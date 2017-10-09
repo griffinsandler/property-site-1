@@ -1,0 +1,15 @@
+<h1>Properties</h1>
+<table>
+<%if @property %>
+    <table>
+     <tr>
+          <td><%= @property.name %> </a> </td>
+         <td><%= @property.address %> </a> </td>
+         <td><%= @property.square_feet %> </a> </td>
+         <td><%= @property.max_num_tenants%> </td>
+         <td><%= @property.curr_num_tenants%> </td>
+         <td><%= @property.monthly_rent %> </td>
+         <td><%= @property.notes %> </td>
+     </tr>
+     <% end %>
+</table>
