@@ -1,16 +1,24 @@
-<h1>Properties</h1>
-<table>
-<%if @properties
-  @properties.each do |t| %>
-     <tr>
-         <td>  <a href="<%= properties_path %>/<%= t.id %>"><%= t.name %> </a> </td>
-         <td><%= t.address %></td>
-         <td><%= t.square_feet%> </td>
-         <td><%= t.max_num_tenants%>   </td>
-         <td><%= t.curr_num_tenants%>   </td>
-         <td><%= t.monthly_rent%>   </td>
-        <td><%= t.notes%>   </td>
-     </tr>
- <%end 
- end%>
-</table>
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1>Properties</h1>
+    <table>
+    <%if @properties
+      @properties.each do |t| %>
+         <tr>
+            <td>  <a href="<%= properties_path %>/id/<%= t.id %>"><%= t.name %> </a> </td>
+            <td><%= t.address %></td>
+            <td><%= t.square_feet%> </td>
+            <td><%= t.max_num_tenants%>   </td>
+            <td><%= t.curr_num_tenants%>   </td>
+            <td><%= t.monthly_rent%>   </td>
+            <td><%= t.notes%>   </td>
+         </tr>
+     <%end 
+     end%>
+    </table>
+    <div>
+        <a href = "<%=properties_path%>/new">Create New</a>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html></html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper orange darken-4">
+                <a href="<%= properties_path %>" class="brand-logo">Home</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Buttons!</a></li>
+                    <li><a href="#">Buttons!</a></li>
+                    <li><a href="#">Buttons!</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class = "container">
+            <div class = "row">
+                <h3>
+                    Create New Project
+                </h3>
+            </div>
+            <div class = "row">
+                <form class = "col s12" action = "<%properties_path%>" method = "post">
+                    <div class = "row">
+                        <div class = "input-field col s6">
+                            <input id="property_name" name = "property[name]" type="text" class="validate">
+                            <label for="property_name">Property Name</label>
+                        </div>
+                        <div class = "input-field col s6">
+                            <input id="property_address" name = "property[address]" type="text" class="validate">
+                            <label for="property_address">Address</label>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "input-field col s3">
+                            <input id="property_square_feet" name = "property[square_feet]" type="text" class="validate">
+                            <label for="property_square_feet">Square Feet</label>
+                        </div>
+                        <div class = "input-field col s3">
+                            <input id="property_max_num_tenants" name = "property[max_num_tenants]" type="number" class="validate">
+                            <label for="property_max_num_tenants">Capacity</label>
+                        </div>
+                        <div class = "input-field col s3">
+                            <input id="property_curr_num_tenants" name = "property[curr_num_tenants]" type="number" class="validate">
+                            <label for="property_curr_num_tenants">Current Occupants</label>
+                        </div>
+                        <div class = "col s3">
+                            $
+                            <div class ="input-field inline">
+                                <input id="property_monthly_rent" name = "property[monthly_rent]" type = "number" class= "validate">
+                                <label for="property_monthly_rent">Monthly Rent</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "input-field col s8">
+                            <textarea class = "materialize-textarea" id="property_notes" name = "property[notes]"></textarea>
+                            <label for="property_notes">Notes</label>
+                        </div>
+                    </div>
+                    <div class = "input-field col s3">
+                        <input name="commit" type="submit" value="Create" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>

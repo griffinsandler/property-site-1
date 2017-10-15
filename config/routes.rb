@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root :to => redirect('/properties')
   get '/properties' => 'properties#index'
   get '/properties/:id' => 'properties#show'
+  get '/properties/new' => 'properties#new'
+  post '/properties/new' => 'properties#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
