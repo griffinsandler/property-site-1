@@ -1,15 +1,52 @@
-<h1>Properties</h1>
-<table>
-<%if @property %>
-    <table>
-     <tr>
-          <td><%= @property.name %> </a> </td>
-         <td><%= @property.address %> </a> </td>
-         <td><%= @property.square_feet %> </a> </td>
-         <td><%= @property.max_num_tenants%> </td>
-         <td><%= @property.curr_num_tenants%> </td>
-         <td><%= @property.monthly_rent %> </td>
-         <td><%= @property.notes %> </td>
-     </tr>
-     <% end %>
-</table>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper orange darken-4">
+                <a href="<%= properties_path %>" class="brand-logo">Home</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Buttons!</a></li>
+                    <li><a href="#">Buttons!</a></li>
+                    <li><a href="#">Buttons!</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class= "container">
+            <div class = "row">
+                <h1>Properties</h1>
+            </div>
+        </div>
+        <div class = "row">
+            <table class = "highlight">
+                
+                <thead>
+                    <th></th>
+                    <th>Address</th>
+                    <th>Square Ft.</th>
+                    <th>Capacity</th>
+                    <th>Current Tenants</th>
+                    <th>Monthly Rent</th>
+                    <th>Notes</th>
+                </thead>
+                <tbody>
+                    <%if @property %>
+                        <tr>
+                            <td><%= @property.name %> </a> </td>
+                            <td><%= @property.address %> </a> </td>
+                            <td><%= @property.square_feet %> </a> </td>
+                            <td><%= @property.max_num_tenants%> </td>
+                            <td><%= @property.curr_num_tenants%> </td>
+                            <td><%= @property.monthly_rent %> </td>
+                            <td><%= @property.notes %> </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>
