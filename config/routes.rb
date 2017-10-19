@@ -1,10 +1,22 @@
 Rails.application.routes.draw do
+
+  get 'sessions/new'
+
   resources :properties
   root :to => redirect('/properties')
   get '/properties' => 'properties#index'
   get '/properties/:id' => 'properties#show'
   get '/properties/new' => 'properties#new'
   post '/properties/new' => 'properties#create'
+  resources :landlords
+  get '/landlords'=> 'landlords#index'
+  get '/landlords/:id'=>'landlords#show'
+  get '/landlords/new' => 'landlords#new'
+  post '/landlords/new' => 'landlords#create'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
