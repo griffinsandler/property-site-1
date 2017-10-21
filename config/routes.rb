@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :properties
-  root :to => redirect('/properties')
+  root :to => redirect('/home')
+  get '/home' => 'sessions#home'
   get '/properties' => 'properties#index'
   get '/properties/:id' => 'properties#show'
   get '/properties/new' => 'properties#new'
