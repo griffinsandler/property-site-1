@@ -9,4 +9,4 @@ properties = Property.create([{ :name => 'Example Property', :address => '123 Ma
                                :max_num_tenants => 4, :curr_num_tenants => 3, :monthly_rent => 3200, :notes => "Definitely a property." }])
                                
                                
-landlords = Landlord.create([{:first_name=>'Example',:last_name=> 'Landlord', :office_address=>'123 Main', :phone_number=>'123456789', :email=>'land@lord.com', :notes=>"I am the best landloard ever"}])
+landlords = Landlord.create([{:first_name=>'Example',:last_name=> 'Landlord', :office_address=>'123 Main', :phone_number=>'123456789', :email=>'land@lord.com', :password=>"Password", :notes=>"I am the best landloard ever"}])

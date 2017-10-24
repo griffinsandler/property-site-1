@@ -1,19 +1,16 @@
 class SessionsController < ApplicationController
-  def new
-  end
+  # user shouldn't have to be logged in before logging in!
+  skip_before_filter :set_current_user
   def create
-    landlord = Landlord.find_by(email: params[:session][:email].downcase)
-    if landlord && TRUE
-      log_in landlord
-      redirect_to landlord
-    # Log the user in and redirect to the user's show page.
-    else
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
-    end
+    auth=request.env["omniauth.auth"]
+    user=Landlord.where(:provider => auth["provider"], :uid => auth["uid"]) ||
+      Landlord.create_with_omniauth(auth)
+    session[:user_id] = user.id
+    redirect_to landlord_path
   end
   def destroy
-  end
-  def home
+    session.delete(:user_id)
+    flash[:notice] = 'Logged out successfully.'
+    redirect_to landlord_path
   end
 end
