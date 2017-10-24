@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/properties/:id' => 'properties#show'
   get '/properties/new' => 'properties#new'
   post '/properties/new' => 'properties#create'
+  get '/properties/:id/edit' => 'properties#edit'
   resources :landlords
   get '/landlords'=> 'landlords#index'
   get '/landlords/:id'=>'landlords#show'
