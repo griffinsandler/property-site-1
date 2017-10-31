@@ -21,15 +21,15 @@
                 </h3>
             </div>
             <div class = "row">
-                <%= form_for @property do |f| %>
-                  <%=  f.text_field :name %>
-                  <%=  f.text_field :address %>
-                  <%=  f.number_field :square_feet %>
-                  <%=  f.number_field :max_num_tenants %>
-                  <%=  f.number_field :curr_num_tenants %>
-                  <%=  f.number_field :monthly_rent %>
+                <%= form_for @property => do |f| %>
+                  <%=  f.text_field :name, :class => "input-field"%>
+                  <%=  f.text_field :address, :class => "input-field" %>
+                  <%=  f.number_field :square_feet, :class => "input-field" %>
+                  <%=  f.number_field :max_num_tenants, :class => "input-field" %>
+                  <%=  f.number_field :curr_num_tenants, :class => "input-field" %>
+                  <%=  f.number_field :monthly_rent, :class => "input-field" %>
                   <%=  f.text_area :notes %>
-                  <%= f.submit "Update" %>
+                  <%= f.submit "Update", :class => "waves-effect waves-teal btn-flat" %>
                 <% end %>
             </div>
         </div>
