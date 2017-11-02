@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/landlords/new' => 'landlords#new'
   post '/landlords/new' => 'landlords#create'
   get  'auth/:provider/callback' => 'sessions#create'
-  post 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
   get  'auth/failure' => 'sessions#failure'
   get  'auth/facebook', :as => 'login'
   # The priority is based upon order of creation: first created -> highest priority.
