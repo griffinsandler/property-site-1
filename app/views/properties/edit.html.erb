@@ -21,7 +21,7 @@
                 </h3>
             </div>
             <div class = "row">
-                <%= form_for @property => do |f| %>
+                <%= form_for @property do |f| %>
                   <%=  f.text_field :name, :class => "input-field"%>
                   <%=  f.text_field :address, :class => "input-field" %>
                   <%=  f.number_field :square_feet, :class => "input-field" %>

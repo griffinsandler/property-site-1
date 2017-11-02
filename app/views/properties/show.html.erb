@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    </head>
+    <%= render '/layouts/nav_bar' %>
     <body>
-        <nav>
-            <div class="nav-wrapper orange darken-4">
-                <a href="<%= properties_path %>" class="brand-logo">Home</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#">Buttons!</a></li>
-                    <li><a href="#">Buttons!</a></li>
-                    <li><a href="#">Buttons!</a></li>
-                </ul>
-            </div>
-        </nav>
         <div class= "container">
             <div class = "row">
                 <h1>Properties</h1>
@@ -46,7 +34,13 @@
                 </tbody>
             </table>
         </div>
+        <div class = "row">
+                <br/>
+                    <%= link_to "Delete", property_path(@property), :method => :delete %>
+                </div>
+            </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
+    
 </html>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/properties/new' => 'properties#new'
   post '/properties/new' => 'properties#create'
   get '/properties/:id/edit' => 'properties#edit'
+  delete '/properties/:id/delete' => 'properties#destroy'
   resources :landlords
   get '/landlords'=> 'landlords#index'
   get '/landlords/:id'=>'landlords#show'
@@ -19,7 +20,6 @@ Rails.application.routes.draw do
   post 'logout' => 'sessions#destroy'
   get  'auth/failure' => 'sessions#failure'
   get  'auth/facebook', :as => 'login'
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

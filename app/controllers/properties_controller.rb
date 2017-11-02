@@ -1,7 +1,8 @@
 class PropertiesController < ApplicationController
   skip_before_action :verify_authenticity_token
   def index
-    @properties = Property.all
+    @manager = Manager.find(session[:user_id])
+    @properties = Property.where(:manager_id => @manager)
   end
   def show
     @property = Property.find(params[:id])
@@ -12,6 +13,7 @@ class PropertiesController < ApplicationController
   def create
     params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:property])
     @property = Property.new(params_map)
+    @property.manager_id = session[:user_id]
     if @property.save
       redirect_to @property
     else
@@ -27,4 +29,12 @@ class PropertiesController < ApplicationController
     @property.update(params_map)
     redirect_to @property
   end
+  
+  def destroy
+  @property = Property.find(params[:id])
+  @property.destroy
+  flash[:notice] = "Property '#{@property.name}' at '#{@property.address}' deleted."
+  redirect_to properties_path
+end
+  
 end

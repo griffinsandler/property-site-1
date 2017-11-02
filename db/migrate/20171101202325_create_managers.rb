@@ -1,5 +1,12 @@
-class CreateProperties < ActiveRecord::Migration
+class CreateManagers < ActiveRecord::Migration
   def change
+    create_table :managers do |t|
+      t.string :name
+      t.string :provider
+      t.string :uid
+      t.timestamps null: false
+    end
+    
     create_table :properties do |t|
       t.string :name
       t.string :address

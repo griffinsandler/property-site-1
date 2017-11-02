@@ -12,6 +12,7 @@
             <div class = "row">
                 <table class = "highlight">
                     <thead>
+                        <th></th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Office Address</th>
@@ -23,8 +24,7 @@
                         <%if @landlords
                         @landlords.each do |t| %>
                             <tr>
-                                <td>  <a class "waves-effect waves-teal btn-flat" href="<%= landlords_path %>/<%= t.id %>">
-                                <%= t.first_name %> </a> </td>
+                                <td>  <a class "waves-effect waves-teal btn-flat" href="<%= landlords_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
                                 <td><%= t.last_name%> </td>
                                 <td><%= t.office_address%>   </td>
                                 <td><%= t.phone_number%>   </td>
