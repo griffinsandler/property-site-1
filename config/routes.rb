@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'tenants/new'
+
   get 'sessions/new'
 
   resources :properties
@@ -20,6 +22,11 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
   get  'auth/failure' => 'sessions#failure'
   get  'auth/facebook', :as => 'login'
+  resources :tenants
+  get '/tenants'=> 'tenants#index'
+  get '/tenants/:id'=>'tenants#show'
+  get '/tenants/new' => 'tenants#new'
+  post '/tenants/new' => 'tenants#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
