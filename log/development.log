@@ -16014,3 +16014,763 @@ Cannot render console from 129.81.217.142! Allowed networks: 127.0.0.1, ::1, 127
 Processing by SessionsController#home as HTML
   Rendered sessions/home.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 287ms (Views: 277.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:31:40 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:31:41 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 397ms (Views: 383.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.172.185.27 at 2017-11-12 17:31:41 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/landlords.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/properties.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/landlords.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/properties.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 98.172.185.27 at 2017-11-12 17:31:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:31:50 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:31:50 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQBiei7xZ_8DI3uMMU4Ye3FeZZJA3jvUvy15oSdTXilXopxOdO2YPvJfm_bEvXHE1q5hv3IBvEo9cP3WhSCpUzBCL4yl9NXJHaFwo59IXpRfDnANA6j_yfX6vONboTVJ6YVoukY6Oka10rchyqFFyr4m9zuvCtWtkm6AwkSUHXSDr21FxZS7u69b9imcwlJZ8YQehfSKpcfYPLQW-zuC8MAQ_0bpVUrkwxK4ZYJCatb_D5d1tawcEJL8KmVP0U8XvPHz-Emj4zdYUPOmjD-UDkd9M5njbqQOuR49w4IBOxbjsKYQUUXWeMDM1ZESjjbz_AWYnQkcQPbfK2a5HmmU9xBS&state=5e3a3cf2f3eba281c993be06d33e08fbcf8c73c064a72934" for 98.172.185.27 at 2017-11-12 17:31:51 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBiei7xZ_8DI3uMMU4Ye3FeZZJA3jvUvy15oSdTXilXopxOdO2YPvJfm_bEvXHE1q5hv3IBvEo9cP3WhSCpUzBCL4yl9NXJHaFwo59IXpRfDnANA6j_yfX6vONboTVJ6YVoukY6Oka10rchyqFFyr4m9zuvCtWtkm6AwkSUHXSDr21FxZS7u69b9imcwlJZ8YQehfSKpcfYPLQW-zuC8MAQ_0bpVUrkwxK4ZYJCatb_D5d1tawcEJL8KmVP0U8XvPHz-Emj4zdYUPOmjD-UDkd9M5njbqQOuR49w4IBOxbjsKYQUUXWeMDM1ZESjjbz_AWYnQkcQPbfK2a5HmmU9xBS", "state"=>"5e3a3cf2f3eba281c993be06d33e08fbcf8c73c064a72934", "provider"=>"facebook"}
+  [1m[35mManager Load (7.9ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 70ms (ActiveRecord: 26.5ms)
+
+
+Started GET "/properties" for 98.172.185.27 at 2017-11-12 17:31:51 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.7ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_nav_bar.html.erb (0.7ms)
+  [1m[35mProperty Load (4.5ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 60ms (Views: 38.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/logout" for 98.172.185.27 at 2017-11-12 17:31:54 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-gsandler.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:31:54 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties/1" for 98.172.185.27 at 2017-11-12 17:32:02 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  Rendered properties/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:34:21 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:34:22 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:34:22 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQCt7NjHqB0b4o9gIkZPKqZQrWNJ-ut7jK2t8Fy3ydlA4tfgVWeCT86c31BcDLmjCuJLajTgWvQkyUzdu_VwWXdXQGnTaXEqX_yr8VgC2Hahi52IWLaOMhsynQ7_-4QPGqRFmCvbd-_R9_Ia8H1KABYyVf5pJYfz6HKeguvlz-W1Qf7jqt67xtbUwaKDH8Vs8CnI5h3zdW6fbbsWFHcsE96Wc-tEY2KyhqK7nQ8IgfsGj6G4rogXRMXKlBTuuhS57Q5gzIj5ESXegT_hJVt4WB4ixpEORVXD4w28S4kZPhvmJUX8A4Tp-u8gEQkDV5SK9hH7GCDdIVHRLf7SBnfvlqs4&state=2cde9196adfa938699732217eef4752665056011ea388afa" for 98.172.185.27 at 2017-11-12 17:34:23 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCt7NjHqB0b4o9gIkZPKqZQrWNJ-ut7jK2t8Fy3ydlA4tfgVWeCT86c31BcDLmjCuJLajTgWvQkyUzdu_VwWXdXQGnTaXEqX_yr8VgC2Hahi52IWLaOMhsynQ7_-4QPGqRFmCvbd-_R9_Ia8H1KABYyVf5pJYfz6HKeguvlz-W1Qf7jqt67xtbUwaKDH8Vs8CnI5h3zdW6fbbsWFHcsE96Wc-tEY2KyhqK7nQ8IgfsGj6G4rogXRMXKlBTuuhS57Q5gzIj5ESXegT_hJVt4WB4ixpEORVXD4w28S4kZPhvmJUX8A4Tp-u8gEQkDV5SK9hH7GCDdIVHRLf7SBnfvlqs4", "state"=>"2cde9196adfa938699732217eef4752665056011ea388afa", "provider"=>"facebook"}
+  [1m[35mManager Load (0.8ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 31ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/properties" for 98.172.185.27 at 2017-11-12 17:34:23 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#index as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:34:24 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQDcM7v2kkY4_2xHgsvugy5MlYZ0IEBL7KQp2G6AQ1JH7UVboZmSWb7cuhey9wD0mxyRog8ZTn-Tk4eMeF_Ujsv2-KPFkfud20YA9eN-ojlcBpOpOWsCPPQXhk0ffINSpzZ9tATt9aTFCsRgDL_69-18jaNSJt355H3CRM5lFYJ2CpSfQOScD7dVUDZlSJmV3XxUVTjYd7faqfQ4JjahBDtwgfe9rlbBMl0IuF9sHPt2YzER6svZIc39HP91sC0-sNpXoCflfDw-KDyWYHwHsLPeIsb7jGt2krS7frVh-pAVq47dShXX8Ci7GKMjZYLAV5Nfj8kf01xArMzMdNzW2Xl6&state=3051e83182922f27f9c2fc486dc68759dc53f5ae476ad7f7" for 98.172.185.27 at 2017-11-12 17:34:24 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDcM7v2kkY4_2xHgsvugy5MlYZ0IEBL7KQp2G6AQ1JH7UVboZmSWb7cuhey9wD0mxyRog8ZTn-Tk4eMeF_Ujsv2-KPFkfud20YA9eN-ojlcBpOpOWsCPPQXhk0ffINSpzZ9tATt9aTFCsRgDL_69-18jaNSJt355H3CRM5lFYJ2CpSfQOScD7dVUDZlSJmV3XxUVTjYd7faqfQ4JjahBDtwgfe9rlbBMl0IuF9sHPt2YzER6svZIc39HP91sC0-sNpXoCflfDw-KDyWYHwHsLPeIsb7jGt2krS7frVh-pAVq47dShXX8Ci7GKMjZYLAV5Nfj8kf01xArMzMdNzW2Xl6", "state"=>"3051e83182922f27f9c2fc486dc68759dc53f5ae476ad7f7", "provider"=>"facebook"}
+  [1m[36mManager Load (0.7ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1[0m  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/properties" for 98.172.185.27 at 2017-11-12 17:34:24 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#index as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:34:24 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQB41M0ne-76xTFKYS3wIt58UtERJ6G9xW9uO3LL41cFUAMlZgDQS6cf1ZHGb9aAHOGlJxXvbKDtVyxe36sEIX3CeMYCdXkZfeQ-hk6iO8JNl1_5474mxZZDX_Yo3TlVpnYTjpZUExUuwpBGN9tPwKU61hOmNc_hM0wv0g-8Pyw0T8QTKCo7HAyod1ELGrAPFQM2avbD3zMDmy-t27rr09amqd23-HNRz7lBvYZPWj-E_rKuFWm_GGJwa7-BS5m5I03hY5c2CJLQ63MymBYdSrfCr0O_3iZVL79d6SeozS3-THQzKSc-fE8PnlDA5LegYDEdI1gR7cZO04G-mBbkPtXW&state=5a13360df71589c44f092af2a3bbcc42483965aae0ef61e3" for 98.172.185.27 at 2017-11-12 17:34:25 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB41M0ne-76xTFKYS3wIt58UtERJ6G9xW9uO3LL41cFUAMlZgDQS6cf1ZHGb9aAHOGlJxXvbKDtVyxe36sEIX3CeMYCdXkZfeQ-hk6iO8JNl1_5474mxZZDX_Yo3TlVpnYTjpZUExUuwpBGN9tPwKU61hOmNc_hM0wv0g-8Pyw0T8QTKCo7HAyod1ELGrAPFQM2avbD3zMDmy-t27rr09amqd23-HNRz7lBvYZPWj-E_rKuFWm_GGJwa7-BS5m5I03hY5c2CJLQ63MymBYdSrfCr0O_3iZVL79d6SeozS3-THQzKSc-fE8PnlDA5LegYDEdI1gR7cZO04G-mBbkPtXW", "state"=>"5a13360df71589c44f092af2a3bbcc42483965aae0ef61e3", "provider"=>"facebook"}
+  [1m[35mManager Load (0.7ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/properties" for 98.172.185.27 at 2017-11-12 17:34:25 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#index as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:34:25 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQAPAzSgBwi1xs47J3rjNtg1BbA8WQfcWn0V2QARijfr1eWFl7onEOFnMFgacLBZD7lJwODhPy_awoLp8_aejHaStt1fF8vYZeO6LpIFbmnkqS3cdsntnUfksLOAZCfvI7Dc21_N6Tb1czVLugOGk_7rcyrZB9fdBgTXiHe2qu8JTWlFL9T7YyHMUcI6LS-zFyPfHuS_L9fdEXFDM4BC5QhhC_QvcsHCHj0aRQXokeHlO4uNixEzUo0bduY_bAF_MfaHLHc_hJMMCdI1uE6mB83WNHlBj8xaFliLVcmg3f_VYQD0Zhn92ViNsrYRywtkgadzkgS9i7RKXFJREr44wx20&state=e68194a0c2f1af2bc34459adc0f59f504eafba4375ab6bcb" for 98.172.185.27 at 2017-11-12 17:34:25 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAPAzSgBwi1xs47J3rjNtg1BbA8WQfcWn0V2QARijfr1eWFl7onEOFnMFgacLBZD7lJwODhPy_awoLp8_aejHaStt1fF8vYZeO6LpIFbmnkqS3cdsntnUfksLOAZCfvI7Dc21_N6Tb1czVLugOGk_7rcyrZB9fdBgTXiHe2qu8JTWlFL9T7YyHMUcI6LS-zFyPfHuS_L9fdEXFDM4BC5QhhC_QvcsHCHj0aRQXokeHlO4uNixEzUo0bduY_bAF_MfaHLHc_hJMMCdI1uE6mB83WNHlBj8xaFliLVcmg3f_VYQD0Zhn92ViNsrYRywtkgadzkgS9i7RKXFJREr44wx20", "state"=>"e68194a0c2f1af2bc34459adc0f59f504eafba4375ab6bcb", "provider"=>"facebook"}
+  [1m[36mManager Load (0.7ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1[0m  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/properties" for 98.172.185.27 at 2017-11-12 17:34:26 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#index as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:34:26 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQDRDNxXJeO3OPeygq_VYdsfiMcQE1W5catfZcV8H_NCBrqnByJe8vBXXjY1wF1mYZMxuZtJOWT4zEEZdLw83SWPK1ig7jKhitciPJMmjS1FhXwPq3OB8_A7UQ1RX66gkDJAvce_gDzBmtzuSyLJk_G79T2l7F7isjwA6Mw5xOrvVdXOmd9wQR87e8BkUxK4C5FMNNP3cpzNgajRzg307AH2klLX8-EJmuBypj77XcHvkHtn2BQZy-I0HXH5iQxbMzIZYl8rDFXcx9dWUV2-N2dGj2Xd0Q1-yjj_UAL04HpJ7ca7ftTt502NzwhocxczJ_yjUlwhzQpkiAJ85Rs17eIx&state=ac2287024380557af9e735e9e5768422ddc1b67cd661b63b" for 98.172.185.27 at 2017-11-12 17:34:26 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDRDNxXJeO3OPeygq_VYdsfiMcQE1W5catfZcV8H_NCBrqnByJe8vBXXjY1wF1mYZMxuZtJOWT4zEEZdLw83SWPK1ig7jKhitciPJMmjS1FhXwPq3OB8_A7UQ1RX66gkDJAvce_gDzBmtzuSyLJk_G79T2l7F7isjwA6Mw5xOrvVdXOmd9wQR87e8BkUxK4C5FMNNP3cpzNgajRzg307AH2klLX8-EJmuBypj77XcHvkHtn2BQZy-I0HXH5iQxbMzIZYl8rDFXcx9dWUV2-N2dGj2Xd0Q1-yjj_UAL04HpJ7ca7ftTt502NzwhocxczJ_yjUlwhzQpkiAJ85Rs17eIx", "state"=>"ac2287024380557af9e735e9e5768422ddc1b67cd661b63b", "provider"=>"facebook"}
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/auth/facebook/callback?code=AQDRDNxXJeO3OPeygq_VYdsfiMcQE1W5catfZcV8H_NCBrqnByJe8vBXXjY1wF1mYZMxuZtJOWT4zEEZdLw83SWPK1ig7jKhitciPJMmjS1FhXwPq3OB8_A7UQ1RX66gkDJAvce_gDzBmtzuSyLJk_G79T2l7F7isjwA6Mw5xOrvVdXOmd9wQR87e8BkUxK4C5FMNNP3cpzNgajRzg307AH2klLX8-EJmuBypj77XcHvkHtn2BQZy-I0HXH5iQxbMzIZYl8rDFXcx9dWUV2-N2dGj2Xd0Q1-yjj_UAL04HpJ7ca7ftTt502NzwhocxczJ_yjUlwhzQpkiAJ85Rs17eIx&state=ac2287024380557af9e735e9e5768422ddc1b67cd661b63b" for 98.172.185.27 at 2017-11-12 17:34:27 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  omniauth (1.7.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+  omniauth (1.7.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+  omniauth (1.7.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+  omniauth (1.7.1) lib/omniauth/strategy.rb:486:in `fail!'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+  omniauth (1.7.1) lib/omniauth/strategy.rb:236:in `callback_call'
+  omniauth (1.7.1) lib/omniauth/strategy.rb:188:in `call!'
+  omniauth (1.7.1) lib/omniauth/strategy.rb:168:in `call'
+  omniauth (1.7.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.9ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:34:58 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:34:59 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:34:59 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQClkkZw8cJa4YGwWZdbU_MYkmYOBzOdn_eZUUF4nSfgReP7Ax74aft-0P7dZCeMi0CdgtwVWO0XyM3TnkIc6ZCmZ8qxtILhip9_t5ZEAEP0b4X3yLWAym9YDwWpAMJWdi163TC4A9WOlrlHSv17BJRVksTjUezPoESnDGWWcd8n_CFBVouT92_3hncpIqdDR3hfx-EirhfRigC4wnruojyMxT3mocvGAlvVixjx0CmY63jMOyOrOS6fe0Fl5ResXW5_bg5gniU-GovkmEh7Yvr3sVqsaD0sCwAW8hAqd3Cs7EkHhXuI9O-7yAjfv2RlhamdS8lJNidCielsZCHE1Ag1&state=ac00ec6be8a28aaee690718da31d8c8871b6534fd17d3f30" for 98.172.185.27 at 2017-11-12 17:34:59 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQClkkZw8cJa4YGwWZdbU_MYkmYOBzOdn_eZUUF4nSfgReP7Ax74aft-0P7dZCeMi0CdgtwVWO0XyM3TnkIc6ZCmZ8qxtILhip9_t5ZEAEP0b4X3yLWAym9YDwWpAMJWdi163TC4A9WOlrlHSv17BJRVksTjUezPoESnDGWWcd8n_CFBVouT92_3hncpIqdDR3hfx-EirhfRigC4wnruojyMxT3mocvGAlvVixjx0CmY63jMOyOrOS6fe0Fl5ResXW5_bg5gniU-GovkmEh7Yvr3sVqsaD0sCwAW8hAqd3Cs7EkHhXuI9O-7yAjfv2RlhamdS8lJNidCielsZCHE1Ag1", "state"=>"ac00ec6be8a28aaee690718da31d8c8871b6534fd17d3f30", "provider"=>"facebook"}
+  [1m[35mManager Load (1.1ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 37ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/properties" for 98.172.185.27 at 2017-11-12 17:35:00 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#index as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:35:00 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQB6-fhuL42ba7gEWPlRw_j8Tue1mtZ9UGtnVDs3ktyyfgTKTZz76_odqNGf0Im2f6s4b3DEOlvnlDAHb1j524nrP8yw8STAb3QHwllJEqIsHc2oFB7sRWH2PoUc9u9JZUbg8vdRynAKEJv9ZNsuW23T7NDWUgeKto6e30SMpcWwsBdqfHo0Uq4zPexLj82rZcjI86Yj93tM5anlIz-jNb5GIAAroUNUO48yek7l5-87USOtOMhQ2t_cY5ANYsLufokPbrGkw1zLo7W5uOrikgOJOIO8mSYJ32mydWLfHOXzmaAKcXeJPYv38IkmLi_IsDqo_tBXf6JSvN87z89qKERW&state=38bcfeca2a7926e37c5e174d888b4e382bd35a13c2f91219" for 98.172.185.27 at 2017-11-12 17:35:00 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB6-fhuL42ba7gEWPlRw_j8Tue1mtZ9UGtnVDs3ktyyfgTKTZz76_odqNGf0Im2f6s4b3DEOlvnlDAHb1j524nrP8yw8STAb3QHwllJEqIsHc2oFB7sRWH2PoUc9u9JZUbg8vdRynAKEJv9ZNsuW23T7NDWUgeKto6e30SMpcWwsBdqfHo0Uq4zPexLj82rZcjI86Yj93tM5anlIz-jNb5GIAAroUNUO48yek7l5-87USOtOMhQ2t_cY5ANYsLufokPbrGkw1zLo7W5uOrikgOJOIO8mSYJ32mydWLfHOXzmaAKcXeJPYv38IkmLi_IsDqo_tBXf6JSvN87z89qKERW", "state"=>"38bcfeca2a7926e37c5e174d888b4e382bd35a13c2f91219", "provider"=>"facebook"}
+  [1m[36mManager Load (0.7ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1[0m  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/properties" for 98.172.185.27 at 2017-11-12 17:35:01 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#index as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:35:01 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQBT7FpD_yNUUru_Kz5WyxtK2l1IVXes4shAHsH6VCExdQPu3RRFCluIx0_OPiYQyYX03nJsWiwdEnjzQVjA2Tt0Kv7PJxr0VLpT_RDtkt48Nmp2q5rjKpUonqxIh1izNTlc4l0HYlyRBacmeVx_vgPsls0JilrTwW_ADBQGmE1Vx0JKWVUazpJ39kjjMYBwrJu_UkujadbwXHh9Ywlb65ZHnF8fuBDPFx2M15ZrFxV70Gymf1-9EYkXbibnNVN0r2hp7SX-VyxtKWUya8rQZc-8yY1UUHib11-O8jRMr8uY_Zmvq3RCLAG7QHzvRy_BHNwuETfZ6eSVPjtuE3ceTvyd&state=f94a31baf58b51abbe700d5bcc2573856e16d0b670d57493" for 98.172.185.27 at 2017-11-12 17:35:01 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBT7FpD_yNUUru_Kz5WyxtK2l1IVXes4shAHsH6VCExdQPu3RRFCluIx0_OPiYQyYX03nJsWiwdEnjzQVjA2Tt0Kv7PJxr0VLpT_RDtkt48Nmp2q5rjKpUonqxIh1izNTlc4l0HYlyRBacmeVx_vgPsls0JilrTwW_ADBQGmE1Vx0JKWVUazpJ39kjjMYBwrJu_UkujadbwXHh9Ywlb65ZHnF8fuBDPFx2M15ZrFxV70Gymf1-9EYkXbibnNVN0r2hp7SX-VyxtKWUya8rQZc-8yY1UUHib11-O8jRMr8uY_Zmvq3RCLAG7QHzvRy_BHNwuETfZ6eSVPjtuE3ceTvyd", "state"=>"f94a31baf58b51abbe700d5bcc2573856e16d0b670d57493", "provider"=>"facebook"}
+  [1m[35mManager Load (0.9ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/properties
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/properties" for 98.172.185.27 at 2017-11-12 17:35:01 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#index as HTML
+Redirected to https://property-site-gsandler.c9users.io/auth/facebook
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 98.172.185.27 at 2017-11-12 17:35:01 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/facebook/callback?code=AQAKlBpWvNPRnjU92o335p_kJIDf7zcTEBf5O78Y5t62gc20wI7BSN9Xuv9M2J3MQVC-9q1EEGccC-EUmpgaSjkuQxwJET6ZEj5cvXYrFnKv4si8s7quOMUdn-eQ105666q07fBZxJQAXXaRHvp4pR9iS655RfRuowV-f3-asBN10dCs7mha-Ah0FJkzYKb5F-UEwxd_IhmNVBbaEu0_j1dpKXyLhcStN0KiuFYbZ4BuQHOs4QNasqS8vSukBkmwibufG2OCaqoTM2G1Bgty4o2wIJ0GtnAhfPMMvHsRXxVsHnVqNzP5W1ylyKrATmfd7dmYYbKkVj7pCj1rcJuTgdOU&state=c6ae7e5abd545926e40fedabd3b712ae4203c398cdf6d998" for 98.172.185.27 at 2017-11-12 17:35:02 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"ALlspLBLc2N"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"ALlspLBLc2N"}}):
+  oauth2 (1.4.0) lib/oauth2/client.rb:119:in `request'
+  oauth2 (1.4.0) lib/oauth2/client.rb:146:in `get_token'
+  oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+  omniauth (1.7.1) lib/omniauth/strategy.rb:236:in `callback_call'
+  omniauth (1.7.1) lib/omniauth/strategy.rb:188:in `call!'
+  omniauth (1.7.1) lib/omniauth/strategy.rb:168:in `call'
+  omniauth (1.7.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.1ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:36:24 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:36:24 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 476ms (Views: 464.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties/1" for 98.172.185.27 at 2017-11-12 17:36:33 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to https://property-site-gsandler.c9users.io/home
+Filter chain halted as :force_log_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:36:33 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:38:12 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:38:12 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/sessions/home.html.erb:63: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/app/views/sessions/home.html.erb:65: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/sessions/home.html.erb:63: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/sessions/home.html.erb:65: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.3ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:38:58 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:38:58 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/sessions/home.html.erb:63: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/app/views/sessions/home.html.erb:65: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/sessions/home.html.erb:63: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/sessions/home.html.erb:65: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.4ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:39:44 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:39:45 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 405ms (Views: 394.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:45:02 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:45:02 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 375ms (Views: 364.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:46:11 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:46:12 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 374ms (Views: 363.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:47:26 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:47:27 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 388ms (Views: 376.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:47:46 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:47:46 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:48:09 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:48:09 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 399ms (Views: 385.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:49:31 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:49:31 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.172.185.27 at 2017-11-12 17:49:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 98.172.185.27 at 2017-11-12 17:49:42 +0000
+Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:03:34 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:03:34 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 483ms (Views: 472.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:03:40 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:03:45 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:04:20 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:04:21 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 473ms (Views: 454.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:05:17 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:05:17 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 385ms (Views: 373.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:05:49 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:05:50 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 350ms (Views: 339.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:07:03 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:07:04 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 419ms (Views: 403.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:07:20 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:07:20 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 358ms (Views: 347.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:08:14 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:08:14 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (33.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (95.3ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:08:53 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:08:54 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 374ms (Views: 363.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.147.74 at 2017-11-12 21:09:29 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.147.74 at 2017-11-12 21:09:29 +0000
+Cannot render console from 70.196.147.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 361ms (Views: 349.6ms | ActiveRecord: 0.0ms)

@@ -1,4 +1,5 @@
 class PropertiesController < ApplicationController
+  before_action :force_log_in
   skip_before_action :verify_authenticity_token
   def index
     @manager = Manager.find(session[:user_id])
