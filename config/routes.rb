@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-
-  get 'sessions/new'
-
   resources :properties
   root :to => redirect('/home')
   get '/home' => 'sessions#home'
+  get '/managers/show' => 'managers#show'
+  get '/tenants/show' => 'tenants#show'
+  get '/tenants' => 'tenants#index'
   get '/properties' => 'properties#index'
   get '/properties/:id' => 'properties#show'
   get '/properties/new' => 'properties#new'

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <%= render '/layouts/nav_bar' %>
+    <body>
+        <div class= "container">
+            <div class = "row">
+                <h1>tenants</h1>
+            </div>
+        </div>
+        <div class = "row">
+            <table class = "highlight">
+                
+                <thead>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>provider</th>
+                    <th>uid</th>
+                </thead>
+                <tbody>
+                    <%if @tenant %>
+                        <tr>
+                            <td><%= @tenant.name %> </a> </td>
+                            <td><%= @tenant.phone_number%> </a> </td>
+                            <td><%= @tenant.email %> </a> </td>
+                            <td><%= @tenant.provider%> </td>
+                            <td><%= @tenant.uid%> </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <div class = "row">
+                <br/>
+                    <%= link_to "Delete", tenant_path(@tenant), :method => :delete %>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+    
+</html>
