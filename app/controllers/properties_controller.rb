@@ -9,7 +9,7 @@ class PropertiesController < ApplicationController
   end
   def show
     @property = Property.find(params[:id])
-    @tenants = Tenant.where(:property_id => @property)
+    @tenants = Tenant.where(:property_id => @property.id)
   end
   def new
     @property = Property.new
@@ -19,7 +19,7 @@ class PropertiesController < ApplicationController
     @property = Property.new(params_map)
     @property.manager_id = session[:user_id]
     if @property.save
-            flash[:notice] = "#{@property.first_name} was successfully created."
+            flash[:notice] = "#{@property.name} was successfully created."
         else
             flash[:notice] = "Property could not be created because #{@property.errors.full_messages}"
         end
