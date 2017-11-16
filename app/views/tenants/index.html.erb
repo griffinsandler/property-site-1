@@ -1,0 +1,47 @@
+<<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <h1>Tenants</h1>
+            </div>
+            <div class = "row">
+                <table class = "highlight">
+                    <thead>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Provider</th>
+                        <th>Uid</th>
+                    </thead>
+                    <tbody>
+                        <%if @tenants
+                        @tenants.each do |t| %>
+                            <tr>
+                                <td>  <a class "waves-effect waves-teal btn-flat" href="<%= tenants_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+                                <td><%= t.email %></td>
+                                <td><%= t.phone_number%> </td>
+                                <td><%= t.uid%>   </td>
+                                <td><%= t.provider%>   </td>
+                                <td>  <a class "waves-effect waves-teal btn-flat" href="<%= tenants_path %>/<%= t.id %>/edit" id = "Edit">Edit</a> </td>
+                            </tr>
+                        <%end 
+                         end%>
+                     </tbody>
+                </table>
+            </div>
+            <div class = "row">
+                <br/>
+                <div>
+                    <a class = "waves-effect waves-light btn" href = "<%=tenants_path%>/new" id = "create">Create New</a>
+                </div>
+            </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>

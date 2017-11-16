@@ -38,7 +38,23 @@
                 <br/>
                     <%= link_to "Delete", property_path(@property), :method => :delete %>
                 </div>
-            </div>
+        <div class = "row">
+            <table class = "highlight">
+                <thead>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>My Property</th>
+                </thead>
+                <tbody>
+                    <%if @tenants %>
+                        <tr>
+                            <td><%= @tenants.name%> </td>
+                            
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>

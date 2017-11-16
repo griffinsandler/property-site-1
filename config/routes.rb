@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-
-  get 'sessions/new'
-
   resources :properties
   root :to => redirect('/home')
   get '/home' => 'sessions#home'
+  get '/create' => 'sessions#create'
+  get '/signin' => 'sessions#signin'
+  post '/signin/:op' => 'sessions#new'
+  post '/create/manager/:op' => 'sessions#createManager'
+  post '/create/tenant/:op' => 'sessions#createTenant'
+  get '/managers/show' => 'managers#show'
+  get '/tenants/show' => 'tenants#show'
+  get '/tenants' => 'tenants#index'
+  get '/tenants/new' => 'tenants#new'
+  post '/tenants/new' => 'tenants#create'
   get '/properties' => 'properties#index'
   get '/properties/:id' => 'properties#show'
   get '/properties/new' => 'properties#new'
@@ -16,7 +23,7 @@ Rails.application.routes.draw do
   get '/landlords/:id'=>'landlords#show'
   get '/landlords/new' => 'landlords#new'
   post '/landlords/new' => 'landlords#create'
-  get  'auth/:provider/callback' => 'sessions#create'
+  get  'auth/:provider/callback' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
   get  'auth/failure' => 'sessions#failure'
   get  'auth/facebook', :as => 'login'
