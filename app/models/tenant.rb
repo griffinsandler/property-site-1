@@ -1,4 +1,4 @@
 class Tenant < ActiveRecord::Base
     belongs_to :property
-    validates :first_name, :presence => true,
+    validates :name, :presence => true
 end

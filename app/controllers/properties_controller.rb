@@ -19,7 +19,7 @@ class PropertiesController < ApplicationController
     @property = Property.new(params_map)
     @property.manager_id = session[:user_id]
     if @property.save
-            flash[:notice] = "#{@property.first_name} was successfully created."
+            flash[:notice] = "#{@property.name} was successfully created."
         else
             flash[:notice] = "Property could not be created because #{@property.errors.full_messages}"
         end
