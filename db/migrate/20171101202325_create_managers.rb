@@ -9,7 +9,7 @@ class CreateManagers < ActiveRecord::Migration
       t.string :password
       t.timestamps null: false
     end
-    
+      
     create_table :properties do |t|
       t.string :name
       t.string :address

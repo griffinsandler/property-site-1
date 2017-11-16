@@ -2,7 +2,7 @@ class CreateTenants < ActiveRecord::Migration
   def change
     create_table :tenants do |t|
       t.string :name
-      t.strong :phone_number
+      t.string :phone_number
       t.string :email
       t.string :provider
       t.string :uid
