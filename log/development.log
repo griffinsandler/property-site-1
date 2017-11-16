@@ -28806,3 +28806,144 @@ Processing by PropertiesController#show as HTML
   [1m[36mTenant Load (0.3ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = $1[0m  [["property_id", 7]]
   Rendered properties/show.html.erb within layouts/application (7.1ms)
 Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 70.186.124.163 at 2017-11-16 17:14:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.186.124.163 at 2017-11-16 17:14:34 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 367ms (Views: 351.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.186.124.163 at 2017-11-16 17:18:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.186.124.163 at 2017-11-16 17:18:24 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 312ms (Views: 302.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.186.124.163 at 2017-11-16 17:18:27 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 66ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 70.186.124.163 at 2017-11-16 17:18:28 +0000
+
+
+Started GET "/auth/facebook" for 70.186.124.163 at 2017-11-16 17:18:29 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQDl9pXAs82KMbeJl_NqHJ5zdkEnGzPWqalBmrghBg15C32S1h7JV3gT1yOu88FIkAmqmIx1UzTygSQhCUcuUWKJ4Ps0j_br42q_dpNLcfgJa4L37MxQlmLpu3lGfT2cxeHv5vJW4FocSw6sBV1TViuzYT97Qz7aprOyW4AdUn8nj9P6d4RKUrqzl2JChG1vXU-br0LCRU-BsiL6OKlTCvzRPSPLkvQ5IPGyrb7XfjSwoAi4JujI4onmS-uDRSmf2r-rRBIl0VOnMpoFr3qvrqtFW7HB353l1YaoE40qKRQKvtDzUDoIrzYdRpWX8Rf0vsHA57xTdpWqmdiN76DI1qjLB17f0OIsD2DwO-yO2XGD3g&state=51cba7849b7d8027e96ebcedea7042279b1a95515e1fd6dc" for 70.186.124.163 at 2017-11-16 17:18:29 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQDl9pXAs82KMbeJl_NqHJ5zdkEnGzPWqalBmrghBg15C32S1h7JV3gT1yOu88FIkAmqmIx1UzTygSQhCUcuUWKJ4Ps0j_br42q_dpNLcfgJa4L37MxQlmLpu3lGfT2cxeHv5vJW4FocSw6sBV1TViuzYT97Qz7aprOyW4AdUn8nj9P6d4RKUrqzl2JChG1vXU-br0LCRU-BsiL6OKlTCvzRPSPLkvQ5IPGyrb7XfjSwoAi4JujI4onmS-uDRSmf2r-rRBIl0VOnMpoFr3qvrqtFW7HB353l1YaoE40qKRQKvtDzUDoIrzYdRpWX8Rf0vsHA57xTdpWqmdiN76DI1qjLB17f0OIsD2DwO-yO2XGD3g", "state"=>"51cba7849b7d8027e96ebcedea7042279b1a95515e1fd6dc", "provider"=>"facebook"}
+  [1m[35mManager Load (1.7ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1668934303159331"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 51ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/managers/show" for 70.186.124.163 at 2017-11-16 17:18:29 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered managers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 70.186.124.163 at 2017-11-16 17:18:31 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_nav_bar.html.erb (0.5ms)
+  [1m[36mProperty Load (0.6ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1[0m
+  Rendered properties/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 57ms (Views: 44.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/properties/7" for 70.186.124.163 at 2017-11-16 17:18:36 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = $1[0m  [["property_id", 7]]
+  Rendered properties/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 42ms (Views: 27.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/properties" for 70.186.124.163 at 2017-11-16 17:19:07 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.3ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1[0m
+  Rendered properties/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/landlords" for 70.186.124.163 at 2017-11-16 17:19:12 +0000
+Processing by LandlordsController#index as HTML
+  [1m[35mLandlord Load (12.7ms)[0m  SELECT "landlords".* FROM "landlords"
+  Rendered landlords/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 49ms (Views: 32.3ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/properties" for 70.186.124.163 at 2017-11-16 17:19:22 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  [1m[35mProperty Load (0.4ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'landlords'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'managers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'properties'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tenants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
