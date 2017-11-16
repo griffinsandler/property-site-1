@@ -44,15 +44,17 @@
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
-                    <th>My Property</th>
                 </thead>
                 <tbody>
-                    <%if @tenants %>
+                    <%if @tenants 
+                    @tenants.each do |t| %>
                         <tr>
-                            <td><%= @tenants.name%> </td>
-                            
+                            <td><%= t.name%> </td>
+                            <td><%= t.phone_number%> </td>
+                            <td><%= t.email%> </td>
                         </tr>
-                    <% end %>
+                    <% end 
+                    end %>
                 </tbody>
             </table>
         </div>

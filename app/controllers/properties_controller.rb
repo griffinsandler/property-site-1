@@ -9,7 +9,7 @@ class PropertiesController < ApplicationController
   end
   def show
     @property = Property.find(params[:id])
-    @tenants = Tenant.where(:property_id => @property.id)
+    @tenants = Tenant.where(:property_id => @property)
   end
   def new
     @property = Property.new

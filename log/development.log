@@ -27322,3 +27322,883 @@ Started GET "/home" for 98.163.203.253 at 2017-11-16 04:32:26 +0000
 Processing by SessionsController#home as HTML
   Rendered sessions/home.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 05:39:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:39:20 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 294ms (Views: 284.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 174.70.101.221 at 2017-11-16 05:39:30 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/manager/local" for 174.70.101.221 at 2017-11-16 05:39:32 +0000
+Processing by SessionsController#createManager as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TI7C0JhrjvVlYQogLDoTOu9e5bUvLgg1ByC0f47mm9Z4Dxs5NxC/gVqeethgUvJf2fj3pKQf6O6x14TLwCSIBA==", "manager"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ""], ["email", ""], ["password", ""], ["created_at", "2017-11-16 05:39:32.777770"], ["updated_at", "2017-11-16 05:39:32.777770"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 67ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:39:32 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered managers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 60ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 05:39:38 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered layouts/_nav_bar.html.erb (0.4ms)
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 7[0m
+  Rendered properties/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 48ms (Views: 33.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/logout" for 174.70.101.221 at 2017-11-16 05:39:40 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-gsandler.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:39:40 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 05:39:42 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:39:44 +0000
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:39:44 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQCdurhN7KKfj-iTqMMjtM5SKt6Z9-ZQvE8Xy6zWFWcsu19pMIg12FBjb_jr4SivZOr82KRcU_b71dT7J8s-lbxQT6OQt7S4qh3EyNXE2agWXL0k-rcSMmB8JiYnKZx1Sugpwqp9waiztC2p34e_lGXiG7YSbsUjoqbBp4MgCfWvvC-OkJE3W7t9eVAy3PMGuHhxQoLKFh82bBWzbXBfF5pTrf3H-7mc2F3B40LjbyNOf-Hu-onU3F9IcyaPIt8RB6sEcOn6oTS6-LeRbJ21Op81tCYQXrLXz1owJDyiyw8U98fTv-PO_cqW7yd5tRnL_e-RY-SpxcmLJ_jsjOldd24uu-ruLsxJa9xktJcucjYCcA&state=ad3f694c9b6998118929d40cf1e03dcc6bc4406d698895e0" for 174.70.101.221 at 2017-11-16 05:39:44 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQCdurhN7KKfj-iTqMMjtM5SKt6Z9-ZQvE8Xy6zWFWcsu19pMIg12FBjb_jr4SivZOr82KRcU_b71dT7J8s-lbxQT6OQt7S4qh3EyNXE2agWXL0k-rcSMmB8JiYnKZx1Sugpwqp9waiztC2p34e_lGXiG7YSbsUjoqbBp4MgCfWvvC-OkJE3W7t9eVAy3PMGuHhxQoLKFh82bBWzbXBfF5pTrf3H-7mc2F3B40LjbyNOf-Hu-onU3F9IcyaPIt8RB6sEcOn6oTS6-LeRbJ21Op81tCYQXrLXz1owJDyiyw8U98fTv-PO_cqW7yd5tRnL_e-RY-SpxcmLJ_jsjOldd24uu-ruLsxJa9xktJcucjYCcA", "state"=>"ad3f694c9b6998118929d40cf1e03dcc6bc4406d698895e0", "provider"=>"facebook"}
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1729459897087761"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:39:45 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 05:39:50 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 2[0m
+  Rendered properties/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:39:52 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.4ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/models/tenant.rb:4: syntax error, unexpected keyword_end):
+  app/models/tenant.rb:4: syntax error, unexpected keyword_end
+  app/controllers/properties_controller.rb:12:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.0ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 05:44:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:44:21 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 730ms (Views: 720.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 05:44:23 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 48ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:44:24 +0000
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:44:25 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQDPYtitM1CLb-rbdwbyZRJ4b15EfoZjCwl-lgijK6A2C-gNJm7ilL0FN3ji4-Lm09ykgiYggLQvY6vvt7dsObg9OhAcnZWC1m2zzYq00EY7XDC3BAopXVC4coDtNVxi91bgbILc6mq6qHULFcof34JUgXR8OMoOFeOYMPkRg0OEdonRS3du1WZor5s0N7zowKhvxb9zijN918svGC0s4ep_xm6d8PFAEfIfJzj7v0dhVujzA99gn7WpkAJUjxmwYohRkQOgXx1OsuX0WEOkWTHhq6iUaqTfdYGnNoIFofbWtAD_WII-skJsS6-FcEKSTEyHF2dpMKoUXQV3BsNbpG7q15wFcrUdCfjwvYdgZPpKNw&state=0d42b4da20b55c8286f9c255507a7b980d79e5cab442fdc2" for 174.70.101.221 at 2017-11-16 05:44:25 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQDPYtitM1CLb-rbdwbyZRJ4b15EfoZjCwl-lgijK6A2C-gNJm7ilL0FN3ji4-Lm09ykgiYggLQvY6vvt7dsObg9OhAcnZWC1m2zzYq00EY7XDC3BAopXVC4coDtNVxi91bgbILc6mq6qHULFcof34JUgXR8OMoOFeOYMPkRg0OEdonRS3du1WZor5s0N7zowKhvxb9zijN918svGC0s4ep_xm6d8PFAEfIfJzj7v0dhVujzA99gn7WpkAJUjxmwYohRkQOgXx1OsuX0WEOkWTHhq6iUaqTfdYGnNoIFofbWtAD_WII-skJsS6-FcEKSTEyHF2dpMKoUXQV3BsNbpG7q15wFcrUdCfjwvYdgZPpKNw", "state"=>"0d42b4da20b55c8286f9c255507a7b980d79e5cab442fdc2", "provider"=>"facebook"}
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1729459897087761"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 41ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:44:25 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 05:44:27 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 2[0m
+  Rendered properties/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 49ms (Views: 38.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:44:29 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/models/tenant.rb:4: syntax error, unexpected keyword_end):
+  app/models/tenant.rb:4: syntax error, unexpected keyword_end
+  app/controllers/properties_controller.rb:12:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:45:29 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  Rendered properties/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 184ms (Views: 157.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 05:49:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:49:57 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 795ms (Views: 785.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 05:50:00 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 52ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 174.70.101.221 at 2017-11-16 05:50:10 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hdJJRaXDo7YHV9CkMof8rgKPW5A6DZLJxNX46CdNXcKxU5CsCriSwjiooFx+7x3LNClJgbE8chJyIshcaY9OEA==", "session"=>{"email"=>"dan@wills.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "dan@wills.edu"], ["password", "password"]]
+  [1m[36mTenant Load (0.6ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "dan@wills.edu"], ["password", "password"]]
+Redirected to https://property-site-gsandler.c9users.io/tenants/show
+Completed 302 Found in 214ms (ActiveRecord: 158.9ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-16 05:50:10 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered tenants/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 208ms (Views: 170.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:50:14 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.5ms)
+  Rendered properties/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["created_at", "2017-11-16 05:51:30.213950"], ["updated_at", "2017-11-16 05:51:30.213950"]]
+  [1m[35m (5.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "landlords" ("first_name", "last_name", "office_address", "phone_number", "email", "password", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["first_name", "Example"], ["last_name", "Landlord"], ["office_address", "123 Main"], ["phone_number", "123456789"], ["email", "land@lord.com"], ["password", "Password"], ["notes", "I am the best landloard ever"], ["created_at", "2017-11-16 05:51:30.244302"], ["updated_at", "2017-11-16 05:51:30.244302"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["created_at", "2017-11-16 05:52:10.851872"], ["updated_at", "2017-11-16 05:52:10.851872"]]
+  [1m[35m (126.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["created_at", "2017-11-16 05:53:01.245901"], ["updated_at", "2017-11-16 05:53:01.245901"]]
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "landlords" ("first_name", "last_name", "office_address", "phone_number", "email", "password", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["first_name", "Example"], ["last_name", "Landlord"], ["office_address", "123 Main"], ["phone_number", "123456789"], ["email", "land@lord.com"], ["password", "Password"], ["notes", "I am the best landloard ever"], ["created_at", "2017-11-16 05:53:01.391818"], ["updated_at", "2017-11-16 05:53:01.391818"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["created_at", "2017-11-16 05:53:37.812149"], ["updated_at", "2017-11-16 05:53:37.812149"]]
+  [1m[35m (35.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "landlords" ("first_name", "last_name", "office_address", "phone_number", "email", "password", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["first_name", "Example"], ["last_name", "Landlord"], ["office_address", "123 Main"], ["phone_number", "123456789"], ["email", "land@lord.com"], ["password", "Password"], ["notes", "I am the best landloard ever"], ["created_at", "2017-11-16 05:53:37.871471"], ["updated_at", "2017-11-16 05:53:37.871471"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jordyn Saviet"], ["phone_number", "1234567890"], ["email", "jordyn@saviet.com"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 05:53:37.884639"], ["updated_at", "2017-11-16 05:53:37.884639"]]
+  [1m[35m (3.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Lily Pollard"], ["phone_number", "9876543210"], ["email", "lily@pollard.edu"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 05:53:37.891326"], ["updated_at", "2017-11-16 05:53:37.891326"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Dan Wills"], ["phone_number", "4561237890"], ["email", "dan@wills.edu"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 05:53:37.895699"], ["updated_at", "2017-11-16 05:53:37.895699"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Brad Silk"], ["phone_number", "1239874560"], ["email", "Brad@silk.edu"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 05:53:37.900229"], ["updated_at", "2017-11-16 05:53:37.900229"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Joe Stokes"], ["phone_number", "1357908642"], ["email", "joe@stokes.org"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 05:53:37.904814"], ["updated_at", "2017-11-16 05:53:37.904814"]]
+  [1m[35m (76.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Jessie Grant"], ["phone_number", "1325476980"], ["email", "jessie@grant.gov"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 05:53:37.983976"], ["updated_at", "2017-11-16 05:53:37.983976"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sam Levy"], ["phone_number", "0987654321"], ["email", "sam@levy.com"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 05:53:37.989448"], ["updated_at", "2017-11-16 05:53:37.989448"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Sam Springer"], ["phone_number", "9876543210"], ["email", "sam@springer.edu"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 05:53:37.994026"], ["updated_at", "2017-11-16 05:53:37.994026"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Andrew Kirsh"], ["phone_number", "0897645312"], ["email", "andrew@kirsh.gov"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 05:53:37.998401"], ["updated_at", "2017-11-16 05:53:37.998401"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Madison Wagman"], ["phone_number", "1029384756"], ["email", "madison@wagman.com"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 05:53:38.002539"], ["updated_at", "2017-11-16 05:53:38.002539"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Adam Slavick"], ["phone_number", "0912348765"], ["email", "adam@slavick.edu"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 05:53:38.006404"], ["updated_at", "2017-11-16 05:53:38.006404"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Julian Ungar"], ["phone_number", "5647382910"], ["email", "julian@ungar.edu"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 05:53:38.010225"], ["updated_at", "2017-11-16 05:53:38.010225"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Chuck Rogers"], ["phone_number", "6574839201"], ["email", "chuck@rogers.com"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 05:53:38.014824"], ["updated_at", "2017-11-16 05:53:38.014824"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Aaron Wolfe"], ["phone_number", "7865231940"], ["email", "aaron@wolfe.com"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 05:53:38.019730"], ["updated_at", "2017-11-16 05:53:38.019730"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Amanda Deutsch"], ["phone_number", "9854123780"], ["email", "amanda@deutsch.org"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 05:53:38.023952"], ["updated_at", "2017-11-16 05:53:38.023952"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Sydney Kerzner"], ["phone_number", "5043192786"], ["email", "sydney@kerzner.edu"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 05:53:38.028415"], ["updated_at", "2017-11-16 05:53:38.028415"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jackson Parker"], ["phone_number", "5046789321"], ["email", "jackson@parker.dog"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 05:53:38.032525"], ["updated_at", "2017-11-16 05:53:38.032525"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Kobe Bryant"], ["phone_number", "5041236789"], ["email", "kobe@bryant.com"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 05:53:38.036917"], ["updated_at", "2017-11-16 05:53:38.036917"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cody Belinger"], ["phone_number", "5041237869"], ["email", "cody@belinger.edu"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 05:53:38.040992"], ["updated_at", "2017-11-16 05:53:38.040992"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Kanye West"], ["phone_number", "0594837261"], ["email", "kanye@west.gov"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 05:53:38.045164"], ["updated_at", "2017-11-16 05:53:38.045164"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["created_at", "2017-11-16 05:55:06.221399"], ["updated_at", "2017-11-16 05:55:06.221399"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "landlords" ("first_name", "last_name", "office_address", "phone_number", "email", "password", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["first_name", "Example"], ["last_name", "Landlord"], ["office_address", "123 Main"], ["phone_number", "123456789"], ["email", "land@lord.com"], ["password", "Password"], ["notes", "I am the best landloard ever"], ["created_at", "2017-11-16 05:55:06.238913"], ["updated_at", "2017-11-16 05:55:06.238913"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jordyn Saviet"], ["phone_number", "1234567890"], ["email", "jordyn@saviet.com"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 05:55:06.251619"], ["updated_at", "2017-11-16 05:55:06.251619"]]
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Lily Pollard"], ["phone_number", "9876543210"], ["email", "lily@pollard.edu"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 05:55:06.256912"], ["updated_at", "2017-11-16 05:55:06.256912"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Dan Wills"], ["phone_number", "4561237890"], ["email", "dan@wills.edu"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 05:55:06.261308"], ["updated_at", "2017-11-16 05:55:06.261308"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Brad Silk"], ["phone_number", "1239874560"], ["email", "Brad@silk.edu"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 05:55:06.265770"], ["updated_at", "2017-11-16 05:55:06.265770"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Joe Stokes"], ["phone_number", "1357908642"], ["email", "joe@stokes.org"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 05:55:06.271219"], ["updated_at", "2017-11-16 05:55:06.271219"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Jessie Grant"], ["phone_number", "1325476980"], ["email", "jessie@grant.gov"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 05:55:06.275359"], ["updated_at", "2017-11-16 05:55:06.275359"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sam Levy"], ["phone_number", "0987654321"], ["email", "sam@levy.com"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 05:55:06.279243"], ["updated_at", "2017-11-16 05:55:06.279243"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Sam Springer"], ["phone_number", "9876543210"], ["email", "sam@springer.edu"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 05:55:06.283368"], ["updated_at", "2017-11-16 05:55:06.283368"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Andrew Kirsh"], ["phone_number", "0897645312"], ["email", "andrew@kirsh.gov"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 05:55:06.287307"], ["updated_at", "2017-11-16 05:55:06.287307"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Madison Wagman"], ["phone_number", "1029384756"], ["email", "madison@wagman.com"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 05:55:06.291373"], ["updated_at", "2017-11-16 05:55:06.291373"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Adam Slavick"], ["phone_number", "0912348765"], ["email", "adam@slavick.edu"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 05:55:06.295327"], ["updated_at", "2017-11-16 05:55:06.295327"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Julian Ungar"], ["phone_number", "5647382910"], ["email", "julian@ungar.edu"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 05:55:06.299558"], ["updated_at", "2017-11-16 05:55:06.299558"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Chuck Rogers"], ["phone_number", "6574839201"], ["email", "chuck@rogers.com"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 05:55:06.304132"], ["updated_at", "2017-11-16 05:55:06.304132"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Aaron Wolfe"], ["phone_number", "7865231940"], ["email", "aaron@wolfe.com"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 05:55:06.311180"], ["updated_at", "2017-11-16 05:55:06.311180"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Amanda Deutsch"], ["phone_number", "9854123780"], ["email", "amanda@deutsch.org"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 05:55:06.315617"], ["updated_at", "2017-11-16 05:55:06.315617"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Sydney Kerzner"], ["phone_number", "5043192786"], ["email", "sydney@kerzner.edu"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 05:55:06.319620"], ["updated_at", "2017-11-16 05:55:06.319620"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jackson Parker"], ["phone_number", "5046789321"], ["email", "jackson@parker.dog"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 05:55:06.323539"], ["updated_at", "2017-11-16 05:55:06.323539"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Kobe Bryant"], ["phone_number", "5041236789"], ["email", "kobe@bryant.com"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 05:55:06.327481"], ["updated_at", "2017-11-16 05:55:06.327481"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cody Belinger"], ["phone_number", "5041237869"], ["email", "cody@belinger.edu"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 05:55:06.331387"], ["updated_at", "2017-11-16 05:55:06.331387"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Kanye West"], ["phone_number", "0594837261"], ["email", "kanye@west.gov"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 05:55:06.335232"], ["updated_at", "2017-11-16 05:55:06.335232"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 05:55:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:55:26 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 403ms (Views: 392.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 05:55:28 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 174.70.101.221 at 2017-11-16 05:55:30 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CkOsND9XREAU5hqAzTuunXWNnCRaVTVSysUJGbInW+Y+wnXdkCx1NCsZaniBU0/4QyuONdFk1Yl8Mjmt/OVINA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", ""], ["password", ""]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 44ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:55:30 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered managers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin/local" for 174.70.101.221 at 2017-11-16 05:55:30 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CkOsND9XREAU5hqAzTuunXWNnCRaVTVSysUJGbInW+Y+wnXdkCx1NCsZaniBU0/4QyuONdFk1Yl8Mjmt/OVINA==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.3ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", ""], ["password", ""]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:55:30 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered managers/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:55:32 +0000
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:55:33 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQBlhEoeIS4LhIfa0vezP8_Fs-LDHwPG_SYTb8O0qnNjvOPHMXnFlspD6XCyB847bdSkPgOfdUXAkAh7bzZW505MFdemjvarIlOT8fWh57GlxHUIs-yONOavc7Go4IDtogtMTUlU3rN3b96wsBPynceYz0CclndpWO6_ozJ5QMmNVN-pvol7di6JegClq60dXmsJxlhyfwZFV0675lHy01x_k_68_TUrc1-IG77DUqCTYBrbVHe8v-6PAGO4Q_35wsDRf8p1rw0pqAgMqkb7uAPHWy0A5MOH9Cxf9p2gRd_KD-cCC6KibEO1adDVcCInCBQE2Q6erjsaACpCOnWotsBL&state=e432f205f3181f73bb83aefa75f65ed69d78e3d8c9496ac0" for 174.70.101.221 at 2017-11-16 05:55:34 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQBlhEoeIS4LhIfa0vezP8_Fs-LDHwPG_SYTb8O0qnNjvOPHMXnFlspD6XCyB847bdSkPgOfdUXAkAh7bzZW505MFdemjvarIlOT8fWh57GlxHUIs-yONOavc7Go4IDtogtMTUlU3rN3b96wsBPynceYz0CclndpWO6_ozJ5QMmNVN-pvol7di6JegClq60dXmsJxlhyfwZFV0675lHy01x_k_68_TUrc1-IG77DUqCTYBrbVHe8v-6PAGO4Q_35wsDRf8p1rw0pqAgMqkb7uAPHWy0A5MOH9Cxf9p2gRd_KD-cCC6KibEO1adDVcCInCBQE2Q6erjsaACpCOnWotsBL", "state"=>"e432f205f3181f73bb83aefa75f65ed69d78e3d8c9496ac0", "provider"=>"facebook"}
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1729459897087761"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:55:34 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 05:55:36 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (0.4ms)
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 2[0m
+  Rendered properties/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 44ms (Views: 33.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:55:40 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  Rendered properties/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:55:47 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 05:56:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:56:38 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 328ms (Views: 318.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 05:56:41 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:56:43 +0000
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:56:44 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQDBqno7BweemYgpCMgkZepIZ3UIW5_c8tvTtuHoe7ushoOQQ67uK8UAIYhwzKfhlrpX8TdI0YBTENLtbBLFoiELaPoXQYqhIofFKCHn6z0w3ZESTtpz47pYk4qm1UU3Ikyu33D9E-mu2Kn5wI6j98tpjwT3AuwH3iNk0s2uBIc0tOMYNv9VT3Vu26-P6J4C9VlXcHIlmOBAkHpjQkUHclNaQLXSZIXew8nfvqjXRXNNplTmhjKHI9dMBKmG7IkQf1uTfyP7QlftKbcakiFnIWl7kpAYUvlaojwFdvsLn9U9GRL2CglT8_w5Mg1kL9g3lQAt0knctEI13WwvER86-IcV&state=a0dedcf26eb3491ba16aeb9a9453e766deb5d2b3b8f481f2" for 174.70.101.221 at 2017-11-16 05:56:44 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQDBqno7BweemYgpCMgkZepIZ3UIW5_c8tvTtuHoe7ushoOQQ67uK8UAIYhwzKfhlrpX8TdI0YBTENLtbBLFoiELaPoXQYqhIofFKCHn6z0w3ZESTtpz47pYk4qm1UU3Ikyu33D9E-mu2Kn5wI6j98tpjwT3AuwH3iNk0s2uBIc0tOMYNv9VT3Vu26-P6J4C9VlXcHIlmOBAkHpjQkUHclNaQLXSZIXew8nfvqjXRXNNplTmhjKHI9dMBKmG7IkQf1uTfyP7QlftKbcakiFnIWl7kpAYUvlaojwFdvsLn9U9GRL2CglT8_w5Mg1kL9g3lQAt0knctEI13WwvER86-IcV", "state"=>"a0dedcf26eb3491ba16aeb9a9453e766deb5d2b3b8f481f2", "provider"=>"facebook"}
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1729459897087761"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 43ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:56:45 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 05:56:47 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (0.4ms)
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 2[0m
+  Rendered properties/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 45ms (Views: 35.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:56:50 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  Rendered properties/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 05:57:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:57:21 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 294ms (Views: 284.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 05:57:23 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:57:24 +0000
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:57:24 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQD89EHRT2eTOm9BS-IQv6KolUOYC0I9ep8nyNt0R2jzLpUNsYw3xTDXGvhzyk8T8OHyWxzKwCdI1wB9NkINTTBqp4dsMXHgtLHoMqzJ-cUlV7R-P848PooN7lGxQhfIBOmhJ7NFIBCP27yM9WrFTZiQZsMTbXPXC246ohb8vja3vR_4mEbic9-saW-mTm06xQCGS_ix0L8xfZL2qzgL4NlOkw4JUsgoli_S6Z2fCsTnUwqPTGlCJnxYQhTYyGIBnNQAHvtb7CZo6OL0g4AD7O1OU8p6KBClx067gPHY0aMg7Ftl8O0uf0lsqUFr_3LYqsdke4tla5ByeKLJ4k0JOzWj&state=1be611cc2377ed5222079b3bd30f4d57a3e588a1f046572c" for 174.70.101.221 at 2017-11-16 05:57:25 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQD89EHRT2eTOm9BS-IQv6KolUOYC0I9ep8nyNt0R2jzLpUNsYw3xTDXGvhzyk8T8OHyWxzKwCdI1wB9NkINTTBqp4dsMXHgtLHoMqzJ-cUlV7R-P848PooN7lGxQhfIBOmhJ7NFIBCP27yM9WrFTZiQZsMTbXPXC246ohb8vja3vR_4mEbic9-saW-mTm06xQCGS_ix0L8xfZL2qzgL4NlOkw4JUsgoli_S6Z2fCsTnUwqPTGlCJnxYQhTYyGIBnNQAHvtb7CZo6OL0g4AD7O1OU8p6KBClx067gPHY0aMg7Ftl8O0uf0lsqUFr_3LYqsdke4tla5ByeKLJ4k0JOzWj", "state"=>"1be611cc2377ed5222079b3bd30f4d57a3e588a1f046572c", "provider"=>"facebook"}
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1729459897087761"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 44ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:57:25 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 05:57:27 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (0.5ms)
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 2[0m
+  Rendered properties/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 51ms (Views: 38.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:57:29 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.4ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  Rendered properties/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 05:58:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:58:42 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 316ms (Views: 306.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 05:58:45 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:58:46 +0000
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:58:47 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQDLKayfg8Ceyxe9dS-XtrL7gqRJ9lgpBgfySuLZrxzbXOtcrkZdtxxLxaxcUBhktftDrbZweuWSLbCIeXtRG_n_aS6nFmcojASwpyLK5NH92uczHPSO3ceKxX1_FEf7T9epF5G828CKZnevxkIpSskXoXCvGqhLNGHLTAgrdfOUfsGbxYaxHOdMn5aeegcrFgz09nYJs3LXTngOug82pg7d6BSZBpV0JxD7nB0pdA-lVPrPLcWFYPL4OSa1-sKV9MzwsANziOgg7Ub1xlWttzPB31FvCShuVKZOv2t-woKl1dgl1a_TqYYXxjvwK2YK-Ku2_UTxDdxdemab3YQIi737&state=94263bef17ca25cc644ab54383797bfa66e624623518f9b3" for 174.70.101.221 at 2017-11-16 05:58:47 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQDLKayfg8Ceyxe9dS-XtrL7gqRJ9lgpBgfySuLZrxzbXOtcrkZdtxxLxaxcUBhktftDrbZweuWSLbCIeXtRG_n_aS6nFmcojASwpyLK5NH92uczHPSO3ceKxX1_FEf7T9epF5G828CKZnevxkIpSskXoXCvGqhLNGHLTAgrdfOUfsGbxYaxHOdMn5aeegcrFgz09nYJs3LXTngOug82pg7d6BSZBpV0JxD7nB0pdA-lVPrPLcWFYPL4OSa1-sKV9MzwsANziOgg7Ub1xlWttzPB31FvCShuVKZOv2t-woKl1dgl1a_TqYYXxjvwK2YK-Ku2_UTxDdxdemab3YQIi737", "state"=>"94263bef17ca25cc644ab54383797bfa66e624623518f9b3", "provider"=>"facebook"}
+  [1m[35mManager Load (0.7ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1729459897087761"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 49ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:58:48 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 05:58:49 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (0.5ms)
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 2[0m
+  Rendered properties/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 62ms (Views: 49.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:58:51 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered properties/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/properties/show.html.erb:63: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/app/views/properties/show.html.erb:65: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/properties/show.html.erb:63: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/properties/show.html.erb:65: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 05:59:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 05:59:35 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 291ms (Views: 281.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 05:59:37 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:59:38 +0000
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 05:59:38 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQBL1_C1gwObsLTf41_JJ08qxtLJcHiPi4Hy48_jHJVrWJyjua828Y21iHWiymaR6Mdr68oc3NQgx7X9zUIZ8VJfLY01rlkEGIjq9FJpSTfSTjnxoNFknXqufHBVNRdkIaPp4rM371vKWIwHdZiqrwGHuwD5dhrORRbQRBVQxPl_a7Uv5MMCUssGvuoEOSCa1K5lxWsOZvmwJ6gWEGFw_f-rx7C8kc3DQOlI-AissNq2V8FLpXo9GuDpDGHC9w8UQhQds1XRCdQPj10Kuwk5pvyuJmWfNPYs2W4ajNhF8yfUmJTw2IRN9F82khfnCdMzMf_e2uCfoJ8T5r70PD-Maw_W&state=b0b6c65a73678b56c2f00a746341a3cdd6c49087102b6f71" for 174.70.101.221 at 2017-11-16 05:59:38 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQBL1_C1gwObsLTf41_JJ08qxtLJcHiPi4Hy48_jHJVrWJyjua828Y21iHWiymaR6Mdr68oc3NQgx7X9zUIZ8VJfLY01rlkEGIjq9FJpSTfSTjnxoNFknXqufHBVNRdkIaPp4rM371vKWIwHdZiqrwGHuwD5dhrORRbQRBVQxPl_a7Uv5MMCUssGvuoEOSCa1K5lxWsOZvmwJ6gWEGFw_f-rx7C8kc3DQOlI-AissNq2V8FLpXo9GuDpDGHC9w8UQhQds1XRCdQPj10Kuwk5pvyuJmWfNPYs2W4ajNhF8yfUmJTw2IRN9F82khfnCdMzMf_e2uCfoJ8T5r70PD-Maw_W", "state"=>"b0b6c65a73678b56c2f00a746341a3cdd6c49087102b6f71", "provider"=>"facebook"}
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1729459897087761"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 41ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 05:59:39 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 05:59:43 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (0.8ms)
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 2[0m
+  Rendered properties/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 60ms (Views: 47.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 05:59:45 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = 8[0m
+  Rendered properties/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 43ms (Views: 35.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 06:00:14 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.4ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = 8[0m
+  Rendered properties/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["created_at", "2017-11-16 06:03:01.788736"], ["updated_at", "2017-11-16 06:03:01.788736"]]
+  [1m[35m (4.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "landlords" ("first_name", "last_name", "office_address", "phone_number", "email", "password", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["first_name", "Example"], ["last_name", "Landlord"], ["office_address", "123 Main"], ["phone_number", "123456789"], ["email", "land@lord.com"], ["password", "Password"], ["notes", "I am the best landloard ever"], ["created_at", "2017-11-16 06:03:01.822863"], ["updated_at", "2017-11-16 06:03:01.822863"]]
+  [1m[36m (28.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jordyn Saviet"], ["phone_number", "1234567890"], ["email", "jordyn@saviet.com"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 06:03:01.863509"], ["updated_at", "2017-11-16 06:03:01.863509"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Lily Pollard"], ["phone_number", "9876543210"], ["email", "lily@pollard.edu"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 06:03:01.869274"], ["updated_at", "2017-11-16 06:03:01.869274"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Dan Wills"], ["phone_number", "4561237890"], ["email", "dan@wills.edu"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 06:03:01.874573"], ["updated_at", "2017-11-16 06:03:01.874573"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Brad Silk"], ["phone_number", "1239874560"], ["email", "Brad@silk.edu"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 06:03:01.879413"], ["updated_at", "2017-11-16 06:03:01.879413"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Joe Stokes"], ["phone_number", "1357908642"], ["email", "joe@stokes.org"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 06:03:01.884055"], ["updated_at", "2017-11-16 06:03:01.884055"]]
+  [1m[35m (4.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Jessie Grant"], ["phone_number", "1325476980"], ["email", "jessie@grant.gov"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 06:03:01.891091"], ["updated_at", "2017-11-16 06:03:01.891091"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sam Levy"], ["phone_number", "0987654321"], ["email", "sam@levy.com"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 06:03:01.896418"], ["updated_at", "2017-11-16 06:03:01.896418"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Sam Springer"], ["phone_number", "9876543210"], ["email", "sam@springer.edu"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 06:03:01.901478"], ["updated_at", "2017-11-16 06:03:01.901478"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Andrew Kirsh"], ["phone_number", "0897645312"], ["email", "andrew@kirsh.gov"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 06:03:01.906701"], ["updated_at", "2017-11-16 06:03:01.906701"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Madison Wagman"], ["phone_number", "1029384756"], ["email", "madison@wagman.com"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 06:03:01.911755"], ["updated_at", "2017-11-16 06:03:01.911755"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Adam Slavick"], ["phone_number", "0912348765"], ["email", "adam@slavick.edu"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 06:03:01.916704"], ["updated_at", "2017-11-16 06:03:01.916704"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Julian Ungar"], ["phone_number", "5647382910"], ["email", "julian@ungar.edu"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 06:03:01.920815"], ["updated_at", "2017-11-16 06:03:01.920815"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Chuck Rogers"], ["phone_number", "6574839201"], ["email", "chuck@rogers.com"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 06:03:01.924855"], ["updated_at", "2017-11-16 06:03:01.924855"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Aaron Wolfe"], ["phone_number", "7865231940"], ["email", "aaron@wolfe.com"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 06:03:01.929398"], ["updated_at", "2017-11-16 06:03:01.929398"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Amanda Deutsch"], ["phone_number", "9854123780"], ["email", "amanda@deutsch.org"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 06:03:01.933808"], ["updated_at", "2017-11-16 06:03:01.933808"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Sydney Kerzner"], ["phone_number", "5043192786"], ["email", "sydney@kerzner.edu"], ["property_id", 5], ["password", "password"], ["created_at", "2017-11-16 06:03:01.937953"], ["updated_at", "2017-11-16 06:03:01.937953"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jackson Parker"], ["phone_number", "5046789321"], ["email", "jackson@parker.dog"], ["property_id", 7], ["password", "password"], ["created_at", "2017-11-16 06:03:01.942293"], ["updated_at", "2017-11-16 06:03:01.942293"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Kobe Bryant"], ["phone_number", "5041236789"], ["email", "kobe@bryant.com"], ["property_id", 8], ["password", "password"], ["created_at", "2017-11-16 06:03:01.946989"], ["updated_at", "2017-11-16 06:03:01.946989"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cody Belinger"], ["phone_number", "5041237869"], ["email", "cody@belinger.edu"], ["property_id", 9], ["password", "password"], ["created_at", "2017-11-16 06:03:01.951314"], ["updated_at", "2017-11-16 06:03:01.951314"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Kanye West"], ["phone_number", "0594837261"], ["email", "kanye@west.gov"], ["property_id", 11], ["password", "password"], ["created_at", "2017-11-16 06:03:01.955622"], ["updated_at", "2017-11-16 06:03:01.955622"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-16 06:03:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 06:03:17 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 314ms (Views: 303.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 06:03:19 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 06:03:20 +0000
+
+
+Started GET "/auth/facebook" for 174.70.101.221 at 2017-11-16 06:03:21 +0000
+
+
+Started GET "/auth/facebook/callback?code=AQBEkSrk6_WPY8cw-iSJDbHcU8anIBb4JOHCjVSGl8N-EqvBIUq9j6RbbjooamisDP7bOmSgAFe2yl48GJwm2cARGZpHSRQzg64IWL7INtdh3HbSWplC5t7LUlAdnxqUCxpjpKCk7cp5-ZjgQ9QYov4l48iJXgNHmkCsrquiTtrUG1qXjGKOAnEYYynl_F6HJUZM9lp-um2CoNK7RrpYrXv0GnoIe1IRzr6uwP1wzF_H-yEXMVBLuce1Oq9yspdb7GTiYqctZr7-fTc0oiCA19Po9lfhIRsUlzP6f1t_l0FMhkKjJndCOfYP3l6-zPRwhkHAqK61CMXDWpOn_vvp_UgxMdjq_Jhg40Pv96HhLfgU8w&state=3fc24fe95c7c9025da7b46e9319f78825b182b4f535ec44b" for 174.70.101.221 at 2017-11-16 06:03:21 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"code"=>"AQBEkSrk6_WPY8cw-iSJDbHcU8anIBb4JOHCjVSGl8N-EqvBIUq9j6RbbjooamisDP7bOmSgAFe2yl48GJwm2cARGZpHSRQzg64IWL7INtdh3HbSWplC5t7LUlAdnxqUCxpjpKCk7cp5-ZjgQ9QYov4l48iJXgNHmkCsrquiTtrUG1qXjGKOAnEYYynl_F6HJUZM9lp-um2CoNK7RrpYrXv0GnoIe1IRzr6uwP1wzF_H-yEXMVBLuce1Oq9yspdb7GTiYqctZr7-fTc0oiCA19Po9lfhIRsUlzP6f1t_l0FMhkKjJndCOfYP3l6-zPRwhkHAqK61CMXDWpOn_vvp_UgxMdjq_Jhg40Pv96HhLfgU8w", "state"=>"3fc24fe95c7c9025da7b46e9319f78825b182b4f535ec44b", "provider"=>"facebook"}
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."provider" = $1 AND "managers"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1729459897087761"]]
+Redirected to https://property-site-gsandler.c9users.io/managers/show
+Completed 302 Found in 50ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-16 06:03:21 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 174.70.101.221 at 2017-11-16 06:03:23 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_bar.html.erb (0.5ms)
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 2[0m
+  Rendered properties/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 44ms (Views: 34.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 06:03:25 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = 8[0m
+  Rendered properties/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 36ms (Views: 29.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/logout" for 174.70.101.221 at 2017-11-16 06:03:43 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-gsandler.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-16 06:03:43 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-16 06:03:45 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 174.70.101.221 at 2017-11-16 06:03:57 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XN6c/Jor3h46SJbRE3wOpqyQl+qlmw2h6K8BBwlddxNoX0UVNVDvagW35ilfFO/DmjaF+y6q7XpeWDGzR59kwQ==", "session"=>{"email"=>"dan@wills.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.3ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "dan@wills.edu"], ["password", "password"]]
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "dan@wills.edu"], ["password", "password"]]
+Redirected to https://property-site-gsandler.c9users.io/tenants/show
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-16 06:03:57 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 67]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered tenants/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/properties/8" for 174.70.101.221 at 2017-11-16 06:04:01 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+  [1m[36mTenant Load (0.9ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = 8[0m
+  Rendered properties/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 1.3ms)
