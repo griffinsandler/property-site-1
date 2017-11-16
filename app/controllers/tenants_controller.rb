@@ -1,10 +1,11 @@
 class TenantsController < ApplicationController
- # skip_before_action :verify_authenticity_token
+ skip_before_action :verify_authenticity_token
   def index
-    @tenants = Tenant.all
+    @tenents = Tenant.where(:property_id => @property)
   end
   def show
-    @tenant = Tenant.find(params[:id]) 
+    @tenant = Tenant.find(session[:user_id]) 
+    @property = Property.find(@tenant.property_id)
   end
   def create
      params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:tenant])
@@ -16,3 +17,4 @@ class TenantsController < ApplicationController
     end
 end
 end
+

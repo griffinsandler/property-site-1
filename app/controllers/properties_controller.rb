@@ -6,6 +6,7 @@ class PropertiesController < ApplicationController
   end
   def show
     @property = Property.find(params[:id])
+    @tenants = Tenant.where(:property_id => @property.id)
   end
   def new
     @property = Property.new
@@ -14,11 +15,13 @@ class PropertiesController < ApplicationController
     params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:property])
     @property = Property.new(params_map)
     @property.manager_id = session[:user_id]
-    if @property.save
-      redirect_to @property
-    else
-      render "new"
-    end
+    if @property.valid?
+          @property.save
+          redirect_to @property
+      else
+          render "new"
+      end
+    
   end
   def edit
     @property = Property.find(params[:id])

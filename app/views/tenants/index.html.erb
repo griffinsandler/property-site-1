@@ -1,15 +1,20 @@
+<<!DOCTYPE html>
+
 <html>
-  <body>
-<div class = "container">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body>
+        <div class = "container">
             <div class = "row">
-                <h1>tenants</h1>
+                <h1>Tenants</h1>
             </div>
-            <div class = "row" id = "proptable">
-                <table class = "highlight"  >
+            <div class = "row">
+                <table class = "highlight">
                     <thead>
                         <th></th>
                         <th>Name</th>
-                        <th>Phone_Number</th>
+                        <th>Phone Number</th>
                         <th>Email</th>
                         <th>Provider</th>
                         <th>Uid</th>
@@ -34,7 +39,6 @@
                 <br/>
                 <div>
                     <a class = "waves-effect waves-light btn" href = "<%=tenants_path%>/new" id = "create">Create New</a>
-                    <a class = "waves-effect waves-light btn" href = "<%=landlords_path%>">Landlords</a>
                 </div>
             </div>
         </div>

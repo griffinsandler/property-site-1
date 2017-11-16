@@ -1,18 +1,45 @@
-<% provide(:title, "Log in") %>
-<h1>Log in</h1>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "Log in", class: "btn btn-primary" %>
-    <% end %>
-
-  </div>
-</div>
+<!DOCTYPE html>
+<html> 
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  </head>
+  <body>
+      <div class = "row">
+        <div class ="col s6 offset-s3">
+          <h1>Log in</h1>
+        </div>
+      </div>
+      <div class = row>
+        <div >
+          <ul id="login-tabs" class="tabs">
+            <li class="tab col s6"><a class="active" href="#landlord">Landlord</a></li>
+            <li class="tab col s6"><a href="#tenant">Tenant</a></li>
+          </ul>
+          <div id="landlord" class="col s12">
+            <div class="col s6">
+              <br/>
+              Landlord Login:
+              <br/>
+                <form method="post" action="/new/manager" class="waves-effect waves-light btn">
+                  <input value="Login" type="submit" />
+                </form>
+            </div>
+          </div>
+          <div id="tenant" class="col s12">
+            <div class="col s6">
+              <br/>
+                Tenant Login:
+              <br/>
+                <form method="post" action="/new/tenant" class="waves-effect waves-light btn">
+                  <input value="Login" type="submit" />
+                 </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  </body>
+</html>
+  

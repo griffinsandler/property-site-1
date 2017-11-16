@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <%= render '/layouts/nav_bar' %>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
     <body>
+        <nav>
+            <div class="nav-wrapper orange darken-4">
+                <a href="<%=tenants_path %>" class="brand-logo">Home</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Buttons!</a></li>
+                    <li><a href="#">Buttons!</a></li>
+                    <li><a href="#">Buttons!</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class = "container">
             <div class = "row">
                 <h3>
-                    Create New tenant
+                    Create New Tenant
                 </h3>
             </div>
             <div class = "row">
@@ -13,7 +25,7 @@
                     <div class = "row">
                         <div class = "input-field col s12">
                             <input id="tenant_name" name = "tenant[name]" type="text" class="validate">
-                            <label for="tenant_name">tenant Name</label>
+                            <label for="tenant_name">Tenant Name</label>
                         </div>
                     <div class = "row">
                         <div class = "input-field col s6">
@@ -24,12 +36,9 @@
                             <input id="email" name = "tenant[email]" type="text" class="validate">
                             <label for="email">Email</label>
                         </div>
-                        <div class = "input-field col s3">
-                            <input id="tenant_curr_num_tenants" name = "tenant[curr_num_tenants]" type="number" class="validate">
-                            <label for="tenant_curr_num_tenants">Current Occupants</label>
-                        </div>
                     <div class = "input-field col s3">
-                        <input name="commit" type="submit" value="Create" />
+                        <input name="commit" type="submit" value="Create"/>
+                        
                     </div>
                 </form>
             </div>

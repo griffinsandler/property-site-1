@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body>
+      <div class = row>
+        <div >
+          <ul id="login-tabs" class="tabs">
+            <li class="tab col s6"><a class="active" href="#landlord">Landlord</a></li>
+            <li class="tab col s6"><a href="#tenant">Tenant</a></li>
+          </ul>
+          <div id="landlord" class="col s12">
+            <div class="col s6">
+              <br/>
+              Landlord Signup:
+              <br/>
+                <%= form_for(:manager, url: '/create/manager/local') do |f| %>
+                
+                <%= f.label :name %>
+                <%= f.text_field :name, class: 'form-control' %>
+            
+                <%= f.label :email %>
+                <%= f.email_field :email, class: 'form-control' %>
+              
+                <%= f.label :password %>
+                <%= f.password_field :password, class: 'form-control' %>
+              
+                <%= f.submit "Sign Up", class: "btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
+          <div id="tenant" class="col s12">
+            <div class="col s6">
+              <br/>
+                Tenant Signup:
+              <br/>
+                <%= form_for(:tenant, url: '/create/tenant/local') do |f| %>
+                
+                <%= f.label :name %>
+                <%= f.text_field :name, class: 'form-control' %>
+            
+                <%= f.label :email %>
+                <%= f.email_field :email, class: 'form-control' %>
+              
+                <%= f.label :password %>
+                <%= f.password_field :password, class: 'form-control' %>
+              
+                <%= f.submit "Sign Up", class: "btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>
