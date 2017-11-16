@@ -1,6 +1,8 @@
 class PropertiesController < ApplicationController
-  before_action :force_log_in
+  #before_action :force_log_in
   skip_before_action :verify_authenticity_token
+  before_action :confirm_logged_in
+  
   def index
     @manager = Manager.find(session[:user_id])
     @properties = Property.where(:manager_id => @manager)
@@ -16,13 +18,12 @@ class PropertiesController < ApplicationController
     params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:property])
     @property = Property.new(params_map)
     @property.manager_id = session[:user_id]
-    if @property.valid?
-          @property.save
-          redirect_to @property
-      else
-          render "new"
-      end
-    
+    if @property.save
+            flash[:notice] = "#{@property.first_name} was successfully created."
+        else
+            flash[:notice] = "Property could not be created because #{@property.errors.full_messages}"
+        end
+    redirect_to properties_path
   end
   def edit
     @property = Property.find(params[:id])

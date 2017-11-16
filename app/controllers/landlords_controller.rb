@@ -1,5 +1,5 @@
 class LandlordsController < ApplicationController
-  before_action :force_log_in
+  #before_action :force_log_in
   skip_before_action :verify_authenticity_token
   def index
     @landlords = Landlord.all
