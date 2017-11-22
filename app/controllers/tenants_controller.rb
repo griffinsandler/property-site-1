@@ -4,11 +4,12 @@ class TenantsController < ApplicationController
  before_action :confirm_logged_in
  
   def index
-    @tenents = Tenant.where(:property_id => @property)
+    @tenants = Tenant.where(:property_id => @property)
   end
+  
   def show
     @tenant = Tenant.find(session[:user_id]) 
-    @property = Property.find(@tenant.property_id)
+    #@property = Property.find(@tenant.property_id)
   end
   def create
      params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:tenant])
