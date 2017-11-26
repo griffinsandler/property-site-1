@@ -35067,3 +35067,270 @@ Started GET "/home" for 174.70.101.221 at 2017-11-26 19:28:29 +0000
 Processing by SessionsController#home as HTML
   Rendered sessions/home.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-26 19:30:15 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-26 19:30:15 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 349ms (Views: 339.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 174.70.101.221 at 2017-11-26 19:30:18 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 174.70.101.221 at 2017-11-26 19:30:28 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XTs7qRqGCxRAehcwbbVlBpUSZhMfnmhbzrWgGHN7xzPdEPH5gLCA5wlhoHkUGQTYcQJp2iuW/K7KE1ijf3WLNw==", "tenant"=>{"name"=>"Charles Powicki", "email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Charles Powicki"], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-26 19:30:28.791525"], ["updated_at", "2017-11-26 19:30:28.791525"]]
+  [1m[35m (47.6ms)[0m  COMMIT
+  Rendered sessions/search.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 182ms (Views: 67.9ms | ActiveRecord: 52.7ms)
+
+
+Started POST "/search" for 174.70.101.221 at 2017-11-26 19:30:31 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OJ+m1Wou3CCcJPCt0CtlPyVJu4uzXACdmryRp2RvHtu4tGyF8BhX09U/R+SphwThwVm0QodUlGieGmkcaGFS3w==", "query"=>{"address"=>"123 Main Street, New Orleans LA 70118"}, "commit"=>"Search"}
+  [1m[36mProperty Load (0.7ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1[0m  [["address", "123 Main Street, New Orleans LA 70118"]]
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered sessions/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 20.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/join/25/1" for 174.70.101.221 at 2017-11-26 19:30:32 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"25", "pid"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["resolved", "f"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 2], ["created_at", "2017-11-26 19:30:32.977043"], ["updated_at", "2017-11-26 19:30:32.977043"]]
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 17ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-26 19:30:33 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.5ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.6ms)
+  Rendered tenants/show.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    21:                             <td><%= @tenant.name%> </td>
+    22:                             <td><%= @tenant.phone_number%></td>
+    23:                             <td><%= @tenant.email %></td>
+    24:                             <td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= @property.id %>"><%= @property.name %> </a> </td>
+    25:                         </tr>
+    26:                     <% end %>
+    27:                 </tbody>
+  app/views/tenants/show.html.erb:24:in `_app_views_tenants_show_html_erb___596297078833198650_70129185648020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.8ms)
+
+
+Started GET "/join/25/1" for 174.70.101.221 at 2017-11-26 19:30:46 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"25", "pid"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["resolved", "f"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 2], ["created_at", "2017-11-26 19:30:46.903533"], ["updated_at", "2017-11-26 19:30:46.903533"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-26 19:30:46 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.6ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered tenants/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    21:                             <td><%= @tenant.name%> </td>
+    22:                             <td><%= @tenant.phone_number%></td>
+    23:                             <td><%= @tenant.email %></td>
+    24:                             <td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= @property.id %>"><%= @property.name %> </a> </td>
+    25:                         </tr>
+    26:                     <% end %>
+    27:                 </tbody>
+  app/views/tenants/show.html.erb:24:in `_app_views_tenants_show_html_erb___596297078833198650_70129185648020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.2ms)
+
+
+Started GET "/join/25/1" for 174.70.101.221 at 2017-11-26 19:32:14 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"25", "pid"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["resolved", "f"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 2], ["created_at", "2017-11-26 19:32:14.889263"], ["updated_at", "2017-11-26 19:32:14.889263"]]
+  [1m[36m (2.9ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 7ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-26 19:32:14 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.6ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered tenants/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/tenants/show.html.erb:27: syntax error, unexpected '<'
+                        </tr>
+                         ^
+/home/ubuntu/workspace/app/views/tenants/show.html.erb:29: unknown regexp options - tbdy
+/home/ubuntu/workspace/app/views/tenants/show.html.erb:30: syntax error, unexpected '<'
+            </table>
+             ^
+/home/ubuntu/workspace/app/views/tenants/show.html.erb:31: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/tenants/show.html.erb:32: syntax error, unexpected '<'
+        <script src="https://cdnjs.clo...
+         ^
+/home/ubuntu/workspace/app/views/tenants/show.html.erb:32: syntax error, unexpected '<'
+....100.2/js/materialize.min.js"></script>
+...                               ^
+/home/ubuntu/workspace/app/views/tenants/show.html.erb:33: unknown regexp options - bdy
+/home/ubuntu/workspace/app/views/tenants/show.html.erb:34: syntax error, unexpected '<'
+</html>'.freeze;@output_buffer.to_s
+ ^
+/home/ubuntu/workspace/app/views/tenants/show.html.erb:34: unterminated regexp meets end of file):
+  app/views/tenants/show.html.erb:27: syntax error, unexpected '<'
+  app/views/tenants/show.html.erb:29: unknown regexp options - tbdy
+  app/views/tenants/show.html.erb:30: syntax error, unexpected '<'
+  app/views/tenants/show.html.erb:31: unknown regexp options - dv
+  app/views/tenants/show.html.erb:32: syntax error, unexpected '<'
+  app/views/tenants/show.html.erb:32: syntax error, unexpected '<'
+  app/views/tenants/show.html.erb:33: unknown regexp options - bdy
+  app/views/tenants/show.html.erb:34: syntax error, unexpected '<'
+  app/views/tenants/show.html.erb:34: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-26 19:32:26 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.6ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered tenants/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-26 19:32:34 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-26 19:32:35 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 174.70.101.221 at 2017-11-26 19:32:36 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FSBhW0O2NJxSH//MrJ6jCdkpSD/PG92LHPPrKW44Z3WVC6sL2YC/bxsESIXVMsLXPTlH9vsTSX4YVROSYjYrcQ==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-26 19:32:37 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.7ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mJoinrequest Load (0.7ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 41.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/request/deny/1" for 174.70.101.221 at 2017-11-26 19:32:46 +0000
+Processing by ManagersController#respond as HTML
+  Parameters: {"op"=>"deny", "id"=>"1"}
+  [1m[36mJoinrequest Load (0.4ms)[0m  [1mSELECT  "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (3.1ms)[0m  DELETE FROM "joinrequests" WHERE "joinrequests"."id" = $1  [["id", 1]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-26 19:32:46 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.6ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mJoinrequest Load (0.5ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 28.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/request/deny/2" for 174.70.101.221 at 2017-11-26 19:32:47 +0000
+Processing by ManagersController#respond as HTML
+  Parameters: {"op"=>"deny", "id"=>"2"}
+  [1m[36mJoinrequest Load (0.6ms)[0m  [1mSELECT  "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSQL (3.8ms)[0m  DELETE FROM "joinrequests" WHERE "joinrequests"."id" = $1  [["id", 2]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 7ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-26 19:32:47 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.6ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mJoinrequest Load (0.6ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  [1m[36mProperty Load (50.6ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.6ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered managers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 82ms (Views: 24.8ms | ActiveRecord: 52.3ms)
+
+
+Started GET "/request/accept/3" for 174.70.101.221 at 2017-11-26 19:32:49 +0000
+Processing by ManagersController#respond as HTML
+  Parameters: {"op"=>"accept", "id"=>"3"}
+  [1m[36mJoinrequest Load (0.5ms)[0m  [1mSELECT  "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "tenants" SET "property_id" = $1, "updated_at" = $2 WHERE "tenants"."id" = $3  [["property_id", 1], ["updated_at", "2017-11-26 19:32:49.063393"], ["id", 2]]
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (2.9ms)[0m  DELETE FROM "joinrequests" WHERE "joinrequests"."id" = $1  [["id", 3]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 15ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-26 19:32:49 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mJoinrequest Load (0.4ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  Rendered managers/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-26 19:33:52 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mJoinrequest Load (0.5ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  Rendered layouts/_manager_nav_bar.html.erb (0.5ms)
+  Rendered managers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 1.0ms)
