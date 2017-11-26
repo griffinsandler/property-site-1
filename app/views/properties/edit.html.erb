@@ -1,19 +1,7 @@
 <!DOCTYPE html>
-<html></html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    </head>
+<html>
+    <%= render '/layouts/manager_nav_bar' %>
     <body>
-        <nav>
-            <div class="nav-wrapper orange darken-4">
-                <a href="<%= properties_path %>" class="brand-logo">Home</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#">Buttons!</a></li>
-                    <li><a href="#">Buttons!</a></li>
-                    <li><a href="#">Buttons!</a></li>
-                </ul>
-            </div>
-        </nav>
         <div class = "container">
             <div class = "row">
                 <h3>
@@ -22,14 +10,44 @@
             </div>
             <div class = "row">
                 <%= form_for @property do |f| %>
-                  <%=  f.text_field :name, :class => "input-field"%>
-                  <%=  f.text_field :address, :class => "input-field" %>
-                  <%=  f.number_field :square_feet, :class => "input-field" %>
-                  <%=  f.number_field :max_num_tenants, :class => "input-field" %>
-                  <%=  f.number_field :curr_num_tenants, :class => "input-field" %>
-                  <%=  f.number_field :monthly_rent, :class => "input-field" %>
-                  <%=  f.text_area :notes %>
-                  <%= f.submit "Update", :class => "waves-effect waves-teal btn-flat" %>
+                    <div class = "row">
+                        <div class = "col s6">
+                            <label for="property_name">Property Name</label>
+                            <%=  f.text_field :name, :class => "input-field "%>
+                        </div>
+                        <div class = "col s6">
+                            <label for="property_address">Address</label>
+                            <%=  f.text_field :address, :class => "input-field" %>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col s3"
+                            <label for="property_square_feet">Square Feet</label>
+                            <%=  f.number_field :square_feet, :class => "input-field" %>
+                        </div>
+                        <div class = "col s3">
+                            <label for="property_max_num_tenants">Capacity</label>
+                            <%=  f.number_field :max_num_tenants, :class => "input-field" %>
+                        </div>
+                        <div class = "col s3">
+                            <label for="property_curr_num_tenants">Current Occupants</label>
+                            <%=  f.number_field :curr_num_tenants, :class => "input-field " %>
+                        </div>
+                        <div class = "col s3">
+                            <label for="property_monthly_rent">Monthly Rent</label>
+                            <%=  f.number_field :monthly_rent, :class => "input-field" %>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "input-field col s8">
+                            <label for="property_notes">Notes</label>
+                            <%=  f.text_area :notes, :class => "materialize-textarea"  %>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <div class = "row">
+                        <%= f.submit "Update", class: "btn btn-primary" %>
+                    </div>
                 <% end %>
             </div>
         </div>

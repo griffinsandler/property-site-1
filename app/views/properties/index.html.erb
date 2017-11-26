@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-     <%= render '/layouts/nav_bar' %>
+     <%= render '/layouts/manager_nav_bar' %>
     <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
+        <div class="notice">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
     <body>
         <div class = "container">
             <div class = "row">
@@ -38,11 +40,10 @@
                      </tbody>
                 </table>
             </div>
+            <br/>
             <div class = "row">
-                <br/>
                 <div>
                     <a class = "waves-effect waves-light btn" href = "<%=properties_path%>/new" id = "create">Create New</a>
-                    <a class = "waves-effect waves-light btn" href = "<%=landlords_path%>">Landlords</a>
                 </div>
             </div>
         </div>

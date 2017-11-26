@@ -4,11 +4,11 @@
     <body>
         <nav>
             <div class="nav-wrapper orange darken-4">
-                <a href="<%= properties_path %>" class="brand-logo">Home</a>
+                <a href="/home" class="brand-logo" style = "margin-left:10px;" >Home</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/managers/show">My Profile</a></li>
+                    <li><a href= "<%=properties_path %>">My Properties</a></li>
                     <li><a href="/logout">Log Out</a></li>
-                    <li><a href="#">Buttons!</a></li>
-                    <li><a href="#">Buttons!</a></li>
                 </ul>
             </div>
         </nav>

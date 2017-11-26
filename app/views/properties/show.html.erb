@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <%= render '/layouts/nav_bar' %>
+    <% if session[:check] == 1 %>
+        <%= render '/layouts/manager_nav_bar' %>
+    <% else %>
+        <%= render '/layouts/tenant_nav_bar' %>
+    <% end %>
     <body>
         <div class= "container">
             <div class = "row">
@@ -34,10 +38,12 @@
                 </tbody>
             </table>
         </div>
-        <div class = "row">
-                <br/>
-                    <%= link_to "Delete", property_path(@property), :method => :delete %>
-                </div>
+        <br/>
+        <% if session[:check] == 1 %>
+            <div class = "row">
+                <%= link_to "Delete", property_path(@property), :method => :delete %>
+            </div>
+        <% end %>
         <div class = "row">
             <table class = "highlight">
                 <thead>
