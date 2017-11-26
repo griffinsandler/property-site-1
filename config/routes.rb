@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   # Managers routes #
   get '/request/:op/:id' => 'managers#respond'
   get '/managers/show' => 'managers#show'
+  get '/managers/edit' => 'managers#edit'
+  patch '/managers/edit' => 'managers#update'
   
   # Tenants routes #
   get '/tenants/show' => 'tenants#show'

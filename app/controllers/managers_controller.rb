@@ -18,6 +18,15 @@ class ManagersController < ApplicationController
             end
         end
     end
+    def update
+        @manager = Manager.find(session[:user_id])
+        params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:manager])
+        @manager.update(params_map)
+        redirect_to '/managers/show'
+    end
+    def edit
+        @manager = Manager.find(session[:user_id])
+    end
     
     def respond
         @joinrequest = Joinrequest.find(params[:id])
