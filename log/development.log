@@ -33255,3 +33255,925 @@ Processing by PropertiesController#show as HTML
   [1m[36mTenant Load (0.4ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = $1[0m  [["property_id", 2]]
   Rendered properties/show.html.erb within layouts/application (16.0ms)
 Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:09:10 +0000
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "0.0.0.0" and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.4ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:09:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (8.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:09:46 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 453ms (Views: 442.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:09:49 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:15:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:15:56 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 309ms (Views: 299.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:15:58 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:25:27 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:25:28 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 347ms (Views: 337.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:25:30 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:27:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:27:21 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 334ms (Views: 324.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:27:24 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:27:35 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:29:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:29:37 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 325ms (Views: 315.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:29:43 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:30:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:30:11 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 335ms (Views: 325.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:30:13 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 86ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:30:40 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 74ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:30:45 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:30:49 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:31:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:31:14 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 349ms (Views: 338.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:31:16 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 64ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:33:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:33:39 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 339ms (Views: 329.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:33:47 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:35:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:35:17 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 311ms (Views: 300.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:35:19 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:35:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:35:53 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 351ms (Views: 341.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:35:57 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 120ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:37:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:37:29 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 342ms (Views: 331.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:37:31 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 58ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:39:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:39:48 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 346ms (Views: 336.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:39:51 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:40:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:40:20 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 350ms (Views: 339.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:40:22 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 63ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:41:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:41:10 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 326ms (Views: 316.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:41:12 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 59ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:42:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:42:05 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 315ms (Views: 305.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:42:08 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 60ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:42:12 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 68ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:43:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:43:26 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 349ms (Views: 338.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:43:30 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:43:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:43:52 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 331ms (Views: 321.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:43:54 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:44:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:44:40 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 373ms (Views: 362.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:44:42 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:45:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:45:05 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 312ms (Views: 300.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:45:07 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:45:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:45:54 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 341ms (Views: 330.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:45:58 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:46:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:46:55 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 343ms (Views: 332.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:46:57 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:48:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:48:50 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 346ms (Views: 336.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:48:52 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.144.239 at 2017-11-26 06:50:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.144.239 at 2017-11-26 06:50:08 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 331ms (Views: 321.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.144.239 at 2017-11-26 06:50:13 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:43:38 +0000
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "0.0.0.0" and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:43:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (22.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:43:58 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 519ms (Views: 506.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:44:02 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:47:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:47:03 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 340ms (Views: 330.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:47:05 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:47:19 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:48:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:48:35 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 348ms (Views: 337.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.139.52 at 2017-11-26 17:48:37 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:48:39 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:49:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:49:42 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 352ms (Views: 341.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:49:45 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:50:08 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:52:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:52:03 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 324ms (Views: 314.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:52:05 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:53:18 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 84ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:53:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:53:48 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 342ms (Views: 331.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:53:52 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:54:05 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:56:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:56:09 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 345ms (Views: 335.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:56:11 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 66ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:57:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:57:36 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 340ms (Views: 327.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:57:38 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:58:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:58:17 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 337ms (Views: 327.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:58:20 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 70ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:58:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:58:40 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 338ms (Views: 327.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:58:43 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 17:59:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 17:59:35 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 347ms (Views: 336.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 17:59:37 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 58ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:00:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:00:13 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 344ms (Views: 333.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:00:16 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:02:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:02:26 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 346ms (Views: 335.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:02:28 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 111ms (Views: 110.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:03:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:03:02 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 365ms (Views: 353.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:03:05 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:11:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:11:32 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 328ms (Views: 316.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:11:34 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:13:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:13:08 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 348ms (Views: 338.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:13:09 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:13:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:13:54 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 351ms (Views: 339.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:13:56 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:15:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:15:51 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 354ms (Views: 344.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:15:53 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:16:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:16:17 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 359ms (Views: 348.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:16:24 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:16:37 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 72ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:16:45 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:16:54 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:17:09 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:18:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:18:11 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 351ms (Views: 340.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:18:14 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 69ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.139.52 at 2017-11-26 18:23:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.139.52 at 2017-11-26 18:23:27 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 331ms (Views: 320.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.139.52 at 2017-11-26 18:23:30 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 77ms (Views: 76.1ms | ActiveRecord: 0.0ms)
