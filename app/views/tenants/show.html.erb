@@ -2,32 +2,55 @@
 <html>
      <%= render '/layouts/tenant_nav_bar' %>
     <body>
-        <div class= "container">
-            <div class = "row">
-                <h1 class = "center-align">Welcome, <%= @tenant.name%> </h1>
+        <br/>
+        <div class = "row">
+            <div class = "col s6">
+                <div class = "card orange darken-4">
+                    <span class = "card-title white-text" style = "padding:5px;">My Info</span>
+                    <div class = "card-content black-text white">
+                        <p>
+                            <ul>
+                                <li><b>Name:</b> <%= @tenant.name%></li>
+                                <li><b>Email:</b> <%= @tenant.email%></li>
+                                <li><b>Phone Number:</b> <%= @tenant.phone_number%></li>
+                                <%if @property %>
+                                    <li><b>My Property:</b> <a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= @property.id %>"><%= @property.name %> </a> </td>
+                                <% else %>
+                                    <li><b>My Property:</b> None</li>
+                                <% end %>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class = "card-action">
+                        <a href = "/tenants/edit">Edit</a>
+                    </div>
+                </div>
+            </div>
+        <% if @roommates %>
+            <div class = "col s6">
+            <div class = "card orange darken-4">
+                <span class = "card-title white-text" style = "padding:5px;">My Housemates</span>
+                <div class = "card-content black-text white">
+                    <table class = "highlight"  >
+                        <thead>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                        </thead>
+                        <tbody>
+                            <% @roommates.each do |t| %>
+                                <tr>
+                                    <td><%= t.name %></td>
+                                    <td><%= t.email %></td>
+                                    <td><%= t.phone_number %></td>
+                                </tr>
+                            <% end %>
+                         </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <div class = "row">
-            <table class = "highlight">
-                <thead>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>My Email</th>
-                    <th>My Property</th>
-                </thead>
-                <tbody>
-                    <%if @tenant %>
-                        <tr>
-                            <td><%= @tenant.name%> </td>
-                            <td><%= @tenant.phone_number%></td>
-                            <td><%= @tenant.email %></td>
-                            <%if @property %>
-                                <td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= @property.id %>"><%= @property.name %> </a> </td>
-                            <% end %>
-                        </tr>
-                    <% end %>
-                </tbody>
-            </table>
+        <% end %>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>

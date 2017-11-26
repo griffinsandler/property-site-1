@@ -11,6 +11,7 @@ class TenantsController < ApplicationController
     @tenant = Tenant.find(session[:user_id]) 
     unless @tenant.property_id.blank?
       @property = Property.find(@tenant.property_id)
+      @roommates = Tenant.where("property_id = ? AND id != ?", @property.id, @tenant.id)
     end
   end
   def create
