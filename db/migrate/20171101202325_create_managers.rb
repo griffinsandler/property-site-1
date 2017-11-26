@@ -5,7 +5,6 @@ class CreateManagers < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :email
-      t.string :name
       t.string :password
       t.timestamps null: false
     end

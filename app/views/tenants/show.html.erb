@@ -33,6 +33,7 @@
                             <td><%= @tenant.name%> </td>
                             <td><%= @tenant.phone_number%></td>
                             <td><%= @tenant.email %></td>
+                            <td></td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= @property.id %>"><%= @property.name %> </a> </td>
                         </tr>
                     <% end %>
                 </tbody>

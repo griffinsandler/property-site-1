@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :properties
   root :to => redirect('/home')
+  post '/search' => 'sessions#search'
+  get '/join/:id/:pid' => 'sessions#sendreq'
+  get '/request/:op/:id' => 'managers#respond'
   get '/home' => 'sessions#home'
   get '/create' => 'sessions#create'
   get '/signin' => 'sessions#signin'

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     </head>
     <body>
         <nav>
@@ -20,6 +21,36 @@
                 Hello, <%=@manager.name%>
             </div>
         </div>
+        <br/>
+        <%if @JRBundles %>
+            <div class = "row">
+                <h1>
+                    Requests to Join Properties
+                </h1>
+                <table class = "highlight"  >
+                    <thead>
+                        <th>Property</th>
+                        <th>Address</th>
+                        <th>Tenant</th>
+                        <th>Email</th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <% @JRBundles.each do |t| %>
+                            <tr>
+                                <td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= t.property.id %>"><%= t.property.name %> </a> </td>
+                                <td><%= t.property.address %></td>
+                                <td><%= t.tenant.name %></td>
+                                <td><%= t.tenant.email %></td>
+                                <td><a href="/request/accept/<%= t.joinRequest.id %>"><i class="material-icons">check</i></a></li></td>
+                                <td><a href="/request/deny/<%= t.joinRequest.id %>"><i class="material-icons">close</i></a></li></td>
+                            </tr>
+                        <% end %>
+                     </tbody>
+                </table>
+            </div>
+        <% end %>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
 </html>

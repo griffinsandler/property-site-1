@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body>
+        <div class = "row">
+            <div class = "col s6 offset-s3"
+                <h1>
+                    Where are you living?
+                </h1>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col s6 offset-s3">
+                <%= form_for(:query, url: '/search') do |f| %>
+                    
+                    <%= f.label :address %>
+                    <%= f.text_field :address, class: 'form-control' %>
+                  
+                    <%= f.submit "Search", class: "btn btn-primary" %>
+                <% end %>
+            </div>
+        </div>
+        <div class = "row">
+            <% if @result %>
+                <table class = "highlight">
+                    <thead>
+                        <th>Property Name</th>
+                        <th>Address</th>
+                        <th>Landlord</th>
+                        <th>Notes</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%= @result.name %></td>
+                            <td><%= @result.address %> </td>
+                            <td><%= @manager.name %></td>
+                            <td><%= @result.notes %></td>
+                            <td><a href="/join/<%= @manager.id %>/<%= @result.id %>" class = "waves-effect waves-light btn">Request to Join</a></td>
+                        </tr>
+                     </tbody>
+                </table>
+            <% else %>
+                <div>
+                    
+                </div>
+            <% end %>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>

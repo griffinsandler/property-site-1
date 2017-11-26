@@ -5,10 +5,12 @@
 #
 #   cities  = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-properties  = Property.create([{ :name => 'Example Property', :address => '123 Main Street, New Orleans LA 70118', :square_feet  => 5000,
-                               :max_num_tenants => 4, :curr_num_tenants => 3, :monthly_rent => 3200, :notes => "Definitely a property." }])
-                               
-landlords  = Landlord.create([{:first_name =>'Example',:last_name => 'Landlord', :office_address =>'123 Main', :phone_number =>'123456789', :email =>'land@lord.com', :password =>"Password", :notes =>"I am the best landloard ever"}])
+
+managers = Manager.create([{:name => 'Landlord 25', :id => 25}])
+
+properties = Property.create([{ :name => 'Example Property', :address => '123 Main Street, New Orleans LA 70118', :square_feet  => 5000,
+                               :max_num_tenants => 4, :curr_num_tenants => 3, :monthly_rent => 3200, :notes => "Definitely a property.", :manager_id => 25 }])
+                             
 tenants  = Tenant.create([{:name =>'Jordyn Saviet', :phone_number =>'1234567890', :email =>'jordyn@saviet.com', :property_id => 5, :password => 'password'}])
 tenants  = Tenant.create([{:name =>'Lily Pollard', :phone_number =>'9876543210', :email =>'lily@pollard.edu', :property_id => 7, :password => 'password'}])
 tenants  = Tenant.create([{:name =>'Dan Wills', :phone_number =>'4561237890', :email =>'dan@wills.edu', :property_id => 8, :password => 'password'}])

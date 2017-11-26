@@ -11,25 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116021722) do
+ActiveRecord::Schema.define(version: 20171126011520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "landlords", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "office_address"
-    t.string   "phone_number"
-    t.string   "email"
-    t.text     "notes"
-    t.string   "password"
-    t.string   "name"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+  create_table "joinrequests", force: :cascade do |t|
+    t.boolean  "resolved"
+    t.integer  "tenant_id"
+    t.integer  "property_id"
+    t.integer  "manager_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
+
+  add_index "joinrequests", ["manager_id"], name: "index_joinrequests_on_manager_id", using: :btree
+  add_index "joinrequests", ["property_id"], name: "index_joinrequests_on_property_id", using: :btree
+  add_index "joinrequests", ["tenant_id"], name: "index_joinrequests_on_tenant_id", using: :btree
 
   create_table "managers", force: :cascade do |t|
     t.string   "name"
@@ -63,9 +61,10 @@ ActiveRecord::Schema.define(version: 20171116021722) do
     t.string   "provider"
     t.string   "uid"
     t.string   "password"
+    t.integer  "property_id"
+    t.integer  "true_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.integer  "property_id"
   end
 
 end

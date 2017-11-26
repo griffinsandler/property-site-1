@@ -9,7 +9,9 @@ class TenantsController < ApplicationController
   
   def show
     @tenant = Tenant.find(session[:user_id]) 
-    #@property = Property.find(@tenant.property_id)
+    unless @tenant.property_id.blank?
+      @property = Property.find(@tenant.property_id)
+    end
   end
   def create
      params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:tenant])
@@ -19,6 +21,6 @@ class TenantsController < ApplicationController
     else
       render "new"
     end
-end
+  end
 end
 
