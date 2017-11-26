@@ -7,7 +7,7 @@ class ManagersController < ApplicationController
     def show
         @manager = Manager.find(session[:user_id])
         @joinrequests = Joinrequest.where(:manager_id => @manager)
-        if @joinrequests
+        if !@joinrequests.empty?
             @JRBundles = Array.new
             @joinrequests.each do |i|
                 newBundle = OpenStruct.new

@@ -6,6 +6,7 @@ class CreateManagers < ActiveRecord::Migration
       t.string :uid
       t.string :email
       t.string :password
+      t.string :phone_number
       t.timestamps null: false
     end
       

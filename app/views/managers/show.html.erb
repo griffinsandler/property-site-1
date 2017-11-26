@@ -7,40 +7,55 @@
     <body>
         <br/>
         <div class = "row">
-            <div class = "col s6 offset-s3">
-                Hello, <%=@manager.name%>
+            <div class = "col s6">
+                <div class = "card teal lighten-2">
+                    <span class = "card-title white-text" style = "padding:5px;">My Info</span>
+                    <div class = "card-content black-text white">
+                        <p>
+                            <ul>
+                                <li><b>Name:</b> <%= @manager.name%></li>
+                                <li><b>Email:</b> <%= @manager.email%></li>
+                                <li><b>Phone Number:</b> <%= @manager.phone_number%></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class = "card-action">
+                        <a href = "#">Edit</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <br/>
-        <%if @JRBundles %>
-            <div class = "row">
-                <h1>
-                    Requests to Join Properties
-                </h1>
-                <table class = "highlight"  >
-                    <thead>
-                        <th>Property</th>
-                        <th>Address</th>
-                        <th>Tenant</th>
-                        <th>Email</th>
-                        <th></th>
-                        <th></th>
-                    </thead>
-                    <tbody>
-                        <% @JRBundles.each do |t| %>
-                            <tr>
-                                <td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= t.property.id %>"><%= t.property.name %> </a> </td>
-                                <td><%= t.property.address %></td>
-                                <td><%= t.tenant.name %></td>
-                                <td><%= t.tenant.email %></td>
-                                <td><a href="/request/accept/<%= t.joinRequest.id %>"><i class="material-icons">check</i></a></li></td>
-                                <td><a href="/request/deny/<%= t.joinRequest.id %>"><i class="material-icons">close</i></a></li></td>
-                            </tr>
-                        <% end %>
-                     </tbody>
-                </table>
-            </div>
+        <%if @JRBundles%>
+            <div class = "col s6">
+                    <div class = "card teal lighten-2">
+                        <span class = "card-title white-text" style = "padding:5px;">Requests to Join Properties</span>
+                        <div class = "card-content black-text white">
+                            <table class = "highlight"  >
+                            <thead>
+                                <th>Property</th>
+                                <th>Address</th>
+                                <th>Tenant</th>
+                                <th>Email</th>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                <% @JRBundles.each do |t| %>
+                                    <tr>
+                                        <td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= t.property.id %>"><%= t.property.name %> </a> </td>
+                                        <td><%= t.property.address %></td>
+                                        <td><%= t.tenant.name %></td>
+                                        <td><%= t.tenant.email %></td>
+                                        <td><a href="/request/accept/<%= t.joinRequest.id %>"><i class="material-icons">check</i></a></li></td>
+                                        <td><a href="/request/deny/<%= t.joinRequest.id %>"><i class="material-icons">close</i></a></li></td>
+                                    </tr>
+                                <% end %>
+                             </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
         <% end %>
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
 </html>
