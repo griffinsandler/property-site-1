@@ -11,11 +11,9 @@ class SessionsController < ApplicationController
     end
     if user.is_a?(Manager)
       session[:user_id] = user.id
-      session[:check] = 1
       redirect_to '/managers/show'
     else if user.is_a?(Tenant)
       session[:user_id] = user.id
-      session[:check] = 2
       redirect_to '/tenants/show'
     else
       session[:auth] = auth

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
   get  'auth/failure' => 'sessions#failure'
   get  'auth/facebook', :as => 'login'
+  get '/tenants/:id/pay' => 'tenants#pay'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -9,7 +9,7 @@
             <div class = "row">
                 <h1>Landlords</h1>
             </div>
-            <div class = "row">
+            <div class = "row" id = "proptable">
                 <table class = "highlight">
                     <thead>
                         <th></th>
@@ -23,9 +23,9 @@
                     <tbody>
                         <%if @landlords
                         @landlords.each do |t| %>
-                            <tr>
-                                <td>  <a class "waves-effect waves-teal btn-flat" href="<%= landlords_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
-                                <td><%= t.last_name%> </td>
+                           <tr>
+                                <td>  <a class "waves-effect waves-teal btn-flat" href="<%= landlords_path %>/<%= t.id %>"><%= t.i %> </a> </td>
+                                <td><%= t.last_name %></td>
                                 <td><%= t.office_address%>   </td>
                                 <td><%= t.phone_number%>   </td>
                                 <td><%= t.email%>   </td>

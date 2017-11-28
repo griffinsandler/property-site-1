@@ -37,6 +37,8 @@
         <div class = "row">
                 <br/>
                     <%= link_to "Delete", property_path(@property), :method => :delete %>
+                    <a class = "waves-effect waves-light btn" href = "<%=tenants_path%>/<%=params[:id]%>/pay" id = "pay">Pay rent</a></a>
+                    
                 </div>
         <div class = "row">
             <table class = "highlight">
@@ -44,6 +46,7 @@
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
+                    <th>Rent Payed?</th>
                 </thead>
                 <tbody>
                     <%if @tenants 
@@ -52,6 +55,7 @@
                             <td><%= t.name%> </td>
                             <td><%= t.phone_number%> </td>
                             <td><%= t.email%> </td>
+                            <td><%= t.rent%></td>
                         </tr>
                     <% end 
                     end %>
