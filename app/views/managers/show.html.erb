@@ -56,6 +56,33 @@
                 </div>
         <% end %>
         </div>
+        <div class = "row">
+            <div class = "col s6">
+                <div class = "card teal lighten-2">
+                    <span class = "card-title white-text" style = "padding:5px;">Monthly Rent</span>
+                    <div class = "card-content black-text white">
+                        <table class = "highlight"  >
+                            <thead>
+                                <th>Property</th>
+                                <th>Address</th>
+                                <th>Monthly Rent Payed?</th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                <%@properties.each do |t| %>
+                                    <tr>
+                                        <td>  <a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+                                        <td><%= t.address %></td>
+                                        <td><%= t.monthly_rent %></td>
+                                        <td><i class="material-icons">Send reminder</i></a></li></td>
+                                    </tr>
+                                <%end%>
+                             </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
 </html>

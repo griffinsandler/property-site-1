@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html>
-     <%= render '/layouts/tenant_nav_bar' %>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
     <body>
-        <br/>
-        <div class = "row">
-            <div class = "col s6">
-                <div class = "card orange darken-4">
-                    <span class = "card-title white-text" style = "padding:5px;">My Info</span>
-                    <div class = "card-content black-text white">
-                        <p>
-                            <ul>
-                                <li><b>Name:</b> <%= @tenant.name%></li>
-                                <li><b>Email:</b> <%= @tenant.email%></li>
-                                <li><b>Phone Number:</b> <%= @tenant.phone_number%></li>
-                                <%if @property %>
-                                    <li><b>My Property:</b> <a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= @property.id %>"><%= @property.name %> </a> </td>
-                                <% else %>
-                                    <li><b>My Property:</b> None</li>
-                                <% end %>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class = "card-action">
-                        <a href = "/tenants/edit">Edit</a>
-                    </div>
-                </div>
+        <nav>
+            <div class="nav-wrapper orange darken-4">
+                <a href="/home" class="brand-logo">Home</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Buttons!</a></li>
+                    <li><a href="#">Buttons!</a></li>
+                    <li><a href="#">Buttons!</a></li>
+                </ul>
             </div>
-        <% if @roommates %>
-            <div class = "col s6">
-            <div class = "card orange darken-4">
-                <span class = "card-title white-text" style = "padding:5px;">My Housemates</span>
-                <div class = "card-content black-text white">
-                    <table class = "highlight"  >
-                        <thead>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone Number</th>
-                        </thead>
-                        <tbody>
-                            <% @roommates.each do |t| %>
-                                <tr>
-                                    <td><%= t.name %></td>
-                                    <td><%= t.email %></td>
-                                    <td><%= t.phone_number %></td>
-                                </tr>
-                            <% end %>
-                         </tbody>
-                    </table>
-                </div>
+        </nav>
+        <div class= "container">
+            <div class = "row">
+                <h1>Tenants</h1>
             </div>
         </div>
-        <% end %>
+        <div class = "row">
+            <table class = "highlight">
+                <thead>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>My Property</th>
+                </thead>
+                <tbody>
+                    <%if @tenant %>
+                        <tr>
+                            <td><%= @tenant.name%> </td>
+                            <td><%= @tenant.phone_number%></td>
+                            <td><%= @tenant.email %></td>
+                            <td><a href= '<%=properties_path%>/<%=@property.id%>'><%= @property.name %></a></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <div class = "row">
+                <br/>
+                    <%= link_to "Delete", tenants_path(@tenant), :method => :delete %>
+                </div>
+            </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
+    
 </html>

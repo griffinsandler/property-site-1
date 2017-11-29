@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126200031) do
+ActiveRecord::Schema.define(version: 20171127193147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,9 +37,6 @@ ActiveRecord::Schema.define(version: 20171126200031) do
     t.string   "email"
     t.text     "notes"
     t.string   "password"
-    t.string   "name"
-    t.string   "provider"
-    t.string   "uid"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -48,10 +45,10 @@ ActiveRecord::Schema.define(version: 20171126200031) do
     t.string   "name"
     t.string   "provider"
     t.string   "uid"
-    t.string   "email"
-    t.string   "password"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "email"
+    t.string   "password"
     t.string   "phone_number"
   end
 
@@ -63,23 +60,20 @@ ActiveRecord::Schema.define(version: 20171126200031) do
     t.integer  "curr_num_tenants"
     t.decimal  "monthly_rent"
     t.text     "notes"
-    t.integer  "manager_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "manager_id"
   end
 
-  add_index "properties", ["manager_id"], name: "index_properties_on_manager_id", using: :btree
-
   create_table "tenants", force: :cascade do |t|
-    t.string   "name"
-    t.string   "phone_number"
-    t.string   "email"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "password"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "name"
+    t.string   "email"
+    t.string   "password"
+    t.string   "phone_number"
     t.integer  "property_id"
+    t.string   "rent"
   end
 
 end
