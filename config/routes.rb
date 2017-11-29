@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get '/tenants' => 'tenants#index'
   get '/tenants/new' => 'tenants#new'
   post '/tenants/new' => 'tenants#create'
+  get '/tenants/edit' => 'tenants#edit'
+  patch '/tenants/edit' => 'tenants#update'
   
   # Properties routes #
   get '/properties' => 'properties#index'

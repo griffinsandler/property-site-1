@@ -16857,7 +16857,6 @@ OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
-<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
@@ -16960,7 +16959,6 @@ OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OA
   omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
   omniauth (1.7.1) lib/omniauth/strategy.rb:236:in `callback_call'
   omniauth (1.7.1) lib/omniauth/strategy.rb:188:in `call!'
-=======
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
@@ -17134,7 +17132,6 @@ ActionView::MissingTemplate (Missing template tenants/index, application/index w
   actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
   actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
   omniauth (1.7.1) lib/omniauth/strategy.rb:190:in `call!'
->>>>>>> tenant-model
   omniauth (1.7.1) lib/omniauth/strategy.rb:168:in `call'
   omniauth (1.7.1) lib/omniauth/builder.rb:63:in `call'
   rack (1.6.8) lib/rack/etag.rb:24:in `call'
@@ -37191,6 +37188,7 @@ Processing by TenantsController#show as HTML
 Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 1.1ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 70.196.142.176 at 2017-11-27 01:08:13 +0000
   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 
@@ -37214,6 +37212,28 @@ Started GET "/stylesheets/buttons.scss.css" for 70.196.142.176 at 2017-11-27 01:
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/buttons.scss.css"):
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+=======
+Started GET "/" for 129.81.84.221 at 2017-11-29 02:09:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
@@ -37241,6 +37261,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/buttons.scs
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.6ms)
@@ -37281,6 +37302,139 @@ Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
 Started GET "/stylesheets/custom.scss.css" for 70.196.142.176 at 2017-11-27 01:10:47 +0000
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss.css"):
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinrequests (20171126011520)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.9ms)[0m  CREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests"  ("tenant_id")
+  [1m[36m (3.5ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests"  ("property_id")[0m
+  [1m[35m (5.1ms)[0m  CREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests"  ("manager_id")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20171126011520"]]
+  [1m[35m (3.8ms)[0m  COMMIT
+Migrating to AddPhoneNumberToManagers (20171126200031)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "managers" ADD "phone_number" character varying
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20171126200031"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'joinrequests'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'landlords'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'managers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'properties'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tenants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 129.81.84.221 at 2017-11-29 02:10:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:10:40 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 317ms (Views: 307.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:10:43 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.81.84.221 at 2017-11-29 02:12:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:12:21 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 279ms (Views: 270.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:12:23 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 49ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 129.81.84.221 at 2017-11-29 02:12:30 +0000
+
+
+Started GET "/auth/facebook" for 129.81.84.221 at 2017-11-29 02:12:30 +0000
+
+
+Started POST "/signin/local" for 129.81.84.221 at 2017-11-29 02:13:19 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mWYEPGq9XD3VlngDrKLOlSCZ8PDlC/kcX43FaWsW/ZMfNQl+BGg6z1N3XvLnPlyGdLRowP0mnlfykQWDJlm4WQ==", "session"=>{"email"=>"kanye@west.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (1.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "kanye@west.gov"], ["password", "1234"]]
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "kanye@west.gov"], ["password", "1234"]]
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 116ms (Views: 35.1ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/new/manager" for 129.81.84.221 at 2017-11-29 02:13:27 +0000
+
+ActionController::RoutingError (No route matches [POST] "/new/manager"):
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
@@ -37309,6 +37463,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
@@ -37325,6 +37480,18 @@ Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.0ms)
 Started GET "/stylesheets/custom.scss.css" for 70.196.142.176 at 2017-11-27 01:11:28 +0000
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss.css"):
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (54.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.4ms)
+
+
+Started GET "/signin/local" for 129.81.84.221 at 2017-11-29 02:13:30 +0000
+
+ActionController::RoutingError (No route matches [GET] "/signin/local"):
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
@@ -37353,6 +37520,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
@@ -37366,6 +37534,27 @@ Started GET "/assets/custom.self-20569e1c7e3a1cbf8aa060c1b47e3bc453966ab56662908
 Started GET "/stylesheets/custom.scss.css" for 70.196.142.176 at 2017-11-27 01:11:29 +0000
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss.css"):
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (155.1ms)
+
+
+Started POST "/signin/local" for 129.81.84.221 at 2017-11-29 02:13:35 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mWYEPGq9XD3VlngDrKLOlSCZ8PDlC/kcX43FaWsW/ZMfNQl+BGg6z1N3XvLnPlyGdLRowP0mnlfykQWDJlm4WQ==", "session"=>{"email"=>"kanye@west.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "kanye@west.gov"], ["password", "1234"]]
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "kanye@west.gov"], ["password", "1234"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/new/tenant" for 129.81.84.221 at 2017-11-29 02:13:50 +0000
+
+ActionController::RoutingError (No route matches [POST] "/new/tenant"):
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
@@ -37394,6 +37583,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
@@ -37559,6 +37749,65 @@ Completed 200 OK in 73ms (Views: 45.6ms | ActiveRecord: 4.1ms)
 Started GET "/tenants/edit" for 174.70.101.221 at 2017-11-27 02:40:37 +0000
 
 ActionController::RoutingError (No route matches [GET] "/tenants/edit"):
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (159.2ms)
+
+
+Started GET "/" for 129.81.84.221 at 2017-11-29 02:17:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:17:00 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 293ms (Views: 283.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:17:02 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.84.221 at 2017-11-29 02:17:05 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 57ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 129.81.84.221 at 2017-11-29 02:17:27 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gHP1tMrVwQbbLK0mRpUwStc1rmCtTLmbm92p6UeHiPUGIPj2pACn9F3Ni9cNCaJZgxg2ULVh3tA2wWkDCsjNPw==", "tenant"=>{"name"=>"Joe Biden", "email"=>"joe@biden.gov", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Joe Biden"], ["email", "joe@biden.gov"], ["password", "1234"], ["created_at", "2017-11-29 02:17:27.337220"], ["updated_at", "2017-11-29 02:17:27.337220"]]
+  [1m[35m (6.5ms)[0m  COMMIT
+  Rendered sessions/search.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 75ms (Views: 25.9ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/search" for 129.81.84.221 at 2017-11-29 02:17:41 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a4gQYd/soPZj+QGEtBGFBGELuUKyH1BRd/Nky6WPOaLt2x0jsTnGBOUYJ3X/jRcXNSYhcqoyNxra76Qh6MB8aA==", "query"=>{"address"=>"620 Broadway "}, "commit"=>"Search"}
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1[0m  [["address", "620 Broadway "]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.4ms)
+
+NoMethodError (undefined method `manager_id' for nil:NilClass):
+  app/controllers/sessions_controller.rb:63:in `search'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/create/tenant/local" for 129.81.84.221 at 2017-11-29 02:17:46 +0000
+
+ActionController::RoutingError (No route matches [GET] "/create/tenant/local"):
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
@@ -37587,6 +37836,67 @@ ActionController::RoutingError (No route matches [GET] "/tenants/edit"):
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.6ms)
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:17:52 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:17:54 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.84.221 at 2017-11-29 02:17:56 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HQVLoiu4WeKbvCFBeuKOwyhKQWuPB4KoNykx1hIkziSbVkbgRW0/EB1dB7AxfhzQfGfZW5cq5eOaNfE8X2uL7g==", "session"=>{"email"=>"kanye@west.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.3ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "kanye@west.gov"], ["password", "1234"]]
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "kanye@west.gov"], ["password", "1234"]]
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 29.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/signin/local" for 129.81.84.221 at 2017-11-29 02:18:05 +0000
+
+ActionController::RoutingError (No route matches [GET] "/signin/local"):
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
@@ -37694,6 +38004,50 @@ NoMethodError (undefined method `manager_id' for nil:NilClass):
 Started GET "/create/tenant/local" for 174.70.101.221 at 2017-11-27 06:27:08 +0000
 
 ActionController::RoutingError (No route matches [GET] "/create/tenant/local"):
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.3ms)
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:18:07 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.84.221 at 2017-11-29 02:18:08 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.84.221 at 2017-11-29 02:18:11 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:18:40 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.84.221 at 2017-11-29 02:18:41 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PjqwrezFz/8A9VFPSxu30LpfBTCZf9amfuYVnje6kda4ab3vghCpDYYUd74AhyXD7nKdAIFSse3T+tV0evXUHA==", "session"=>{"email"=>"kanye@west.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "kanye@west.gov"], ["password", "1234"]]
+  [1m[36mTenant Load (0.2ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "kanye@west.gov"], ["password", "1234"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/new/tenant" for 129.81.84.221 at 2017-11-29 02:18:47 +0000
+
+ActionController::RoutingError (No route matches [POST] "/new/tenant"):
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
@@ -37722,6 +38076,84 @@ ActionController::RoutingError (No route matches [GET] "/create/tenant/local"):
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/edit/tenant" for 129.81.84.221 at 2017-11-29 02:18:56 +0000
+
+ActionController::RoutingError (No route matches [GET] "/edit/tenant"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.7ms)
+
+
+Started GET "/signin/local" for 129.81.84.221 at 2017-11-29 02:18:59 +0000
+
+ActionController::RoutingError (No route matches [GET] "/signin/local"):
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
@@ -38595,6 +39027,43 @@ Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 1.5ms)
 Started GET "/tenants/edit" for 129.81.217.234 at 2017-11-28 20:06:34 +0000
 
 ActionController::RoutingError (No route matches [GET] "/tenants/edit"):
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/" for 129.81.84.221 at 2017-11-29 02:20:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:20:41 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 268ms (Views: 259.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:20:43 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.84.221 at 2017-11-29 02:20:44 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WOyDIs6gaFt/JKDbXfNR6/P/XT3DZ8Sj+8enB4Tx0Tzev45goHUOqfnFhioWb8P4p9LFDdtKo+hW22ftyb6U9g==", "session"=>{"email"=>"kanye@west.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "kanye@west.gov"], ["password", "1234"]]
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "kanye@west.gov"], ["password", "1234"]]
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 177ms (Views: 133.5ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/new/manager" for 129.81.84.221 at 2017-11-29 02:20:45 +0000
+
+ActionController::RoutingError (No route matches [POST] "/new/manager"):
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
@@ -38623,6 +39092,7 @@ ActionController::RoutingError (No route matches [GET] "/tenants/edit"):
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.3ms)
@@ -38674,6 +39144,19 @@ PG::ConnectionBad (could not connect to server: Connection refused
   actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
   actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.1ms)
+
+
+Started GET "/signin/local" for 129.81.84.221 at 2017-11-29 02:20:48 +0000
+
+ActionController::RoutingError (No route matches [GET] "/signin/local"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
@@ -38701,6 +39184,7 @@ PG::ConnectionBad (could not connect to server: Connection refused
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
@@ -39200,3 +39684,423 @@ Processing by TenantsController#show as HTML
   [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "tenants" WHERE (property_id = 1 AND id != 1)
   Rendered tenants/show.html.erb within layouts/application (10.0ms)
 Completed 200 OK in 96ms (Views: 42.9ms | ActiveRecord: 4.6ms)
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:20:53 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.84.221 at 2017-11-29 02:20:54 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/manager/local" for 129.81.84.221 at 2017-11-29 02:21:08 +0000
+Processing by SessionsController#createManager as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BQ6HmY+uKtNoFLt46Kchw6lBsq/+tDRd29S2s6eFCKaDXYrb4XtMIe71nYmjO7PQ/Wwqn+aZUxZ2yHZZ6spNbA==", "manager"=>{"name"=>"Barack Obama", "email"=>"barack@obama.gov", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Barack Obama"], ["email", "barack@obama.gov"], ["password", "1234"], ["created_at", "2017-11-29 02:21:08.125468"], ["updated_at", "2017-11-29 02:21:08.125468"]]
+  [1m[35m (2.6ms)[0m  COMMIT
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 17ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/managers/show" for 129.81.84.221 at 2017-11-29 02:21:08 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.4ms)
+  Rendered managers/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/properties" for 129.81.84.221 at 2017-11-29 02:21:17 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  [1m[35mProperty Load (0.4ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/properties/new" for 129.81.84.221 at 2017-11-29 02:21:18 +0000
+Processing by PropertiesController#new as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered properties/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 33.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/properties/new" for 129.81.84.221 at 2017-11-29 02:21:45 +0000
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"name"=>"White House", "address"=>"1600 Pennsylvania Ave", "square_feet"=>"4000000", "max_num_tenants"=>"2", "curr_num_tenants"=>"2", "monthly_rent"=>"1", "notes"=>""}, "commit"=>"Create"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "White House"], ["address", "1600 Pennsylvania Ave"], ["square_feet", "4000000.0"], ["max_num_tenants", 2], ["curr_num_tenants", 2], ["monthly_rent", "1.0"], ["notes", ""], ["manager_id", 1], ["created_at", "2017-11-29 02:21:45.426205"], ["updated_at", "2017-11-29 02:21:45.426205"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-site-redston96.c9users.io/properties
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/properties" for 129.81.84.221 at 2017-11-29 02:21:45 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.3ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  [1m[36mProperty Load (67.6ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1[0m
+  Rendered properties/index.html.erb within layouts/application (69.9ms)
+Completed 200 OK in 93ms (Views: 24.1ms | ActiveRecord: 68.0ms)
+
+
+Started GET "/properties/1" for 129.81.84.221 at 2017-11-29 02:21:47 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.4ms)
+  [1m[36mTenant Load (0.2ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = $1[0m  [["property_id", 1]]
+  Rendered properties/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:21:50 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:21:54 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.84.221 at 2017-11-29 02:22:01 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mTcdY5dhAs8pSO/zGu+18IgwHFs3Nr1MMwvWLbDzkYcfZBAh+bRkPa+pyQJRcyfj3B2Eay8b2geeFxbH/bzUTQ==", "session"=>{"email"=>"joe@biden.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "joe@biden.gov"], ["password", "1234"]]
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "joe@biden.gov"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/tenants/show
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/tenants/show" for 129.81.84.221 at 2017-11-29 02:22:01 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered tenants/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 73ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tenants/show" for 129.81.84.221 at 2017-11-29 02:22:07 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered tenants/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tenants/edit" for 129.81.84.221 at 2017-11-29 02:22:10 +0000
+
+ActionController::RoutingError (No route matches [GET] "/tenants/edit"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.6ms)
+
+
+Started GET "/tenants/edit" for 129.81.84.221 at 2017-11-29 02:22:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TenantsController#edit as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.5ms)
+  Rendered tenants/edit.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9:                 </h3>
+    10:             </div>
+    11:             <div class = "row">
+    12:                 <%= form_for @tenant, url: {action: "edit"} do |f| %>
+    13:                     <div class = "row">
+    14:                         <div class = "col s4">
+    15:                             <label for="tenant_name">Name</label>
+  app/views/tenants/edit.html.erb:12:in `_app_views_tenants_edit_html_erb__3675376493166945368_37787000'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.5ms)
+
+
+Started GET "/tenants/edit" for 129.81.84.221 at 2017-11-29 02:23:50 +0000
+Processing by TenantsController#edit as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered tenants/edit.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9:                 </h3>
+    10:             </div>
+    11:             <div class = "row">
+    12:                 <%= form_for @tenant, url: {action: "edit"} do |f| %>
+    13:                     <div class = "row">
+    14:                         <div class = "col s4">
+    15:                             <label for="tenant_name">Name</label>
+  app/views/tenants/edit.html.erb:12:in `_app_views_tenants_edit_html_erb__3675376493166945368_37787000'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.0ms)
+
+
+Started GET "/" for 129.81.84.221 at 2017-11-29 02:24:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:24:12 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 310ms (Views: 300.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.84.221 at 2017-11-29 02:24:16 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 60ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 129.81.84.221 at 2017-11-29 02:24:25 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y612To3rbM6nN5nzHLJT12Y6+LpyyaMH2lpmH+bRqM/l/nsM4z4KPCHWvwJXLsHEMhdgimrkxEx3Rqb1q57tBQ==", "tenant"=>{"name"=>"Joe Biden", "email"=>"joe@biden.gov", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Joe Biden"], ["email", "joe@biden.gov"], ["password", "1234"], ["created_at", "2017-11-29 02:24:25.071562"], ["updated_at", "2017-11-29 02:24:25.071562"]]
+  [1m[35m (95.1ms)[0m  COMMIT
+  Rendered sessions/search.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 193ms (Views: 48.5ms | ActiveRecord: 98.9ms)
+
+
+Started POST "/search" for 129.81.84.221 at 2017-11-29 02:24:36 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7uyjKqG33U417J4lp5yqQyjJ4CbZu9z401q8Q1wTln5ov65oz2K7vLMNuNTsADhQfOR4FsGWu7N+RnypEVzTtA==", "query"=>{"address"=>"1600 Pennsylvania Ave"}, "commit"=>"Search"}
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1[0m  [["address", "1600 Pennsylvania Ave"]]
+  [1m[35mManager Load (0.7ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered sessions/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 121ms (Views: 20.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/join/1/1" for 129.81.84.221 at 2017-11-29 02:24:37 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"1", "pid"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["resolved", "f"], ["manager_id", 1], ["property_id", 1], ["tenant_id", 2], ["created_at", "2017-11-29 02:24:37.796513"], ["updated_at", "2017-11-29 02:24:37.796513"]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-site-redston96.c9users.io/tenants/show
+Completed 302 Found in 16ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/tenants/show" for 129.81.84.221 at 2017-11-29 02:24:37 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.5ms)
+  Rendered tenants/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:24:48 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:24:50 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.84.221 at 2017-11-29 02:24:57 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K2IxmLDQkO1+5c7CAZbAXUqnNPkTUf8R3VLndxYzeLqtMTza3gX2H/gE6DNKClJOHoqsyQt8mFpwTiedW3w9cA==", "session"=>{"email"=>"barack@obama.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "barack@obama.gov"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/managers/show" for 129.81.84.221 at 2017-11-29 02:24:57 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1[0m
+  [1m[35mJoinrequest Load (0.3ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.4ms)
+  Rendered managers/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 99ms (Views: 23.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/managers/edit" for 129.81.84.221 at 2017-11-29 02:25:51 +0000
+Processing by ManagersController#edit as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered managers/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/managers/edit" for 129.81.84.221 at 2017-11-29 02:26:05 +0000
+Processing by ManagersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gycCFRHL/SGZZev5+N/juTFPvcd5Yz/HCRJXCFm/7DIFdA9Xfx6b0x+EzQizQ3GqZWIl92FOWIykDpfiFPCp+A==", "manager"=>{"name"=>"Barack Obama", "email"=>"barack@obama.gov", "phone_number"=>"44444444444"}, "commit"=>"Update"}
+  [1m[35mManager Load (0.3ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "managers" SET "phone_number" = $1, "updated_at" = $2 WHERE "managers"."id" = $3  [["phone_number", "44444444444"], ["updated_at", "2017-11-29 02:26:05.979572"], ["id", 1]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/managers/show" for 129.81.84.221 at 2017-11-29 02:26:06 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1[0m
+  [1m[35mJoinrequest Load (0.3ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.2ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered managers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/request/accept/1" for 129.81.84.221 at 2017-11-29 02:26:09 +0000
+Processing by ManagersController#respond as HTML
+  Parameters: {"op"=>"accept", "id"=>"1"}
+  [1m[36mJoinrequest Load (0.3ms)[0m  [1mSELECT  "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tenants" SET "property_id" = $1, "updated_at" = $2 WHERE "tenants"."id" = $3  [["property_id", 1], ["updated_at", "2017-11-29 02:26:09.943781"], ["id", 2]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "joinrequests" WHERE "joinrequests"."id" = $1  [["id", 1]]
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 9ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/managers/show" for 129.81.84.221 at 2017-11-29 02:26:10 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered managers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/properties" for 129.81.84.221 at 2017-11-29 02:26:12 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  [1m[35mProperty Load (0.5ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/properties/1" for 129.81.84.221 at 2017-11-29 02:26:14 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  [1m[35mTenant Load (0.2ms)[0m  SELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = $1  [["property_id", 1]]
+  Rendered properties/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 129.81.84.221 at 2017-11-29 02:26:21 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-redston96.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.84.221 at 2017-11-29 02:26:21 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.84.221 at 2017-11-29 02:26:23 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.84.221 at 2017-11-29 02:26:28 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sJ5fS76PV75OF0gNmko9/c0yU4D3tOnu29vigZ7C5Y82zVIJ0FoxTMj2bvzR1q/umR/LsO+ZjqV2xyJr042gRQ==", "session"=>{"email"=>"joe@biden.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "joe@biden.gov"], ["password", "1234"]]
+  [1m[35mTenant Load (0.2ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1  [["email", "joe@biden.gov"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/tenants/show
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/tenants/show" for 129.81.84.221 at 2017-11-29 02:26:28 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.1ms)
+  Rendered tenants/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tenants/edit" for 129.81.84.221 at 2017-11-29 02:26:33 +0000
+Processing by TenantsController#edit as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered tenants/edit.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9:                 </h3>
+    10:             </div>
+    11:             <div class = "row">
+    12:                 <%= form_for @tenant, url: {action: "edit"} do |f| %>
+    13:                     <div class = "row">
+    14:                         <div class = "col s4">
+    15:                             <label for="tenant_name">Name</label>
+  app/views/tenants/edit.html.erb:12:in `_app_views_tenants_edit_html_erb___930710168069048214_70060568758500'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.6ms)
+>>>>>>> db7f8181ba6d4a462dc5315628711f28f9dc7aad

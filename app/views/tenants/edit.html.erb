@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <%= render '/layouts/manager_nav_bar' %>
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <h3>
+                   Edit Tenant Information
+                </h3>
+            </div>
+            <div class = "row">
+                <%= form_for @tenant, url: {action: "edit"} do |f| %>
+                    <div class = "row">
+                        <div class = "col s4">
+                            <label for="tenant_name">Name</label>
+                            <%=  f.text_field :name, :class => "input-field "%>
+                        </div>
+                        <div class = "col s4">
+                            <label for="tenant_email">Email</label>
+                            <%=  f.text_field :email, :class => "input-field" %>
+                        </div>
+                        <div class = "col s4"
+                            <label for="tenant_phone_number">Phone Number</label>
+                            <%=  f.text_field :phone_number, :class => "input-field" %>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col s3">
+                            <%= f.submit "Update", class: "btn btn-primary" %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>
