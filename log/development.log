@@ -37189,3 +37189,2014 @@ Processing by TenantsController#show as HTML
   [1m[36mTenant Load (0.5ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
   Rendered tenants/show.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 70.196.142.176 at 2017-11-27 01:08:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 70.196.142.176 at 2017-11-27 01:08:14 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 605ms (Views: 586.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/buttons.self-37e3164496726cac309b3619d886f51eb18643248d65a2de921eede14163b4a2.css?body=1" for 70.196.142.176 at 2017-11-27 01:08:15 +0000
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:08:32 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (76.9ms)
+Completed 200 OK in 151ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/buttons.scss.css" for 70.196.142.176 at 2017-11-27 01:08:32 +0000
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/buttons.scss.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.3ms)
+
+
+Started GET "/" for 70.196.142.176 at 2017-11-27 01:08:56 +0000
+
+
+Started GET "/home" for 70.196.142.176 at 2017-11-27 01:08:56 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 70.196.142.176 at 2017-11-27 01:09:24 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 70.196.142.176 at 2017-11-27 01:10:45 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-26d8f33edd7193168ab50dcca1834600644ebb7a3c18f67689a01787824759ca.css?body=1" for 70.196.142.176 at 2017-11-27 01:10:45 +0000
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:10:47 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/custom.scss.css" for 70.196.142.176 at 2017-11-27 01:10:47 +0000
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.8ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:11:28 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/custom.scss.css" for 70.196.142.176 at 2017-11-27 01:11:28 +0000
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.4ms)
+
+
+Started GET "/assets/custom.self-20569e1c7e3a1cbf8aa060c1b47e3bc453966ab5666290851951381f2e06762d.css?body=1" for 70.196.142.176 at 2017-11-27 01:11:28 +0000
+
+
+Started GET "/stylesheets/custom.scss.css" for 70.196.142.176 at 2017-11-27 01:11:29 +0000
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/custom.scss.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:14:21 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:18:19 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:20:30 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:20:43 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:21:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 414ms (Views: 403.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.142.176 at 2017-11-27 01:21:39 +0000
+
+
+Started GET "/home" for 70.196.142.176 at 2017-11-27 01:21:40 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:21:41 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 82ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:23:03 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.196.142.176 at 2017-11-27 01:23:11 +0000
+
+
+Started GET "/home" for 70.196.142.176 at 2017-11-27 01:23:11 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:23:14 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:23:27 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:29:51 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 70.196.142.176 at 2017-11-27 01:29:54 +0000
+
+
+Started GET "/auth/facebook" for 70.196.142.176 at 2017-11-27 01:29:55 +0000
+
+
+Started GET "/auth/facebook" for 70.196.142.176 at 2017-11-27 01:29:59 +0000
+
+
+Started GET "/auth/facebook" for 70.196.142.176 at 2017-11-27 01:29:59 +0000
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:30:36 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 70.196.142.176 at 2017-11-27 01:31:07 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 70.196.142.176 at 2017-11-27 01:31:08 +0000
+
+
+Started GET "/auth/facebook" for 70.196.142.176 at 2017-11-27 01:31:09 +0000
+
+
+Started GET "/home" for 70.196.142.176 at 2017-11-27 01:31:21 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 70.196.142.176 at 2017-11-27 01:31:23 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-27 02:40:23 +0000
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-27 02:40:24 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-27 02:40:25 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 174.70.101.221 at 2017-11-27 02:40:28 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cHwJeQodoNWgNIYl2uGWRctZk45UvaNkugl/qtEBZyXwV8MpkCsrJukvMWyjTfebL0mcR2C1N5G+r4cR3Q8rIQ==", "session"=>{"email"=>"kanye@west.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.9ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "kanye@west.gov"], ["password", "1234"]]
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "kanye@west.gov"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 157ms (ActiveRecord: 66.2ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-27 02:40:28 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.8ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.9ms)
+  [1m[35mTenant Load (0.7ms)[0m  SELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  Rendered tenants/show.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 73ms (Views: 45.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/tenants/edit" for 174.70.101.221 at 2017-11-27 02:40:37 +0000
+
+ActionController::RoutingError (No route matches [GET] "/tenants/edit"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.8ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-27 02:40:42 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.7ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
+  Rendered tenants/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-27 02:40:52 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[35mTenant Load (0.5ms)[0m  SELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  Rendered tenants/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 174.70.101.221 at 2017-11-27 02:41:02 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-27 02:41:02 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-27 02:41:03 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 174.70.101.221 at 2017-11-27 02:41:06 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ZCmwq/saH1xfUfWQHj+8hRqqPqeO54A+92CGu4HjLx9u2ySNdrjjjhm8J851J8s8HqnM6ozCvX/e3qh4gnAuA==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.6ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-27 02:41:06 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25[0m
+  Rendered layouts/_manager_nav_bar.html.erb (0.9ms)
+  Rendered managers/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 52ms (Views: 35.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 174.70.101.221 at 2017-11-27 06:26:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-27 06:26:28 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 491ms (Views: 467.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 174.70.101.221 at 2017-11-27 06:26:32 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 174.70.101.221 at 2017-11-27 06:26:52 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u846CRY0MNYyq+WaI02nEwrKhsKtFnPhLnfRLrmsUYs75fBZjAK7JXuwUtNa4cbN7tqJC5ke5xQq0SmVtaIdjw==", "tenant"=>{"name"=>"New Tenant", "email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "New Tenant"], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-27 06:26:52.650227"], ["updated_at", "2017-11-27 06:26:52.650227"]]
+  [1m[35m (4.7ms)[0m  COMMIT
+  Rendered sessions/search.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 127ms (Views: 61.4ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/search" for 174.70.101.221 at 2017-11-27 06:26:57 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SufHnuG77nVUcCRNAYVibIweFdmgigxRBeRrRug2MGrKzA3Oe41lhh1rkwR4KQOyaA4aEJSCmKQBQpP95Dh8bg==", "query"=>{"address"=>"2224 Calhoun Street"}, "commit"=>"Search"}
+  [1m[36mProperty Load (0.6ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1[0m  [["address", "2224 Calhoun Street"]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.7ms)
+
+NoMethodError (undefined method `manager_id' for nil:NilClass):
+  app/controllers/sessions_controller.rb:63:in `search'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.7ms)
+
+
+Started GET "/create/tenant/local" for 174.70.101.221 at 2017-11-27 06:27:08 +0000
+
+ActionController::RoutingError (No route matches [GET] "/create/tenant/local"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.4ms)
+
+
+Started POST "/create/tenant/local" for 174.70.101.221 at 2017-11-27 06:27:14 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xcsgNRT/XwEdja2FbylOR4TEiMG9WOon6TAJni964ydF4OpljsnU8lSWGswWhS+ZYNSHCIlQftLtlvElI3SvIw==", "tenant"=>{"name"=>"New Tenant", "email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "New Tenant"], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-27 06:27:14.492906"], ["updated_at", "2017-11-27 06:27:14.492906"]]
+  [1m[35m (3.4ms)[0m  COMMIT
+  Rendered sessions/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 20.5ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/search" for 174.70.101.221 at 2017-11-27 06:27:17 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4jWqLJ1OlM0lKQmnLfi36fwo3GpNI3Y/EQwlh+ubtWhiHmB8B3gfPmwyvu5UVNY3GDjTo3kr4soVqt0855X5bA==", "query"=>{"address"=>"123 Main Street, New Orleans LA 70118"}, "commit"=>"Search"}
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1[0m  [["address", "123 Main Street, New Orleans LA 70118"]]
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered sessions/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 20.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/join/25/1" for 174.70.101.221 at 2017-11-27 06:27:19 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"25", "pid"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["resolved", "f"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 4], ["created_at", "2017-11-27 06:27:19.983069"], ["updated_at", "2017-11-27 06:27:19.983069"]]
+  [1m[36m (10.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 30ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/tenants/show" for 174.70.101.221 at 2017-11-27 06:27:20 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.6ms)
+  Rendered tenants/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 174.70.101.221 at 2017-11-27 06:27:27 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 174.70.101.221 at 2017-11-27 06:27:27 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 174.70.101.221 at 2017-11-27 06:27:28 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 174.70.101.221 at 2017-11-27 06:27:29 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jbrjiq/GgmhLI9qaVwj+FYs/R4DRgcOR4KT3hl3s72ENkSnaNfAJmwI4bdMupJ/Lby9ISeWJV2TkAg89UeKjZQ==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/managers/show" for 174.70.101.221 at 2017-11-27 06:27:30 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.7ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25[0m
+  [1m[35mJoinrequest Load (0.8ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.9ms)
+  Rendered managers/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 46ms (Views: 34.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 129.81.171.201 at 2017-11-28 18:55:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.171.201 at 2017-11-28 18:55:47 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 490ms (Views: 476.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.171.201 at 2017-11-28 18:55:57 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.171.201 at 2017-11-28 18:55:58 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khp1zkSPD3LyviInYeK+MNRRY+Cs/e78wMbTzWhOxaMSMb+e3rmEgbullW4YTt/uMEFsKZj1egnEYCt2ZECJpw==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (65.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 181ms (ActiveRecord: 94.8ms)
+
+
+Started GET "/managers/show" for 129.81.171.201 at 2017-11-28 18:55:59 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (6.2ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  [1m[36mJoinrequest Load (0.5ms)[0m  [1mSELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25[0m
+  [1m[35mProperty Load (14.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTenant Load (16.1ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.8ms)
+  Rendered managers/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 190ms (Views: 36.1ms | ActiveRecord: 43.6ms)
+  [1m[36m (5008.9ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (113.1ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1383.0ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (26.2ms)[0m  DROP TABLE "joinrequests" CASCADE
+  [1m[36m (32.6ms)[0m  [1mCREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (8.1ms)[0m  CREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")
+  [1m[36m (8.4ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")[0m
+  [1m[35m (10.7ms)[0m  CREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")
+  [1m[36m (5.4ms)[0m  [1mDROP TABLE "managers" CASCADE[0m
+  [1m[35m (18.4ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (4.8ms)[0m  [1mDROP TABLE "properties" CASCADE[0m
+  [1m[35m (22.3ms)[0m  CREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (11.2ms)[0m  [1mCREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")[0m
+  [1m[35m (6.4ms)[0m  DROP TABLE "tenants" CASCADE
+  [1m[36m (16.5ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "property_id" integer, "true_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.7ms)[0m  CREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (9.8ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")[0m
+  [1m[35m (10.9ms)[0m  CREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")
+  [1m[36m (11.7ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")[0m
+  [1m[35m (19.4ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (17.9ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")
+  [1m[36m (15.4ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "property_id" integer, "true_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (11.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (3.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126200031')[0m
+  [1m[35m (3.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171101202325')
+  [1m[36m (4.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "managers" ("name", "id", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Charlie Powicki"], ["id", 25], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-28 18:56:34.050549"], ["updated_at", "2017-11-28 18:56:34.050549"]]
+  [1m[35m (4.2ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["manager_id", 25], ["id", 1], ["created_at", "2017-11-28 18:56:34.078896"], ["updated_at", "2017-11-28 18:56:34.078896"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Kanye West"], ["phone_number", "0594837261"], ["email", "kanye@west.gov"], ["property_id", 1], ["password", "1234"], ["created_at", "2017-11-28 18:56:34.098013"], ["updated_at", "2017-11-28 18:56:34.098013"]]
+  [1m[35m (3.9ms)[0m  COMMIT
+
+
+Started GET "/request/deny/2" for 129.81.171.201 at 2017-11-28 18:59:43 +0000
+Processing by ManagersController#respond as HTML
+  Parameters: {"op"=>"deny", "id"=>"2"}
+  [1m[35mJoinrequest Load (0.8ms)[0m  SELECT  "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Joinrequest with 'id'=2):
+  app/controllers/managers_controller.rb:32:in `respond'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.9ms)
+
+
+Started GET "/managers/show" for 129.81.171.201 at 2017-11-28 18:59:48 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.8ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 129.81.171.201 at 2017-11-28 19:03:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.171.201 at 2017-11-28 19:03:49 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 604ms (Views: 445.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.171.201 at 2017-11-28 19:03:52 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (209.5ms)
+Completed 200 OK in 249ms (Views: 248.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/manager/local" for 129.81.171.201 at 2017-11-28 19:04:06 +0000
+Processing by SessionsController#createManager as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S7S3p8VrhaQyYWv00BCiDjXwn/Bta13wCe/lLHnEwEzLn333X10OV3t63L2pvMPQ0eCQOVljyQUNSR2XdcqMSA==", "manager"=>{"name"=>"Charlie Powicki", "email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Charlie Powicki"], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-28 19:04:06.689337"], ["updated_at", "2017-11-28 19:04:06.689337"]]
+  [1m[35m (12.2ms)[0m  COMMIT
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 73ms (ActiveRecord: 17.5ms)
+
+
+Started GET "/managers/show" for 129.81.171.201 at 2017-11-28 19:04:06 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.6ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.7ms)
+  Rendered managers/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 131ms (Views: 72.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/managers/edit" for 129.81.171.201 at 2017-11-28 19:04:09 +0000
+Processing by ManagersController#edit as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.3ms)
+  Rendered managers/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/managers/edit" for 129.81.171.201 at 2017-11-28 19:04:13 +0000
+Processing by ManagersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1aotHTnuoR7mf/0hYakykPIKfRB+zh0yE7KDHL4UwYNVgedNo9gq7a9kSmgYBVNOFhpy2UrGiccXFHunshqNhw==", "manager"=>{"name"=>"Charles Powicki", "email"=>"chpowicki@gmail.com", "phone_number"=>"7744874638"}, "commit"=>"Update"}
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "managers" SET "name" = $1, "email" = $2, "phone_number" = $3, "updated_at" = $4 WHERE "managers"."id" = $5  [["name", "Charles Powicki"], ["email", "chpowicki@gmail.com"], ["phone_number", "7744874638"], ["updated_at", "2017-11-28 19:04:13.843386"], ["id", 1]]
+  [1m[36m (4.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 12ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/managers/show" for 129.81.171.201 at 2017-11-28 19:04:13 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1[0m
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/properties" for 129.81.171.201 at 2017-11-28 19:04:17 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.3ms)
+  [1m[36mProperty Load (0.7ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1[0m
+  Rendered properties/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 43ms (Views: 34.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/properties/new" for 129.81.171.201 at 2017-11-28 19:04:19 +0000
+Processing by PropertiesController#new as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.3ms)
+  Rendered properties/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/properties/new" for 129.81.171.201 at 2017-11-28 19:04:35 +0000
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"name"=>"New Property", "address"=>"2224 Calhoun Street", "square_feet"=>"40000", "max_num_tenants"=>"4", "curr_num_tenants"=>"3", "monthly_rent"=>"9000", "notes"=>""}, "commit"=>"Create"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "New Property"], ["address", "2224 Calhoun Street"], ["square_feet", "40000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "9000.0"], ["notes", ""], ["manager_id", 1], ["created_at", "2017-11-28 19:04:35.695079"], ["updated_at", "2017-11-28 19:04:35.695079"]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.2ms)
+
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "properties_pkey"
+DETAIL:  Key (id)=(1) already exists.
+: INSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"):
+  app/controllers/properties_controller.rb:21:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/" for 129.81.217.234 at 2017-11-28 19:59:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 19:59:55 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 467ms (Views: 452.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.234 at 2017-11-28 20:00:07 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:00:08 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BKlJDZt2lKYOxx1APlHEQFlGVrqE/dxqQIfNEMxkgliEgoNdAUAfVUfcqglH/aWevVZZc7D1SJ9EITWrwGrOXA==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.9ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 100ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:00:09 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.6ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  Rendered layouts/_manager_nav_bar.html.erb (0.9ms)
+  Rendered managers/show.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 112ms (Views: 74.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/managers/edit" for 129.81.217.234 at 2017-11-28 20:00:14 +0000
+Processing by ManagersController#edit as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/managers/edit" for 129.81.217.234 at 2017-11-28 20:00:19 +0000
+Processing by ManagersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hdfACe81VfhMKMY/KCnSYoCp7N3XNJfDnqO7UO43aZkF/ApZdQPeCwUzcXZRhbO8ZLnjFOM8AzaaBUPr4jklnQ==", "manager"=>{"name"=>"Charles Powicki", "email"=>"chpowicki@gmail.com", "phone_number"=>"7744874638"}, "commit"=>"Update"}
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "managers" SET "name" = $1, "email" = $2, "phone_number" = $3, "updated_at" = $4 WHERE "managers"."id" = $5  [["name", "Charles Powicki"], ["email", "chpowicki@gmail.com"], ["phone_number", "7744874638"], ["updated_at", "2017-11-28 20:00:19.340607"], ["id", 25]]
+  [1m[36m (5.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 12ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:00:19 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.7ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25[0m
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/properties" for 129.81.217.234 at 2017-11-28 20:00:22 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.9ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.3ms)
+  [1m[36mProperty Load (0.9ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 25[0m
+  Rendered properties/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 50ms (Views: 38.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/logout" for 129.81.217.234 at 2017-11-28 20:00:25 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:00:25 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.234 at 2017-11-28 20:00:26 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 129.81.217.234 at 2017-11-28 20:00:38 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JjdXVYW5Xe/s45uFvouc/HhdUBL1DVutmaOQe1R+SoSmHJ0FH4/WHKX4LMzHJ/0inE1f28EFz1idBWjAWHAGgA==", "tenant"=>{"name"=>"Griffin Sandler", "email"=>"gsandler@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Griffin Sandler"], ["email", "gsandler@gmail.com"], ["password", "1234"], ["created_at", "2017-11-28 20:00:38.822077"], ["updated_at", "2017-11-28 20:00:38.822077"]]
+  [1m[35m (3.8ms)[0m  COMMIT
+  Rendered sessions/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 26.1ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/search" for 129.81.217.234 at 2017-11-28 20:00:47 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T2CNv9TMZlXn5dlSyNZDiQR/4bvuI0Fr1qrIO3lAOZHPS0fvTvrtpq7+bhuxeiJX4G/uctor1Z7SDDCAdU51lQ==", "query"=>{"address"=>"123 Main Street, New Orleans LA 70118"}, "commit"=>"Search"}
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1[0m  [["address", "123 Main Street, New Orleans LA 70118"]]
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered sessions/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/join/25/1" for 129.81.217.234 at 2017-11-28 20:00:49 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"25", "pid"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["resolved", "f"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 2], ["created_at", "2017-11-28 20:00:49.629475"], ["updated_at", "2017-11-28 20:00:49.629475"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 15ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/tenants/show" for 129.81.217.234 at 2017-11-28 20:00:49 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.5ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.7ms)
+  Rendered tenants/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 129.81.217.234 at 2017-11-28 20:00:52 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:00:52 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.234 at 2017-11-28 20:00:54 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:01:00 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1c1uwwygTlzr2pfruQStaDepwJFOtNQAUpGc50WETPxV5qSTlpbFr6LBIKLAqMy207nPWHq8QPVWN2RcSYoA+A==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:01:03 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5HWXmC9nWNmZGw316aFcHcuO4lLEatjdfWQWqd0cWAlkXl3ItVHTKtAAuryQDT3DL57tm/BiTCh5wu4S0RIUDQ==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:01:10 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5HWXmC9nWNmZGw316aFcHcuO4lLEatjdfWQWqd0cWAlkXl3ItVHTKtAAuryQDT3DL57tm/BiTCh5wu4S0RIUDQ==", "session"=>{"email"=>"chpowicki@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (2.2ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "chpowicki@gmail.com"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 4ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:01:10 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1[0m
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 25.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:01:31 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1[0m
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 129.81.217.234 at 2017-11-28 20:01:48 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:01:48 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.234 at 2017-11-28 20:01:52 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:01:59 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VmfMx8VicDBkk82AEOmLs80NcsRSIePizzGxS4cifZbWTAaXX1T7wy2IeslpReptKR19DWYpdxfLl0nwiywxkg==", "session"=>{"email"=>"chpowicki@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "chpowicki@gmail.com"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:02:00 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 48.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:02:47 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.234 at 2017-11-28 20:02:49 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 129.81.217.234 at 2017-11-28 20:03:07 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qyJtEr57sSncMUQQ/dgPCnNM0OpvOBSPF0SHn/9LwtArCadCJE062pUq81mEdG7Ul1zfI1swgHoT4n8k80WO1A==", "tenant"=>{"name"=>"New Tenant", "email"=>"ex@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "New Tenant"], ["email", "ex@gmail.com"], ["password", "1234"], ["created_at", "2017-11-28 20:03:07.740952"], ["updated_at", "2017-11-28 20:03:07.740952"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  Rendered sessions/search.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/search" for 129.81.217.234 at 2017-11-28 20:03:13 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Il2Et7ijzFV0oXa/FzlFD0KGhAqb72q0wmsV9UpbNc2idk7nIpVHpj26wfZulSTRppaLw6/n/kHGze1ORlV5yQ==", "query"=>{"address"=>"123 Main Street, New Orleans LA 70118"}, "commit"=>"Search"}
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1  [["address", "123 Main Street, New Orleans LA 70118"]]
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  Rendered sessions/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/join/25/1" for 129.81.217.234 at 2017-11-28 20:03:15 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"25", "pid"=>"1"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["resolved", "f"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 3], ["created_at", "2017-11-28 20:03:15.140467"], ["updated_at", "2017-11-28 20:03:15.140467"]]
+  [1m[35m (3.3ms)[0m  COMMIT
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 7ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/tenants/show" for 129.81.217.234 at 2017-11-28 20:03:15 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered tenants/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 129.81.217.234 at 2017-11-28 20:03:17 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:03:17 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.234 at 2017-11-28 20:03:18 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:03:21 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGXA2xRdtV5abN6of66c+L+xuDbG+jeIrOO2rrrLZRmITgqLjms+rRN3aeEGAv0mW6G3//Lyo32oRU4VtsUpHQ==", "session"=>{"email"=>"chpowicki@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "chpowicki@gmail.com"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:03:22 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:03:27 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ll5h6Ofo8+iJmehV5yFS8GYphAyEtKNSQovMIJi5U1IWdau4fd54G8CCXxyejTMugjmLxbC8N6dGLTSblLcfVg==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.9ms)
+  [1m[36m (120.3ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (113.5ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (638.9ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1252.4ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.0ms)[0m  CREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (8.9ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")[0m
+  [1m[35m (7.8ms)[0m  CREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")
+  [1m[36m (9.8ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")[0m
+  [1m[35m (24.7ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (11.3ms)[0m  CREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")
+  [1m[36m (17.6ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "property_id" integer, "true_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (9.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (9.4ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (1.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (3.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126200031')[0m
+  [1m[35m (3.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171101202325')
+  [1m[36m (2.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (3.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36mSQL (1.1ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.6ms)[0m  CREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (8.9ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")[0m
+  [1m[35m (13.6ms)[0m  CREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")
+  [1m[36m (8.0ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")[0m
+  [1m[35m (17.3ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (14.6ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (8.5ms)[0m  CREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")
+  [1m[36m (14.6ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "property_id" integer, "true_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (9.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (10.7ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (4.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126200031')[0m
+  [1m[35m (3.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171101202325')
+  [1m[36m (3.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (3.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "managers" ("name", "id", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Charlie Powicki"], ["id", 25], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-28 20:03:39.739807"], ["updated_at", "2017-11-28 20:03:39.739807"]]
+  [1m[35m (3.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["manager_id", 25], ["id", 1], ["created_at", "2017-11-28 20:03:39.770536"], ["updated_at", "2017-11-28 20:03:39.770536"]]
+  [1m[36m (3.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Kanye West"], ["phone_number", "0594837261"], ["email", "kanye@west.gov"], ["property_id", 1], ["password", "1234"], ["created_at", "2017-11-28 20:03:39.791559"], ["updated_at", "2017-11-28 20:03:39.791559"]]
+  [1m[35m (3.2ms)[0m  COMMIT
+
+
+Started GET "/" for 129.81.217.234 at 2017-11-28 20:04:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:04:37 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 444ms (Views: 420.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.234 at 2017-11-28 20:04:40 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 137ms (Views: 135.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:04:42 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E7UeY9KcbQ6qKpJCPs/EBVarK5W9J4Jiyq1mwKsl87KTntQzSKrm/eMxJQtHY6XbsrskXIkvFpfOC557pyu/tg==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (6.7ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 109ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:04:42 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (11.0ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  Rendered layouts/_manager_nav_bar.html.erb (1.5ms)
+  Rendered managers/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 105ms (Views: 69.7ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/properties" for 129.81.217.234 at 2017-11-28 20:04:44 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.7ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[35mProperty Load (0.5ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 25
+  Rendered properties/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 149ms (Views: 139.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:04:48 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/logout" for 129.81.217.234 at 2017-11-28 20:04:50 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:04:50 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.234 at 2017-11-28 20:04:51 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 129.81.217.234 at 2017-11-28 20:05:18 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UIEd80WFS1fX6lNIkaLiqh3z7Jb5ojaE3LzJZ1ST8PfQqtej37PApJ7x5AHoDoN0+ePjX82qonHYGjHcWJ288w==", "tenant"=>{"name"=>"Griffin Sandler", "email"=>"gsandler@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Griffin Sandler"], ["email", "gsandler@gmail.com"], ["password", "1234"], ["created_at", "2017-11-28 20:05:18.770836"], ["updated_at", "2017-11-28 20:05:18.770836"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+  Rendered sessions/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 111ms (Views: 88.0ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/search" for 129.81.217.234 at 2017-11-28 20:05:23 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"McLUTwedwkZgM/RT68x147jIyQX5m4DF963rHh4g0r6x6R4fnatJtSkoQxqSYBQ9XNjGzM2TFDDzCxOlEi6eug==", "query"=>{"address"=>"123 Main Street, New Orleans LA 70118"}, "commit"=>"Search"}
+  [1m[35mProperty Load (0.4ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1  [["address", "123 Main Street, New Orleans LA 70118"]]
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  Rendered sessions/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 30.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/join/25/1" for 129.81.217.234 at 2017-11-28 20:05:25 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"25", "pid"=>"1"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["resolved", "f"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 2], ["created_at", "2017-11-28 20:05:25.749627"], ["updated_at", "2017-11-28 20:05:25.749627"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 13ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/tenants/show" for 129.81.217.234 at 2017-11-28 20:05:25 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.7ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.9ms)
+  Rendered tenants/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 61ms (Views: 57.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/logout" for 129.81.217.234 at 2017-11-28 20:05:31 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:05:31 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.234 at 2017-11-28 20:05:33 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:05:34 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Tk3vDHPEg+V/6hbzhOED3meOhC7rT90kbFOPH78LNZ5Ev3sq/mZ/NzkHxK3v+XRnY412Y+lq4GVF7aHcvJg0g==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:05:34 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  [1m[36mJoinrequest Load (0.4ms)[0m  [1mSELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25[0m
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 106ms (Views: 22.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/request/accept/1" for 129.81.217.234 at 2017-11-28 20:05:45 +0000
+Processing by ManagersController#respond as HTML
+  Parameters: {"op"=>"accept", "id"=>"1"}
+  [1m[35mJoinrequest Load (0.3ms)[0m  SELECT  "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTenant Load (0.8ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "tenants" SET "property_id" = $1, "updated_at" = $2 WHERE "tenants"."id" = $3[0m  [["property_id", 1], ["updated_at", "2017-11-28 20:05:45.200567"], ["id", 2]]
+  [1m[35m (3.3ms)[0m  COMMIT
+  [1m[36mSQL (40.4ms)[0m  [1mDELETE FROM "joinrequests" WHERE "joinrequests"."id" = $1[0m  [["id", 1]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 53ms (ActiveRecord: 45.3ms)
+
+
+Started GET "/managers/show" for 129.81.217.234 at 2017-11-28 20:05:45 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25[0m
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered managers/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for 129.81.217.234 at 2017-11-28 20:05:47 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.234 at 2017-11-28 20:05:47 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.234 at 2017-11-28 20:05:49 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.234 at 2017-11-28 20:05:57 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s8f246bYRZCfIGnbhyv+5zYMhHmYA7iHtY2uEj0Xr4Ez7DyzPO7OY9Y73pL+h5850hyLsKwLLHKxK1apMRnjhQ==", "session"=>{"email"=>"gsandler@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/tenants/show" for 129.81.217.234 at 2017-11-28 20:05:57 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.7ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[35mTenant Load (0.7ms)[0m  SELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 2)
+  Rendered tenants/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 103ms (Views: 34.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/properties/1" for 129.81.217.234 at 2017-11-28 20:06:04 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[35mTenant Load (0.3ms)[0m  SELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = $1  [["property_id", 1]]
+  Rendered properties/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tenants/show" for 129.81.217.234 at 2017-11-28 20:06:26 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.7ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 2)[0m
+  Rendered tenants/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tenants/edit" for 129.81.217.234 at 2017-11-28 20:06:34 +0000
+
+ActionController::RoutingError (No route matches [GET] "/tenants/edit"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.1ms)
+
+
+Started GET "/tenants/show" for 129.81.217.234 at 2017-11-28 20:06:38 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.7ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[35mTenant Load (2.8ms)[0m  SELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 2)
+  Rendered tenants/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 34ms (Views: 28.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 129.81.217.88 at 2017-11-29 21:22:04 +0000
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "0.0.0.0" and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.9ms)
+
+
+Started GET "/" for 129.81.217.88 at 2017-11-29 21:22:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (16.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.217.88 at 2017-11-29 21:22:41 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 474ms (Views: 462.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.88 at 2017-11-29 21:22:45 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 171ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.88 at 2017-11-29 21:22:51 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.88 at 2017-11-29 21:22:54 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.81.217.88 at 2017-11-29 21:23:06 +0000
+
+
+Started GET "/home" for 129.81.217.88 at 2017-11-29 21:23:06 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.88 at 2017-11-29 21:23:07 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.88 at 2017-11-29 21:23:36 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (118.2ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (116.7ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (1194.2ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1118.2ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.6ms)[0m  CREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (10.6ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")[0m
+  [1m[35m (10.8ms)[0m  CREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")
+  [1m[36m (10.9ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")[0m
+  [1m[35m (27.5ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (17.5ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (7.5ms)[0m  CREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")
+  [1m[36m (19.3ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "property_id" integer, "true_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (26.7ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (9.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126200031')[0m
+  [1m[35m (2.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171101202325')
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (44.6ms)[0m  CREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (10.9ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")[0m
+  [1m[35m (8.2ms)[0m  CREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")
+  [1m[36m (8.3ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")[0m
+  [1m[35m (18.8ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (8.8ms)[0m  CREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")
+  [1m[36m (20.4ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "property_id" integer, "true_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (8.3ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (8.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.9ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (4.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126200031')[0m
+  [1m[35m (3.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171101202325')
+  [1m[36m (3.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (3.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "managers" ("name", "id", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Charlie Powicki"], ["id", 25], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-29 21:24:07.350627"], ["updated_at", "2017-11-29 21:24:07.350627"]]
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Example Property"], ["address", "123 Main Street, New Orleans LA 70118"], ["square_feet", "5000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "3200.0"], ["notes", "Definitely a property."], ["manager_id", 25], ["id", 1], ["created_at", "2017-11-29 21:24:07.391572"], ["updated_at", "2017-11-29 21:24:07.391572"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tenants" ("name", "phone_number", "email", "property_id", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Kanye West"], ["phone_number", "0594837261"], ["email", "kanye@west.gov"], ["property_id", 1], ["password", "1234"], ["created_at", "2017-11-29 21:24:07.408543"], ["updated_at", "2017-11-29 21:24:07.408543"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+
+
+Started GET "/" for 129.81.217.88 at 2017-11-29 21:24:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.217.88 at 2017-11-29 21:24:22 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 351ms (Views: 341.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.88 at 2017-11-29 21:24:25 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/manager/local" for 129.81.217.88 at 2017-11-29 21:24:46 +0000
+Processing by SessionsController#createManager as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L3DD1b9+QeewI6dTxfsV84jc8SfndS8nPl/tNPRyLJmvWwmFJUjKFPk4EBq8V3QtbMz+7tN9u9I6+RWP+HxgnQ==", "manager"=>{"name"=>"Charles Powicki", "email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Charles Powicki"], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-29 21:24:46.186723"], ["updated_at", "2017-11-29 21:24:46.186723"]]
+  [1m[35m (53.0ms)[0m  COMMIT
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 102ms (ActiveRecord: 58.0ms)
+
+
+Started GET "/managers/show" for 129.81.217.88 at 2017-11-29 21:24:46 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.7ms)
+  Rendered managers/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 105ms (Views: 57.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/properties" for 129.81.217.88 at 2017-11-29 21:24:49 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[35mProperty Load (0.7ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 41ms (Views: 33.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/properties/new" for 129.81.217.88 at 2017-11-29 21:24:50 +0000
+Processing by PropertiesController#new as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered properties/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 22.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/properties/new" for 129.81.217.88 at 2017-11-29 21:25:16 +0000
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"name"=>"2224 Calhoun", "address"=>"2224 Calhoun Street", "square_feet"=>"4000", "max_num_tenants"=>"123", "curr_num_tenants"=>"3", "monthly_rent"=>"", "notes"=>""}, "commit"=>"Create"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Redirected to https://property-management-cpowicki.c9users.io/properties
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/properties" for 129.81.217.88 at 2017-11-29 21:25:16 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[35mProperty Load (0.6ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/properties/new" for 129.81.217.88 at 2017-11-29 21:25:20 +0000
+Processing by PropertiesController#new as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered properties/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/properties/new" for 129.81.217.88 at 2017-11-29 21:25:34 +0000
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"name"=>"2224 Calhoun", "address"=>"2224 Calhoun Street", "square_feet"=>"4000", "max_num_tenants"=>"3", "curr_num_tenants"=>"3", "monthly_rent"=>"400000", "notes"=>""}, "commit"=>"Create"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "2224 Calhoun"], ["address", "2224 Calhoun Street"], ["square_feet", "4000.0"], ["max_num_tenants", 3], ["curr_num_tenants", 3], ["monthly_rent", "400000.0"], ["notes", ""], ["manager_id", 1], ["created_at", "2017-11-29 21:25:34.517235"], ["updated_at", "2017-11-29 21:25:34.517235"]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.7ms)
+
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "properties_pkey"
+DETAIL:  Key (id)=(1) already exists.
+: INSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"):
+  app/controllers/properties_controller.rb:21:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/properties" for 129.81.217.88 at 2017-11-29 21:25:42 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.7ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.4ms)
+  [1m[36mProperty Load (0.6ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1[0m
+  Rendered properties/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 1.3ms)
+  [1m[36m (112.4ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (113.6ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (1265.0ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1171.6ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.4ms)[0m  CREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (7.9ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")[0m
+  [1m[35m (11.7ms)[0m  CREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")
+  [1m[36m (8.0ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")[0m
+  [1m[35m (14.7ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (15.8ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (9.7ms)[0m  CREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")
+  [1m[36m (15.1ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "property_id" integer, "true_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (8.7ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (7.8ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126200031')[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171101202325')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (3.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.2ms)[0m  CREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (9.9ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")[0m
+  [1m[35m (10.6ms)[0m  CREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")
+  [1m[36m (9.0ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")[0m
+  [1m[35m (15.8ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (15.4ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (9.3ms)[0m  CREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")
+  [1m[36m (14.2ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "property_id" integer, "true_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (14.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (6.8ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126200031')[0m
+  [1m[35m (2.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171101202325')
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "managers" ("name", "id", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Charlie Powicki"], ["id", 25], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-11-29 21:26:28.880593"], ["updated_at", "2017-11-29 21:26:28.880593"]]
+  [1m[35m (3.2ms)[0m  COMMIT
+
+
+Started GET "/" for 129.81.217.88 at 2017-11-29 21:26:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.217.88 at 2017-11-29 21:26:37 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 389ms (Views: 377.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.88 at 2017-11-29 21:26:41 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.88 at 2017-11-29 21:26:42 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TsQWZ1t+jxkcThfd0sq2AiUVpE2d4sydNw9opXY/HwbO79w3wUgE6lVVoJSrZtfcwQWrhKnqWGgzqZAeejFTAg==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.9ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 104ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/managers/show" for 129.81.217.88 at 2017-11-29 21:26:42 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  Rendered layouts/_manager_nav_bar.html.erb (0.9ms)
+  Rendered managers/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 146ms (Views: 106.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/properties" for 129.81.217.88 at 2017-11-29 21:26:44 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[35mProperty Load (18.3ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 25
+  Rendered properties/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 75ms (Views: 46.3ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/properties/new" for 129.81.217.88 at 2017-11-29 21:26:46 +0000
+Processing by PropertiesController#new as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered properties/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 30.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/properties/new" for 129.81.217.88 at 2017-11-29 21:27:00 +0000
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"name"=>"2224 Calhoun", "address"=>"2224 Calhoun Street", "square_feet"=>"400000", "max_num_tenants"=>"4", "curr_num_tenants"=>"3", "monthly_rent"=>"50000", "notes"=>""}, "commit"=>"Create"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "properties" ("name", "address", "square_feet", "max_num_tenants", "curr_num_tenants", "monthly_rent", "notes", "manager_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "2224 Calhoun"], ["address", "2224 Calhoun Street"], ["square_feet", "400000.0"], ["max_num_tenants", 4], ["curr_num_tenants", 3], ["monthly_rent", "50000.0"], ["notes", ""], ["manager_id", 25], ["created_at", "2017-11-29 21:27:00.045965"], ["updated_at", "2017-11-29 21:27:00.045965"]]
+  [1m[36m (3.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/properties
+Completed 302 Found in 14ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/properties" for 129.81.217.88 at 2017-11-29 21:27:00 +0000
+Processing by PropertiesController#index as HTML
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[36mProperty Load (0.8ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 25[0m
+  Rendered properties/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/logout" for 129.81.217.88 at 2017-11-29 21:27:02 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.88 at 2017-11-29 21:27:02 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.88 at 2017-11-29 21:27:03 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 129.81.217.88 at 2017-11-29 21:27:13 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Py/XpDjPRB2hEITNmrSpqb5qEmA773aYToCtc90DHHm/BB30ovnP7ugLM4TjGMh3WnodqQ/n4m1KJlXI0Q1QfQ==", "tenant"=>{"name"=>"Griffin Sandler", "email"=>"gsandler@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tenants" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Griffin Sandler"], ["email", "gsandler@gmail.com"], ["password", "1234"], ["created_at", "2017-11-29 21:27:13.062686"], ["updated_at", "2017-11-29 21:27:13.062686"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  Rendered sessions/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 24.0ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/search" for 129.81.217.88 at 2017-11-29 21:27:15 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hs87Ab+gYOEPdG7h5qfNLVM3qLhTYKDDnX5W4GCQWPwG5PFRJZbrEkZv2aifC6zztyencWdoNDaZ2K5bbJ4U+A==", "query"=>{"address"=>"2224 Calhoun Street"}, "commit"=>"Search"}
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1[0m  [["address", "2224 Calhoun Street"]]
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered sessions/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/join/25/1" for 129.81.217.88 at 2017-11-29 21:27:16 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"25", "pid"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["resolved", "f"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 1], ["created_at", "2017-11-29 21:27:16.914757"], ["updated_at", "2017-11-29 21:27:16.914757"]]
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 16ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/tenants/show" for 129.81.217.88 at 2017-11-29 21:27:17 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.5ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.8ms)
+  Rendered tenants/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 129.81.217.88 at 2017-11-29 21:27:19 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.88 at 2017-11-29 21:27:19 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.88 at 2017-11-29 21:27:20 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.88 at 2017-11-29 21:27:22 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rAmJvbWCZiE2KaJyryMztxYy6ttDnj+qZrdrZPd6DOosIkPtL7Tt0n8yFTvWj1Jp8iLlEneWq19iEZPf+3RA7g==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/managers/show" for 129.81.217.88 at 2017-11-29 21:27:22 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (21.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25[0m
+  [1m[35mJoinrequest Load (0.6ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 24.5ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/request/accept/1" for 129.81.217.88 at 2017-11-29 21:27:27 +0000
+Processing by ManagersController#respond as HTML
+  Parameters: {"op"=>"accept", "id"=>"1"}
+  [1m[36mJoinrequest Load (0.4ms)[0m  [1mSELECT  "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "tenants" SET "property_id" = $1, "updated_at" = $2 WHERE "tenants"."id" = $3  [["property_id", 1], ["updated_at", "2017-11-29 21:27:27.898418"], ["id", 1]]
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (3.2ms)[0m  DELETE FROM "joinrequests" WHERE "joinrequests"."id" = $1  [["id", 1]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 17ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/managers/show" for 129.81.217.88 at 2017-11-29 21:27:28 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for 129.81.217.88 at 2017-11-29 21:27:30 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-management-cpowicki.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.88 at 2017-11-29 21:27:30 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.88 at 2017-11-29 21:27:32 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.88 at 2017-11-29 21:27:35 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fSmK7C8jyrRxqBaNI6vwcRpi8JlyjmygXEFgJ+Oz80b9AkC8tRVBRzizocRaB5Gv/nL/UEaG+FVY55ic772/Qg==", "session"=>{"email"=>"gsandler@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+  [1m[35mTenant Load (0.2ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/tenants/show" for 129.81.217.88 at 2017-11-29 21:27:35 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (6.4ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.6ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[36mTenant Load (0.9ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
+  Rendered tenants/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 32.9ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 129.81.217.88 at 2017-11-29 21:29:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.217.88 at 2017-11-29 21:29:28 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 406ms (Views: 394.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.88 at 2017-11-29 21:29:31 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 75ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.88 at 2017-11-29 21:29:34 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htMFyr1fpRajllA4nfnZWkY0VxEWqn0XzujF+9iBn0UG+M+aJ2ku5eqN53HkVbiEoiRY2CKi6eLKTj1A1I/TQQ==", "session"=>{"email"=>"gsandler@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.8ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 159ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/tenants/show" for 129.81.217.88 at 2017-11-29 21:29:34 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.5ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.8ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (1.0ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  Rendered tenants/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 96ms (Views: 42.9ms | ActiveRecord: 4.6ms)
