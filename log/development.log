@@ -38293,3 +38293,430 @@ ActionView::Template::Error (First argument in form cannot contain nil or be emp
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.6ms)
+
+
+Started GET "/" for 129.81.217.114 at 2017-11-29 21:18:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (3.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.217.114 at 2017-11-29 21:18:25 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 359ms (Views: 347.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.81.217.114 at 2017-11-29 21:18:25 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/landlords.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/managers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/properties.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/tenant.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/properties.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/landlords.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/assets/tenant.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.81.217.114 at 2017-11-29 21:18:26 +0000
+
+
+Started GET "/signin" for 129.81.217.114 at 2017-11-29 21:18:28 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.114 at 2017-11-29 21:18:38 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFZqygNuB+0xhauejjM2CkMkdX8DlN8VDU3U/N1cc6BAEiNFQyXmtz8gsydL2BTXmeNe7Iy+QsU5Yim1yF+Duw==", "session"=>{"email"=>"barack@obama.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (5.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "barack@obama.gov"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 80ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/managers/show" for 129.81.217.114 at 2017-11-29 21:18:38 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (5.3ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.8ms)
+  Rendered managers/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 72ms (Views: 47.8ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/managers/show" for 129.81.217.114 at 2017-11-29 21:18:44 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  Rendered managers/show.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 101ms (Views: 89.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties" for 129.81.217.114 at 2017-11-29 21:18:50 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.6ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[35mProperty Load (3.6ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (122.6ms)
+Completed 200 OK in 161ms (Views: 144.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/properties/1" for 129.81.217.114 at 2017-11-29 21:18:52 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[35mTenant Load (3.2ms)[0m  SELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = $1  [["property_id", 1]]
+  Rendered properties/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 44ms (Views: 32.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/logout" for 129.81.217.114 at 2017-11-29 21:19:04 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-redston96.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.114 at 2017-11-29 21:19:04 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.114 at 2017-11-29 21:19:06 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.114 at 2017-11-29 21:19:16 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ek26Hkgi/tiyOpm8jafhTOalIU0wbzfaMTqmDMk8NEI2CfORCGkfgryfgQVITMORPGIK3r9FqgoFFVtF3D/EWQ==", "session"=>{"email"=>"joe@biden.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "joe@biden.gov"], ["password", "1234"]]
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1  [["email", "joe@biden.gov"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/tenants/show
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/tenants/show" for 129.81.217.114 at 2017-11-29 21:19:16 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.6ms)
+  Rendered tenants/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tenants/show" for 129.81.217.114 at 2017-11-29 21:19:27 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered tenants/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tenants/edit" for 129.81.217.114 at 2017-11-29 21:19:29 +0000
+Processing by TenantsController#edit as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered tenants/edit.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9:                 </h3>
+    10:             </div>
+    11:             <div class = "row">
+    12:                 <%= form_for @tenant, url: {action: "edit"} do |f| %>
+    13:                     <div class = "row">
+    14:                         <div class = "col s4">
+    15:                             <label for="tenant_name">Name</label>
+  app/views/tenants/edit.html.erb:12:in `_app_views_tenants_edit_html_erb__3398390505186948024_70173089671800'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+
+
+Started GET "/home" for 129.81.217.114 at 2017-11-29 21:21:07 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.114 at 2017-11-29 21:22:04 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.114 at 2017-11-29 21:24:57 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.114 at 2017-11-29 21:27:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 321ms (Views: 311.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.114 at 2017-11-29 21:28:10 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CQBDTP+PZr0MCgP2wcLPtMijbC+LxzYL7KHFII2I76otRArDv8SH5wKvG08EKe1pEmRHvATtq9vYjjhpmIsfsQ==", "session"=>{"email"=>"joe@biden.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "joe@biden.gov"], ["password", "1234"]]
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "joe@biden.gov"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/tenants/show
+Completed 302 Found in 41ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/tenants/show" for 129.81.217.114 at 2017-11-29 21:28:10 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (10.5ms)
+  Rendered tenants/show.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tenants/edit" for 129.81.217.114 at 2017-11-29 21:28:29 +0000
+Processing by TenantsController#edit as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (1.5ms)
+  Rendered tenants/edit.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     9:                 </h3>
+    10:             </div>
+    11:             <div class = "row">
+    12:                 <%= form_for @tenant, url: {action: "edit"} do |f| %>
+    13:                     <div class = "row">
+    14:                         <div class = "col s4">
+    15:                             <label for="tenant_name">Name</label>
+  app/views/tenants/edit.html.erb:12:in `_app_views_tenants_edit_html_erb__2709360290998779251_70160687191360'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.0ms)
+
+
+Started GET "/logout" for 129.81.217.114 at 2017-11-29 21:28:42 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-redston96.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.114 at 2017-11-29 21:28:42 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.114 at 2017-11-29 21:28:45 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.81.217.114 at 2017-11-29 21:29:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.217.114 at 2017-11-29 21:29:55 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 308ms (Views: 298.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 129.81.217.114 at 2017-11-29 21:29:58 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create/tenant/local" for 129.81.217.114 at 2017-11-29 21:30:21 +0000
+Processing by SessionsController#createTenant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uFsbAYU9sWs1WcMMo11ZeS3/JTy1lTMmGLUZQ3E0akecH1KOxXZQMTv827Vmtnuk9zgOrzq/rvYsmuQKZDeaXA==", "tenant"=>{"name"=>"Hillary Clinton", "email"=>"hillary@clinton.gov", "password"=>"[FILTERED]", "phone_number"=>"1234891000"}, "commit"=>"Sign Up", "op"=>"local"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO "tenants" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Hillary Clinton"], ["email", "hillary@clinton.gov"], ["password", "1234"], ["phone_number", "1234891000"], ["created_at", "2017-11-29 21:30:21.377232"], ["updated_at", "2017-11-29 21:30:21.377232"]]
+  [1m[35m (87.7ms)[0m  COMMIT
+  Rendered sessions/search.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 194ms (Views: 51.8ms | ActiveRecord: 97.6ms)
+
+
+Started POST "/search" for 129.81.217.114 at 2017-11-29 21:30:31 +0000
+Processing by SessionsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjvHjFHUf8/o/olAcidbT4ZzI3uqtUVd2sIXbRL1CEgOf44DEZ+eleZbkfm3zHmSXLQI6CWf2I3u7eokB/b4Uw==", "query"=>{"address"=>"1600 Pennsylvania Ave"}, "commit"=>"Search"}
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."address" = $1 LIMIT 1[0m  [["address", "1600 Pennsylvania Ave"]]
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered sessions/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 70ms (Views: 24.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/join/1/1" for 129.81.217.114 at 2017-11-29 21:30:37 +0000
+Processing by SessionsController#sendreq as HTML
+  Parameters: {"id"=>"1", "pid"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "joinrequests" ("resolved", "manager_id", "property_id", "tenant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["resolved", "f"], ["manager_id", 1], ["property_id", 1], ["tenant_id", 3], ["created_at", "2017-11-29 21:30:37.900262"], ["updated_at", "2017-11-29 21:30:37.900262"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://property-site-redston96.c9users.io/tenants/show
+Completed 302 Found in 25ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/tenants/show" for 129.81.217.114 at 2017-11-29 21:30:38 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.5ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.5ms)
+  Rendered tenants/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 129.81.217.114 at 2017-11-29 21:30:44 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-redston96.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.114 at 2017-11-29 21:30:44 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.114 at 2017-11-29 21:30:46 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.114 at 2017-11-29 21:30:51 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JaA+whyxatwAHyBchz5Zdp5FyoGc36afUzwhoWeL2toB5HdNXPqLhg66OOVC1XurRILhEhP1O09nE9zocogqwQ==", "session"=>{"email"=>"barack@obama.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "barack@obama.gov"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/managers/show" for 129.81.217.114 at 2017-11-29 21:30:51 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1[0m
+  [1m[35mJoinrequest Load (0.4ms)[0m  SELECT "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.2ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.4ms)
+  Rendered managers/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 29.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/request/accept/2" for 129.81.217.114 at 2017-11-29 21:30:54 +0000
+Processing by ManagersController#respond as HTML
+  Parameters: {"op"=>"accept", "id"=>"2"}
+  [1m[36mJoinrequest Load (0.3ms)[0m  [1mSELECT  "joinrequests".* FROM "joinrequests" WHERE "joinrequests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mTenant Load (0.2ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tenants" SET "property_id" = $1, "updated_at" = $2 WHERE "tenants"."id" = $3  [["property_id", 1], ["updated_at", "2017-11-29 21:30:54.487824"], ["id", 3]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "joinrequests" WHERE "joinrequests"."id" = $1  [["id", 2]]
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 12ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/managers/show" for 129.81.217.114 at 2017-11-29 21:30:54 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered managers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties" for 129.81.217.114 at 2017-11-29 21:30:57 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[35mProperty Load (0.8ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/properties/1" for 129.81.217.114 at 2017-11-29 21:30:58 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.8ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  [1m[35mTenant Load (0.4ms)[0m  SELECT "tenants".* FROM "tenants" WHERE "tenants"."property_id" = $1  [["property_id", 1]]
+  Rendered properties/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 129.81.217.114 at 2017-11-29 21:31:04 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-redston96.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.217.114 at 2017-11-29 21:31:04 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.217.114 at 2017-11-29 21:31:06 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.217.114 at 2017-11-29 21:31:11 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+5KLILU8tARcgpnMlu1HV7UPkHf0Cp85KhbhvGckeLjf1sKv9XdVXlIngXVTBmWKb8i75HsgAukeORz1cieIow==", "session"=>{"email"=>"hillary@clinton.gov", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "hillary@clinton.gov"], ["password", "1234"]]
+  [1m[35mTenant Load (0.2ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1  [["email", "hillary@clinton.gov"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/tenants/show
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/tenants/show" for 129.81.217.114 at 2017-11-29 21:31:12 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.1ms)
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 3)[0m
+  Rendered tenants/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 1.2ms)
