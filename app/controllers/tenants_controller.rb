@@ -4,8 +4,10 @@ class TenantsController < ApplicationController
  before_action :confirm_logged_in
   def pay
     @tenant = Tenant.find(session[:user_id]) 
+    @property = Property.find(@tenant.property_id)
     @tenant.rent = 'Yes'
-    redirect_to properties_path
+    @tenant.save
+    redirect_to "/tenants/show"
   end
   def index
     @tenents = Tenant.where(:property_id => @property)
