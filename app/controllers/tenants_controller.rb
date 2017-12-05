@@ -23,5 +23,20 @@ class TenantsController < ApplicationController
       render "new"
     end
   end
+  def pay
+    @tenant = Tenant.find(session[:user_id])
+    @property = Property.find(@tenant.property_id)
+    if @tenant.rent.nil?
+      @tenant.rent = (@property.monthly_rent / @property.curr_num_tenants)
+      @property.rent = @property.monthly_rent
+      @property.rent = @property.rent.to_f - @tenant.rent.to_f
+      @tenant.save
+      @property.save
+      flash.now[:notice] = 'Rent payment complete.'
+    else
+      flash.now[:notice] = 'Rent already payed. See you next month!'
+    end
+    redirect_to action: "show"
+  end
 end
 
