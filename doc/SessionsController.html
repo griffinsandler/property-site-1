@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class SessionsController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-create">#create</a>
+    
+    <li ><a href="#method-i-createManager">#createManager</a>
+    
+    <li ><a href="#method-i-createTenant">#createTenant</a>
+    
+    <li ><a href="#method-i-destroy">#destroy</a>
+    
+    <li ><a href="#method-i-new">#new</a>
+    
+    <li ><a href="#method-i-search">#search</a>
+    
+    <li ><a href="#method-i-sendreq">#sendreq</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-SessionsController">
+  <h1 id="class-SessionsController" class="class">
+    class SessionsController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-createManager" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">createManager</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a new user with type &#39;Manager&#39;, designed to support both
+local and Facebook sign ups.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="createManager-source">
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">createManager</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:op</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;local&#39;</span>
+      <span class="ruby-identifier">params_map</span> = <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">HashWithIndifferentAccess</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:manager</span>])
+      <span class="ruby-identifier">user</span> = <span class="ruby-constant">Manager</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params_map</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;create&#39;</span>
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">user</span>=<span class="ruby-constant">Manager</span>.<span class="ruby-identifier">create_with_omniauth</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:auth</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&#39;/managers/show&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-createTenant" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">createTenant</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a new user with type &#39;Tenant&#39;, designed to support both
+local and Facebook sign ups.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="createTenant-source">
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">createTenant</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:op</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;local&#39;</span>
+      <span class="ruby-identifier">params_map</span> = <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">HashWithIndifferentAccess</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:tenant</span>])
+      <span class="ruby-identifier">user</span> = <span class="ruby-constant">Tenant</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params_map</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;create&#39;</span>
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">user</span>=<span class="ruby-constant">Tenant</span>.<span class="ruby-identifier">create_with_omniauth</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:auth</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;search&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Ends the user&#39;s current session, logging them out.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-identifier">session</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:user_id</span>)
+  <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&#39;Logged out successfully.&#39;</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/home&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:op</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;local&#39;</span>
+    <span class="ruby-identifier">params_map</span> = <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">HashWithIndifferentAccess</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:session</span>])
+    <span class="ruby-identifier">user</span>=<span class="ruby-constant">Manager</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params_map</span>[<span class="ruby-string">&quot;email&quot;</span>], <span class="ruby-value">:password</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params_map</span>[<span class="ruby-string">&quot;password&quot;</span>]) <span class="ruby-operator">||</span> <span class="ruby-constant">Tenant</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params_map</span>[<span class="ruby-string">&quot;email&quot;</span>], <span class="ruby-value">:password</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params_map</span>[<span class="ruby-string">&quot;password&quot;</span>])
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">auth</span>=<span class="ruby-identifier">request</span>.<span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;omniauth.auth&quot;</span>]
+    <span class="ruby-identifier">user</span>=<span class="ruby-constant">Manager</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:provider</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">auth</span>[<span class="ruby-string">&quot;provider&quot;</span>], <span class="ruby-value">:uid</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">auth</span>[<span class="ruby-string">&quot;uid&quot;</span>]) <span class="ruby-operator">||</span> <span class="ruby-constant">Tenant</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:provider</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">auth</span>[<span class="ruby-string">&quot;provider&quot;</span>], <span class="ruby-value">:uid</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">auth</span>[<span class="ruby-string">&quot;uid&quot;</span>])
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Manager</span>)
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:check</span>] = <span class="ruby-value">1</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&#39;/managers/show&#39;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Tenant</span>)
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:check</span>] = <span class="ruby-value">2</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&#39;/tenants/show&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:auth</span>] = <span class="ruby-identifier">auth</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;new&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Searches for a <a href="Property.html">Property</a> by address using a
+query derived from user input.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="search-source">
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search</span>
+    <span class="ruby-identifier">params_map</span> = <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">HashWithIndifferentAccess</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>])
+    <span class="ruby-ivar">@result</span> = <span class="ruby-constant">Property</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:address</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params_map</span>[<span class="ruby-value">:address</span>]).<span class="ruby-identifier">take</span>
+    <span class="ruby-ivar">@manager</span> = <span class="ruby-constant">Manager</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">manager_id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sendreq" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sendreq</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sends a request to join a particular <a href="Property.html">Property</a>
+from a <a href="Tenant.html">Tenant</a> to the <a
+href="Manager.html">Manager</a> who owns the property.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sendreq-source">
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sendreq</span>
+  <span class="ruby-identifier">newReq</span> = <span class="ruby-constant">Joinrequest</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:resolved</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>, <span class="ruby-value">:manager_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:property_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:pid</span>], <span class="ruby-value">:tenant_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  <span class="ruby-identifier">newReq</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/tenants/show&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

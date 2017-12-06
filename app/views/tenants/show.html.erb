@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-        <% if not @roommates.empty? %>
+        <% if not @roommates.nil? %>
             <div class = "col s6">
             <div class = "card orange darken-4">
                 <span class = "card-title white-text" style = "padding:5px;">My Housemates</span>
@@ -75,7 +75,7 @@
                                     <td> Rent payed! </td>
                                     <% end %>>
                                 </tr>
-                            <% end %>>
+                            <% end %>
                         </tbody>
                     </table>
                     </div>
