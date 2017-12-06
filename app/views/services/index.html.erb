@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+     <%= render '/layouts/manager_nav_bar' %>
+    <% if flash[:notice] %>
+        <div class="notice">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <h1>services</h1>
+            </div>
+            <div class = "row" id = "proptable">
+                <table class = "highlight"  >
+                    <thead>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Room</th>
+                        <th>Notes</th>
+                    </thead>
+                    <tbody>
+                        <%if @services
+                        @services.each do |t| %>
+                            <tr>
+                                <td>  <a class "waves-effect waves-teal btn-flat" href="<%= services_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+                                <td><%= t.address %></td>
+                                <td><%= t.room%> </td>
+                                <td><%= t.notes%>   </td>
+
+                            </tr>
+                        <%end 
+                         end%>
+                     </tbody>
+                </table>
+            </div>
+            <br/>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>

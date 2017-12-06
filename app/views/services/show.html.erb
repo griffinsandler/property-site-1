@@ -1,0 +1,34 @@
+<html>
+    <% if session[:check] == 1 %>
+        <%= render '/layouts/manager_nav_bar' %>
+    <% else %>
+        <%= render '/layouts/tenant_nav_bar' %>
+    <% end %>
+    <body>
+        <div class= "container">
+            <div class = "row">
+                <h1>Service Request</h1>
+            </div>
+        </div>
+        <div class = "row">
+            <table class = "highlight">
+                
+                <thead>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Room</th>
+                    <th>Notes</th>
+                </thead>
+                <tbody>
+                    <%if @service %>
+                        <tr>
+                            <td><%= @service.name %> </a> </td>
+                            <td><%= @service.address %> </a> </td>
+                            <td><%= @service.room %> </a> </td>
+                            <td><%= @service.notes %> </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <br/>

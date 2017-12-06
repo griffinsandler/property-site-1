@@ -38,6 +38,12 @@ Rails.application.routes.draw do
   get '/properties/:id/edit' => 'properties#edit'
   delete '/properties/:id/delete' => 'properties#destroy'
   
+  # Services routes # 
+  get '/services/new' => 'services#new'
+  post '/services/new' => 'services#create'
+  get '/services' => 'services#index'
+  get '/services/:id' => 'services#show'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

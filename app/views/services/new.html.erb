@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <%= render '/layouts/manager_nav_bar' %>
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <h3>
+                    Serivce Request 
+                </h3>
+            </div>
+            <div class = "row">
+                <form class = "col s12" action = "<%services_new_path%>" method = "post">
+                    <div class = "row">
+                        <div class = "input-field col s6">
+                            <input id="services_name" name = "services[name]" type="text" class="validate">
+                            <label for="services_name">Requester Name</label>
+                        </div>
+                        <div class = "input-field col s6">
+                            <input id="services_address" name = "services[address]" type="text" class="validate">
+                            <label for="services_address">Address</label>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "input-field col s12">
+                            <input id="services_room" name = "services[room]" type="text" class="validate">
+                            <label for="services_room">Room</label>
+                        </div>
+                    <div class = "row">
+                        <div class = "input-field col s12">
+                            <textarea class = "materialize-textarea" id="services_notes" name = "services[notes]"></textarea>
+                            <label for="services_notes">Notes</label>
+                        </div>
+                    </div>
+                    <div class = "input-field col s3">
+                        <input name="commit" type="submit" value="Create" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>
