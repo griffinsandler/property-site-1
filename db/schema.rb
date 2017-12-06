@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171206030232) do
+=======
+ActiveRecord::Schema.define(version: 20171206025625) do
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,21 +32,6 @@ ActiveRecord::Schema.define(version: 20171206030232) do
   add_index "joinrequests", ["manager_id"], name: "index_joinrequests_on_manager_id", using: :btree
   add_index "joinrequests", ["property_id"], name: "index_joinrequests_on_property_id", using: :btree
   add_index "joinrequests", ["tenant_id"], name: "index_joinrequests_on_tenant_id", using: :btree
-
-  create_table "landlords", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "office_address"
-    t.string   "phone_number"
-    t.string   "email"
-    t.text     "notes"
-    t.string   "password"
-    t.string   "name"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
 
   create_table "managers", force: :cascade do |t|
     t.string   "name"
@@ -66,6 +55,7 @@ ActiveRecord::Schema.define(version: 20171206030232) do
     t.integer  "manager_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "rent"
   end
 
   add_index "properties", ["manager_id"], name: "index_properties_on_manager_id", using: :btree
@@ -93,9 +83,10 @@ ActiveRecord::Schema.define(version: 20171206030232) do
     t.string   "provider"
     t.string   "uid"
     t.string   "password"
+    t.integer  "property_id"
+    t.integer  "true_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.integer  "property_id"
   end
 
 end

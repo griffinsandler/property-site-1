@@ -137,7 +137,11 @@
 
           
           <div class="method-source-code" id="create-source">
+<<<<<<< HEAD
             <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 57</span>
+=======
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 61</span>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -163,13 +167,22 @@
 
         <div class="method-description">
           
+<<<<<<< HEAD
           
+=======
+          <p>Creates a new user with type &#39;Manager&#39;, designed to support both
+local and Facebook sign ups.</p>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
           
           
 
           
           <div class="method-source-code" id="createManager-source">
+<<<<<<< HEAD
             <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 27</span>
+=======
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 30</span>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">createManager</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:op</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;local&#39;</span>
       <span class="ruby-identifier">params_map</span> = <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">HashWithIndifferentAccess</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:manager</span>])
@@ -207,13 +220,22 @@
 
         <div class="method-description">
           
+<<<<<<< HEAD
           
+=======
+          <p>Creates a new user with type &#39;Tenant&#39;, designed to support both
+local and Facebook sign ups.</p>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
           
           
 
           
           <div class="method-source-code" id="createTenant-source">
+<<<<<<< HEAD
             <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 42</span>
+=======
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 46</span>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">createTenant</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:op</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;local&#39;</span>
       <span class="ruby-identifier">params_map</span> = <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">HashWithIndifferentAccess</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:tenant</span>])
@@ -251,13 +273,21 @@
 
         <div class="method-description">
           
+<<<<<<< HEAD
           
+=======
+          <p>Ends the user&#39;s current session, logging them out.</p>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
           
           
 
           
           <div class="method-source-code" id="destroy-source">
+<<<<<<< HEAD
             <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 66</span>
+=======
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 72</span>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">session</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:user_id</span>)
   <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&#39;Logged out successfully.&#39;</span>
@@ -292,7 +322,11 @@
 
           
           <div class="method-source-code" id="new-source">
+<<<<<<< HEAD
             <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 4</span>
+=======
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 6</span>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:op</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;local&#39;</span>
     <span class="ruby-identifier">params_map</span> = <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">HashWithIndifferentAccess</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:session</span>])
@@ -338,13 +372,22 @@
 
         <div class="method-description">
           
+<<<<<<< HEAD
           
+=======
+          <p>Searches for a <a href="Property.html">Property</a> by address using a
+query derived from user input.</p>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
           
           
 
           
           <div class="method-source-code" id="search-source">
+<<<<<<< HEAD
             <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 60</span>
+=======
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 65</span>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">search</span>
     <span class="ruby-identifier">params_map</span> = <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">HashWithIndifferentAccess</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>])
     <span class="ruby-ivar">@result</span> = <span class="ruby-constant">Property</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:address</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params_map</span>[<span class="ruby-value">:address</span>]).<span class="ruby-identifier">take</span>
@@ -373,13 +416,23 @@
 
         <div class="method-description">
           
+<<<<<<< HEAD
           
+=======
+          <p>Sends a request to join a particular <a href="Property.html">Property</a>
+from a <a href="Tenant.html">Tenant</a> to the <a
+href="Manager.html">Manager</a> who owns the property.</p>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
           
           
 
           
           <div class="method-source-code" id="sendreq-source">
+<<<<<<< HEAD
             <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 72</span>
+=======
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 79</span>
+>>>>>>> 0e1d310ddf7ec51f7e31caaa53837ff635126219
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sendreq</span>
   <span class="ruby-identifier">newReq</span> = <span class="ruby-constant">Joinrequest</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:resolved</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>, <span class="ruby-value">:manager_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:property_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:pid</span>], <span class="ruby-value">:tenant_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
   <span class="ruby-identifier">newReq</span>.<span class="ruby-identifier">save</span>

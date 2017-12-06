@@ -7,8 +7,3 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 managers = Manager.create([{:name => 'Charlie Powicki', :id => 25, :email => 'cpowicki@tulane.edu', :password => '1234'}])
-
-properties = Property.create([{ :name => 'Example Property', :address => '123 Main Street, New Orleans LA 70118', :square_feet  => 5000,
-                               :max_num_tenants => 4, :curr_num_tenants => 3, :monthly_rent => 3200, :notes => "Definitely a property.", :manager_id => 25, :id => 1 }])
-                             
-tenants  =Tenant.create([{:name =>'Kanye West', :phone_number =>'0594837261', :email =>'kanye@west.gov', :property_id => 1, :password => '1234'}])
