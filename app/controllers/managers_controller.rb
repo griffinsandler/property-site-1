@@ -17,6 +17,7 @@ class ManagersController < ApplicationController
                 @JRBundles.push(newBundle)
             end
         end
+        @properties = Property.where(:manager_id => @manager)
     end
     def update
         @manager = Manager.find(session[:user_id])
