@@ -6,6 +6,12 @@ skip_before_action :verify_authenticity_token
 def create
     params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:services])
     @service = Service.new(params_map)
+    @tenant = Tenant.find(session[:user_id])
+    @property = Property.find(@tenant.property_id)
+    @manager = Manager.find(@property.manager_id)
+    @service.manager_id = @manager.id
+    @service.property_id = @property.id
+    @service.tenant_id = @tenant.id
     if @service.save
       redirect_to '/tenants/show'
     else

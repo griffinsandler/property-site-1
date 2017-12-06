@@ -1,6 +1,7 @@
 class Manager < ActiveRecord::Base
   has_many :properties, dependent: :destroy
   has_many :joinrequests
+  has_many :services
   def self.create_with_omniauth(auth)
     Manager.create!(
       :provider => auth["provider"],
