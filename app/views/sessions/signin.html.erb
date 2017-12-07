@@ -10,10 +10,10 @@
                 <%= form_for(:session, url: '/signin/local') do |f| %>
             
                 <%= f.label :email %>
-                <%= f.email_field :email, class: 'form-control' %>
+                <%= f.email_field :email, class: 'form-control', id:"email" %>
               
                 <%= f.label :password %>
-                <%= f.password_field :password, class: 'form-control' %>
+                <%= f.password_field :password, class: 'form-control', id:"password" %>
               
                 <%= f.submit "Log in", class: "btn btn-primary" %>
               <% end %>

@@ -65,6 +65,44 @@ When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
   fill_in(field, :with => value)
 end
 
+When /^I login correctly$/ do
+  fill_in "email", :with => "gsandler@tulane.edu"
+  fill_in "password", :with => "Rbslaw27"
+  click_button "Log in"
+end
+
+When /^I signup correctly$/ do
+  fill_in "email", :with => "gsandler@tulane.edu"
+  fill_in "password", :with => "Rbslaw27"
+  fill_in "name", :with => "Griffin"
+  fill_in "phone_number", :with => "2038042325"
+  click_button "Sign up"
+end
+
+When /^I fill in the form correctly$/ do
+  fill_in "property_name", :with => "Griffin's House"
+  fill_in "property_address", :with => "1234 Main Street"
+  fill_in "property_square_feet", :with => 10000
+  fill_in "property_max_num_tenants", :with => 4
+  fill_in "property_curr_num_tenants", :with => 1
+  fill_in "property_monthly_rent", :with => 2000
+  click_button "create"
+end
+
+When /^I fill in the form incorrectly$/ do
+  fill_in "property_name", :with => "Griffin's House"
+  fill_in "property_address", :with => "1234 Main Street"
+  fill_in "property_square_feet", :with => 10000
+  fill_in "property_max_num_tenants", :with => 4
+  fill_in "property_monthly_rent", :with => 2000
+  click_button "create"
+end
+
+When /^I login incorrectly$/ do
+  fill_in "email", :with => "gsandler@tulane.edu"
+  fill_in "password", :with => "1234"
+  click_button "Log in"
+end
 # Use this to fill in an entire form with data from a table. Example:
 #
 #   When I fill in the following:

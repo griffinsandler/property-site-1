@@ -46,6 +46,13 @@ Rails.application.routes.draw do
   get '/services' => 'services#index'
   get '/services/:id' => 'services#show'
   
+  # Added these for cucumber testing
+    # sessions#create_guest makes a fake user for Cucumber testing with hard coded data 
+    # so that session[:logged_in] is true
+    get 'auth/guest', to: 'sessions#create_guest'
+    # sessions#loggedin checks that the user is logged in and outputs session[:logged_in] to log folder
+    # Since it is used by Cucumber, the output is put into the bottom of log/test.log
+    get 'auth/loggedin', to: 'sessions#loggedin'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
