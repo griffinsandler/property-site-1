@@ -7,8 +7,7 @@ skip_before_action :verify_authenticity_token
     @tenant = Tenant.find(session[:user_id])
     @property = Property.find(@tenant.property_id)
  end
- 
- def create
+def create
     params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:services])
     @service = Service.new(params_map)
     @tenant = Tenant.find(session[:user_id])
@@ -23,7 +22,6 @@ skip_before_action :verify_authenticity_token
       render "new"
     end
  end
-
 
     def index
         @service = Service.all()

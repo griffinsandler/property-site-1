@@ -62,18 +62,16 @@
                 <div class = "card-content black-text white">
                     <table class = "highlight"  >
                         <thead>
-                            <th>Name</th>
                             <th>Address</th>
-                            <th>Room</th>
-                            <th>Notes </th>
+                            <th>Subject</th>
                         </thead>
                         <tbody>
                             <% @services.each do |t| %>
                                 <tr>
-                                    <td><%= t.name %></td>
-                                    <td><%= t.address %></td>
-                                    <td><%= t.room %></td>
-                                    <td><%= t.notes %></td>
+                                   
+                                    <td>  <a class "waves-effect waves-teal btn-flat" href="<%= services_path %>/<%= t.id %>"><%= t.address %> </a> </td>
+                                      <td><%= t.subject %> </td>
+                                    
                                 </tr>
                             <% end %>
                          </tbody>

@@ -1,6 +1,5 @@
 class CreateJoinrequests < ActiveRecord::Migration
   def change
-    drop_table(:joinrequests)
     create_table :joinrequests do |t|
       t.boolean :resolved
       t.belongs_to :tenant, index: true

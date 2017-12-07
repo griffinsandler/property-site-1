@@ -5,6 +5,7 @@ class Property < ActiveRecord::Base
     has_many :tenants
     has_many :joinrequests
     has_many :services
+    has_many :rents
     #creates validation requirements 
     validates :name, :presence => true
     validates :address, :presence => true

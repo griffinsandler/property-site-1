@@ -12,7 +12,7 @@
                 <form class = "col s12" action = "<%services_new_path%>" method = "post">
                     <div class = "row">
                         <div class = "input-field col s6">
-                            <input id="services_name" value = "<%= @tenant.name %>" type="text" class="validate">
+                            <input id="services_name" value = "<%= @tenant.name %>" name = "services[name]"type="text" class="validate">
                             <label for="services_name">Requester Name</label>
                         </div>
                         <div class = "input-field col s6">
@@ -20,11 +20,17 @@
                             <label for="services_address">Address</label>
                         </div>
                     </div>
+                     <div class = "row">
+                        <div class = "input-field col s6">
+                            <input id="services_subject" name = "services[subject]" type="text" class="validate">
+                            <label for="services_subject">Subject</label>
+                        </div>
                     <div class = "row">
-                        <div class = "input-field col s12">
+                        <div class = "input-field col s6">
                             <input id="services_room" name = "services[room]" type="text" class="validate">
                             <label for="services_room">Room</label>
                         </div>
+                   
                     <div class = "row">
                         <div class = "input-field col s12">
                             <textarea class = "materialize-textarea" id="services_notes" name = "services[notes]"></textarea>

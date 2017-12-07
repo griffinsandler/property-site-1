@@ -15,8 +15,9 @@
                 <table class = "highlight"  >
                     <thead>
                         <th></th>
-                        <th>Name</th>
+                        <th>Requester</th>
                         <th>Address</th>
+                        <th>Subject</th>
                         <th>Room</th>
                         <th>Notes</th>
                     </thead>
@@ -26,6 +27,7 @@
                             <tr>
                                 <td>  <a class "waves-effect waves-teal btn-flat" href="<%= services_path %>/<%= t.id %>"><%= t.name %> </a> </td>
                                 <td><%= t.address %></td>
+                                  <td><%= t.subject%> </td>
                                 <td><%= t.room%> </td>
                                 <td><%= t.notes%>   </td>
 
