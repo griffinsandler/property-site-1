@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206040540) do
+ActiveRecord::Schema.define(version: 20171207015214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,21 +28,6 @@ ActiveRecord::Schema.define(version: 20171206040540) do
   add_index "joinrequests", ["manager_id"], name: "index_joinrequests_on_manager_id", using: :btree
   add_index "joinrequests", ["property_id"], name: "index_joinrequests_on_property_id", using: :btree
   add_index "joinrequests", ["tenant_id"], name: "index_joinrequests_on_tenant_id", using: :btree
-
-  create_table "landlords", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "office_address"
-    t.string   "phone_number"
-    t.string   "email"
-    t.text     "notes"
-    t.string   "password"
-    t.string   "name"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
 
   create_table "managers", force: :cascade do |t|
     t.string   "name"
@@ -71,6 +56,26 @@ ActiveRecord::Schema.define(version: 20171206040540) do
 
   add_index "properties", ["manager_id"], name: "index_properties_on_manager_id", using: :btree
 
+  create_table "rents", force: :cascade do |t|
+    t.integer  "total"
+    t.integer  "property_id"
+    t.integer  "manager_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.date     "due"
+  end
+
+  add_index "rents", ["manager_id"], name: "index_rents_on_manager_id", using: :btree
+  add_index "rents", ["property_id"], name: "index_rents_on_property_id", using: :btree
+
+  create_table "rents_tenants", id: false, force: :cascade do |t|
+    t.integer "rent_id",   null: false
+    t.integer "tenant_id", null: false
+  end
+
+  add_index "rents_tenants", ["rent_id", "tenant_id"], name: "index_rents_tenants_on_rent_id_and_tenant_id", using: :btree
+  add_index "rents_tenants", ["tenant_id", "rent_id"], name: "index_rents_tenants_on_tenant_id_and_rent_id", using: :btree
+
   create_table "services", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
@@ -94,9 +99,10 @@ ActiveRecord::Schema.define(version: 20171206040540) do
     t.string   "provider"
     t.string   "uid"
     t.string   "password"
+    t.integer  "property_id"
+    t.integer  "true_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.integer  "property_id"
     t.integer  "rent"
   end
 
