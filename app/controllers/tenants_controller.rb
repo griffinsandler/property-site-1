@@ -23,6 +23,18 @@ class TenantsController < ApplicationController
       render "new"
     end
   end
+  
+  def edit
+    @tenant = Tenant.find(session[:user_id])
+  end
+  
+  def update
+      @tenant = Tenant.find(session[:user_id])
+      params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:tenant])
+      @tenant.update(params_map)
+      redirect_to '/tenants/show'
+  end
+  
   def pay
     @tenant = Tenant.find(session[:user_id])
     @property = Property.find(@tenant.property_id)
@@ -37,6 +49,14 @@ class TenantsController < ApplicationController
       flash.now[:notice] = 'Rent already payed. See you next month!'
     end
     redirect_to action: "show"
+  end
+  
+  def dummypay
+    @rent = Rent.find(params[:id])
+    @tenant = Tenant.find(session[:user_id])
+    @rent.total -= @tenant.rentNum
+    @rent.save
+    redirect_to '/tenants/show'
   end
 end
 

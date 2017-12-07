@@ -1,7 +1,49 @@
 <!DOCTYPE html>
 <html>
      <%= render '/layouts/tenant_nav_bar' %>
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    </head>
     <body>
+        <script>
+            paypal.Button.render({
+            env: 'production', // Or 'sandbox',
+
+            commit: true, // Show a 'Pay Now' button
+
+              style: {
+                color: 'gold',
+                size: 'small'
+              },
+
+      payment: function(data, actions) {
+          
+        /* 
+         * Set up the payment here 
+         */
+      },
+
+      onAuthorize: function(data, actions) {
+        /* 
+         * Execute the payment here 
+         */
+      },
+
+      onCancel: function(data, actions) {
+        /* 
+         * Buyer cancelled the payment 
+         */
+      },
+
+      onError: function(err) {
+        /* 
+         * An error occurred during the transaction 
+         */
+      }
+    }, '#paypal-button');
+  </script>
         <br/>
         <div class = "row">
             <div class = "col s6">
@@ -60,20 +102,25 @@
                         <table class = "highlight"  >
                         <thead>
                             <th>Address</th>
-                            <th>Rent Amount</th>
-                            <th>Amount Payed</th>
+                            <th>Amount Due</th>
+                            <th>Total Due</th>
+                            <th>Pay</th>
+                            <th></th>
                         </thead>
                         <tbody>
                             <%if @property %>
                                 <tr>
-                                    <td><%= @property.address %> </a> </td>
-                                    <td><%= @property.monthly_rent %> </td>
-                                    <td><%= @tenant.rent %> </td>
-                                    <%if @tenant.rent == nil%>
-                                    <td> <a href = "/tenants/pay">Pay Rent </a> </td>
-                                    <%else%>
-                                    <td> Rent payed! </td>
-                                    <% end %>>
+                                    <% @tenant.rent.each do |r| %>
+                                        <td><%= @property.address %> </a> </td>
+                                        <% if @tenant.rentNum.nil? %>
+                                            <td><a href = "/tenants/edit">Edit</a></td>
+                                        <% else %>
+                                            <td><%= @tenant.rentNum %> </td>
+                                            <td><%= r.total %> </td>
+                                            <td><div id = "paypal-button"/></td>
+                                            <td><a class "waves-effect waves-teal btn-flat" href="/tenants/pay/<%= r.id %>">Pay Rent</a></td>
+                                        <% end %>
+                                    <% end %>
                                 </tr>
                             <% end %>
                         </tbody>
@@ -82,6 +129,7 @@
                 </div>
             </div>
         </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
 </html>

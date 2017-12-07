@@ -19,6 +19,11 @@ class ManagersController < ApplicationController
         end
         @properties = Property.where(:manager_id => @manager)
         @services = Service.where(:manager_id => @manager)
+        @propRents = Hash.new
+        @properties.each do |p|
+            @rents = Rent.where(:property_id => p)
+            @propRents[p] = @rents
+        end
     end
     def update
         @manager = Manager.find(session[:user_id])
@@ -33,8 +38,16 @@ class ManagersController < ApplicationController
     def respond
         @joinrequest = Joinrequest.find(params[:id])
         if params[:op] == 'accept'
+            @property = Property.find(@joinrequest.property_id)
             @tenant = Tenant.find(@joinrequest.tenant_id)
             @tenant.property_id = @joinrequest.property_id
+            @rent = Rent.new
+            @rent.property_id = @joinrequest.property_id
+            @rent.manager_id = @joinrequest.manager_id
+            @rent.total = @property.monthly_rent
+            @rent.due = Time.now + 1.month
+            @rent.save 
+            @tenant.rent << @rent
             @tenant.save
         end
         @joinrequest.delete
