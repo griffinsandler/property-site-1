@@ -12,11 +12,11 @@
                 <form class = "col s12" action = "<%services_new_path%>" method = "post">
                     <div class = "row">
                         <div class = "input-field col s6">
-                            <input id="services_name" name = "services[name]" type="text" class="validate">
+                            <input id="services_name" value = "<%= @tenant.name %>" type="text" class="validate">
                             <label for="services_name">Requester Name</label>
                         </div>
                         <div class = "input-field col s6">
-                            <input id="services_address" name = "services[address]" type="text" class="validate">
+                            <input id="services_address" value = "<%= @property.address %>"name = "services[address]" type="text" class="validate">
                             <label for="services_address">Address</label>
                         </div>
                     </div>
