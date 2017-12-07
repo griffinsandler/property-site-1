@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>test.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../README_md.html">README</a>
+  
+    <li><a href="../README_rdoc.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../app/assets/javascripts/landlords_coffee.html">landlords.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/managers_coffee.html">managers.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/properties_coffee.html">properties.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/sessions_coffee.html">sessions.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/tenant_coffee.html">tenant.coffee</a>
+  
+    <li><a href="../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../app/assets/stylesheets/custom_scss.html">custom.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/landlords_scss.html">landlords.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/managers_scss.html">managers.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/properties_scss.html">properties.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/sessions_scss.html">sessions.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/tenant_scss.html">tenant.scss</a>
+  
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../features/addproperty_feature.html">addproperty.feature</a>
+  
+    <li><a href="../features/editproperty_feature.html">editproperty.feature</a>
+  
+    <li><a href="../lib/tasks/cucumber_rake.html">cucumber.rake</a>
+  
+    <li><a href="../log/development_log.html">development.log</a>
+  
+    <li><a href="../log/test_log.html">test.log</a>
+  
+    <li><a href="../public/404_html.html">404.html</a>
+  
+    <li><a href="../public/422_html.html">422.html</a>
+  
+    <li><a href="../public/500_html.html">500.html</a>
+  
+    <li><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../public/robots_txt.html">robots</a>
+  
+    <li><a href="../tmp/pids/server_pid.html">server.pid</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page log/test.log">
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.2ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:31:19 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.9ms)</pre>
+
+<p>Completed 200 OK in 545ms (Views: 533.3ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:33:09 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.1ms)</pre>
+
+<p>Completed 200 OK in 663ms (Views: 651.1ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:33:47 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (6.0ms)</pre>
+
+<p>Completed 200 OK in 198ms (Views: 184.2ms | ActiveRecord: 1.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:36:04 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.5ms)</pre>
+
+<p>Completed 200 OK in 186ms (Views: 173.6ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:36:19 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 183ms (Views: 171.2ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:38:37 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.2ms)</pre>
+
+<p>Completed 200 OK in 167ms (Views: 155.1ms | ActiveRecord: 1.5ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:38:59 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.3ms)</pre>
+
+<p>Completed 200 OK in 251ms (Views: 239.3ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:39:00 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.0ms)</pre>
+
+<p>Completed 200 OK in 170ms (Views: 157.9ms | ActiveRecord: 1.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:40:50 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 171ms (Views: 160.0ms | ActiveRecord: 1.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:40:57 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 169ms (Views: 157.6ms | ActiveRecord: 1.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:43:45 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.0ms)</pre>
+
+<p>Completed 200 OK in 174ms (Views: 162.2ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:44:15 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.7ms)</pre>
+
+<p>Completed 200 OK in 165ms (Views: 153.0ms | ActiveRecord: 1.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:44:51 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.8ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.7ms)</pre>
+
+<p>Completed 200 OK in 266ms (Views: 246.8ms | ActiveRecord: 1.7ms)</p>
+
+<pre>[1m[35m (2.5ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:45:11 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.9ms)</pre>
+
+<p>Completed 200 OK in 207ms (Views: 188.7ms | ActiveRecord: 1.5ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:45:16 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.8ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (6.6ms)</pre>
+
+<p>Completed 200 OK in 182ms (Views: 169.0ms | ActiveRecord: 1.8ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:46:26 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.1ms)</pre>
+
+<p>Completed 200 OK in 171ms (Views: 159.6ms | ActiveRecord: 1.3ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 19:46:26 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.8ms)</pre>
+
+<p>Completed 200 OK in 23ms (Views: 2.9ms | ActiveRecord: 14.1ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.6ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:46:54 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.0ms)</pre>
+
+<p>Completed 200 OK in 165ms (Views: 153.5ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:47:20 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.9ms)</pre>
+
+<p>Completed 200 OK in 169ms (Views: 157.5ms | ActiveRecord: 1.5ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 19:47:20 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.7ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 2.1ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:47:37 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.7ms)
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Completed 200 OK in 236ms (Views: 224.5ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.2ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:47:51 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 205ms (Views: 193.3ms | ActiveRecord: 1.5ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:48:03 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.1ms)</pre>
+
+<p>Completed 200 OK in 177ms (Views: 166.2ms | ActiveRecord: 1.3ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 19:48:03 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 1.9ms)</p>
+
+<pre>[1m[35m (0.2ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:48:37 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.0ms)</pre>
+
+<p>Completed 200 OK in 187ms (Views: 175.2ms | ActiveRecord: 1.4ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 19:48:38 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.8ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 2.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:48:57 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.8ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.8ms)</pre>
+
+<p>Completed 200 OK in 191ms (Views: 177.5ms | ActiveRecord: 1.6ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:49:08 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (6.6ms)</pre>
+
+<p>Completed 200 OK in 217ms (Views: 198.6ms | ActiveRecord: 1.7ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:53:06 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 183ms (Views: 170.3ms | ActiveRecord: 1.3ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 19:53:06 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 1.9ms)</p>
+
+<pre>[1m[35m (61.6ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:53:21 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.4ms)</pre>
+
+<p>Completed 200 OK in 176ms (Views: 162.7ms | ActiveRecord: 1.3ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 19:53:21 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 2.0ms)</p>
+
+<pre>[1m[35m (0.2ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:56:17 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.2ms)</pre>
+
+<p>Completed 200 OK in 173ms (Views: 160.4ms | ActiveRecord: 1.5ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:56:49 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.2ms)</pre>
+
+<p>Completed 200 OK in 183ms (Views: 171.8ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.7ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:58:25 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.0ms)</pre>
+
+<p>Completed 200 OK in 177ms (Views: 165.7ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:58:44 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.1ms)</pre>
+
+<p>Completed 200 OK in 176ms (Views: 163.6ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 19:59:12 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.3ms)</pre>
+
+<p>Completed 200 OK in 170ms (Views: 157.8ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:00:03 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.6ms)</pre>
+
+<p>Completed 200 OK in 276ms (Views: 256.0ms | ActiveRecord: 1.9ms)</p>
+
+<pre>[1m[35m (2.2ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:01:03 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.1ms)</pre>
+
+<p>Completed 200 OK in 176ms (Views: 162.5ms | ActiveRecord: 1.4ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:01:03 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 2.5ms | ActiveRecord: 1.9ms)</p>
+
+<pre>[1m[35m (0.2ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:01:28 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.9ms)</pre>
+
+<p>Completed 200 OK in 187ms (Views: 175.8ms | ActiveRecord: 1.5ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:01:48 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.6ms)</pre>
+
+<p>Completed 200 OK in 162ms (Views: 150.5ms | ActiveRecord: 1.2ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:02:29 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.6ms)</pre>
+
+<p>Completed 200 OK in 164ms (Views: 152.2ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:03:03 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 172ms (Views: 160.0ms | ActiveRecord: 1.3ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:04:43 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.8ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.1ms)</pre>
+
+<p>Completed 200 OK in 168ms (Views: 156.1ms | ActiveRecord: 1.5ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:04:43 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.7ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 2.3ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:04:44 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:05:10 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.4ms)</pre>
+
+<p>Completed 200 OK in 193ms (Views: 181.2ms | ActiveRecord: 1.7ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:05:11 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 2.1ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:05:11 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:05:33 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.5ms)</pre>
+
+<p>Completed 200 OK in 162ms (Views: 150.2ms | ActiveRecord: 1.3ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:05:33 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 2.0ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:05:33 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:06:11 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (7.2ms)</pre>
+
+<p>Completed 200 OK in 365ms (Views: 347.6ms | ActiveRecord: 1.6ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:06:12 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (1.0ms)</pre>
+
+<p>Completed 200 OK in 17ms (Views: 4.0ms | ActiveRecord: 2.7ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:06:12 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.5ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:06:12 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.5ms)</pre>
+
+<p>Completed 200 OK in 187ms (Views: 173.0ms | ActiveRecord: 1.4ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:06:12 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.9ms)</pre>
+
+<p>Completed 200 OK in 17ms (Views: 4.0ms | ActiveRecord: 2.9ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:06:12 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:10:32 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.7ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.3ms)</pre>
+
+<p>Completed 200 OK in 173ms (Views: 161.0ms | ActiveRecord: 1.5ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:10:32 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 2.0ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:10:32 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:12:50 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.8ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.0ms)</pre>
+
+<p>Completed 200 OK in 179ms (Views: 167.0ms | ActiveRecord: 1.5ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:12:51 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 1.9ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:12:51 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:16:46 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.2ms)</pre>
+
+<p>Completed 200 OK in 174ms (Views: 161.9ms | ActiveRecord: 1.4ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:16:46 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.7ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 1.9ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:16:46 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.4ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:17:14 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (2.0ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (8.4ms)</pre>
+
+<p>Completed 200 OK in 219ms (Views: 197.9ms | ActiveRecord: 3.1ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:17:14 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.7ms)</pre>
+
+<p>Completed 200 OK in 16ms (Views: 3.3ms | ActiveRecord: 3.2ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:17:14 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:25:17 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (4.9ms)</pre>
+
+<p>Completed 200 OK in 170ms (Views: 157.8ms | ActiveRecord: 1.5ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:25:17 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 2.1ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:25:17 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:26:38 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.6ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.2ms)</pre>
+
+<p>Completed 200 OK in 168ms (Views: 157.1ms | ActiveRecord: 1.3ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:26:38 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 2.1ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:26:38 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.3ms)[0m  BEGIN
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/properties” for 127.0.0.1 at 2017-10-31 20:27:08 +0000
+Processing by <a
+href="../PropertiesController.html#method-i-index">PropertiesController#index</a>
+as HTML</p>
+
+<pre>[1m[36mProperty Load (0.8ms)[0m  [1mSELECT &quot;properties&quot;.* FROM &quot;properties&quot;[0m
+Rendered properties/index.html.erb within layouts/application (5.2ms)</pre>
+
+<p>Completed 200 OK in 176ms (Views: 163.4ms | ActiveRecord: 1.8ms) Started
+GET “/properties/new” for 127.0.0.1 at 2017-10-31 20:27:09 +0000 Processing
+by <a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 2.7ms) Started GET
+“/properties/new” for 127.0.0.1 at 2017-10-31 20:27:09 +0000 Processing by
+<a
+href="../PropertiesController.html#method-i-new">PropertiesController#new</a>
+as HTML</p>
+
+<pre>Rendered properties/new.html.erb within layouts/application (0.1ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (3.6ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36m (128.4ms)[0m  [1mDROP DATABASE IF EXISTS &quot;app_test&quot;[0m
+[1m[35m (771.4ms)[0m  CREATE DATABASE &quot;app_test&quot; ENCODING = &#39;unicode&#39;
+[1m[36mSQL (0.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS &quot;plpgsql&quot;[0m
+[1m[35m (23.0ms)[0m  CREATE TABLE &quot;landlords&quot; (&quot;id&quot; serial primary key, &quot;first_name&quot; character varying, &quot;last_name&quot; character varying, &quot;office_address&quot; character varying, &quot;phone_number&quot; character varying, &quot;email&quot; character varying, &quot;notes&quot; text, &quot;password&quot; character varying, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL) 
+[1m[36m (11.7ms)[0m  [1mCREATE TABLE &quot;managers&quot; (&quot;id&quot; serial primary key, &quot;name&quot; character varying, &quot;provider&quot; character varying, &quot;uid&quot; character varying, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL) [0m
+[1m[35m (13.2ms)[0m  CREATE TABLE &quot;properties&quot; (&quot;id&quot; serial primary key, &quot;name&quot; character varying, &quot;address&quot; character varying, &quot;square_feet&quot; decimal, &quot;max_num_tenants&quot; integer, &quot;curr_num_tenants&quot; integer, &quot;monthly_rent&quot; decimal, &quot;notes&quot; text, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL, &quot;manager_id&quot; integer) 
+[1m[36m (7.1ms)[0m  [1mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; character varying NOT NULL) [0m
+[1m[35m (5.3ms)[0m  CREATE UNIQUE INDEX  &quot;unique_schema_migrations&quot; ON &quot;schema_migrations&quot;  (&quot;version&quot;)
+[1m[36m (1.3ms)[0m  [1mSELECT version FROM &quot;schema_migrations&quot;[0m
+[1m[35m (2.7ms)[0m  INSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20171102015429&#39;)
+[1m[36m (2.3ms)[0m  [1mINSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20171101202325&#39;)[0m
+[1m[35m (1.0ms)[0m  INSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20171009221450&#39;)
+[1m[36m (5.7ms)[0m  [1mINSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20171017170613&#39;)[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36m (112.4ms)[0m  [1mDROP DATABASE IF EXISTS &quot;app_test&quot;[0m
+[1m[35m (721.3ms)[0m  CREATE DATABASE &quot;app_test&quot; ENCODING = &#39;unicode&#39;
+[1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS &quot;plpgsql&quot;[0m
+[1m[35m (23.8ms)[0m  CREATE TABLE &quot;landlords&quot; (&quot;id&quot; serial primary key, &quot;first_name&quot; character varying, &quot;last_name&quot; character varying, &quot;office_address&quot; character varying, &quot;phone_number&quot; character varying, &quot;email&quot; character varying, &quot;notes&quot; text, &quot;password&quot; character varying, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL) 
+[1m[36m (13.8ms)[0m  [1mCREATE TABLE &quot;managers&quot; (&quot;id&quot; serial primary key, &quot;name&quot; character varying, &quot;provider&quot; character varying, &quot;uid&quot; character varying, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL) [0m
+[1m[35m (12.8ms)[0m  CREATE TABLE &quot;properties&quot; (&quot;id&quot; serial primary key, &quot;name&quot; character varying, &quot;address&quot; character varying, &quot;square_feet&quot; decimal, &quot;max_num_tenants&quot; integer, &quot;curr_num_tenants&quot; integer, &quot;monthly_rent&quot; decimal, &quot;notes&quot; text, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL, &quot;manager_id&quot; integer) 
+[1m[36m (9.6ms)[0m  [1mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; character varying NOT NULL) [0m
+[1m[35m (5.4ms)[0m  CREATE UNIQUE INDEX  &quot;unique_schema_migrations&quot; ON &quot;schema_migrations&quot;  (&quot;version&quot;)
+[1m[36m (0.3ms)[0m  [1mSELECT version FROM &quot;schema_migrations&quot;[0m
+[1m[35m (1.2ms)[0m  INSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20171102015429&#39;)
+[1m[36m (2.8ms)[0m  [1mINSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20171101202325&#39;)[0m
+[1m[35m (1.0ms)[0m  INSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20171009221450&#39;)
+[1m[36m (2.2ms)[0m  [1mINSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20171017170613&#39;)[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

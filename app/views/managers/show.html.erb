@@ -57,23 +57,21 @@
         <% end %>
         <% if @services %>
             <div class = "col s6">
-            <div class = "card orange darken-4">
+            <div class = "card teal lighten-2">
                 <span class = "card-title white-text" style = "padding:5px;">Service Requests</span>
                 <div class = "card-content black-text white">
                     <table class = "highlight"  >
                         <thead>
-                            <th>Name</th>
                             <th>Address</th>
-                            <th>Room</th>
-                            <th>Notes </th>
+                            <th>Subject</th>
                         </thead>
                         <tbody>
                             <% @services.each do |t| %>
                                 <tr>
-                                    <td><%= t.name %></td>
-                                    <td><%= t.address %></td>
-                                    <td><%= t.room %></td>
-                                    <td><%= t.notes %></td>
+                                   
+                                    <td>  <a class "waves-effect waves-teal btn-flat" href="<%= services_path %>/<%= t.id %>"><%= t.address %> </a> </td>
+                                      <td><%= t.subject %> </td>
+                                    
                                 </tr>
                             <% end %>
                          </tbody>
@@ -85,7 +83,7 @@
         </div>
                 <div class = "row">
             <div class = "col s6">
-                <div class = "card orange darken-4">
+                <div class = "card teal lighten-2">
                     <span class = "card-title white-text" style = "padding:5px;"> Rent</span>
                     <div class = "card-content black-text white">
                         <table class = "highlight"  >
