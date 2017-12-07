@@ -8,6 +8,7 @@ class CreateTenants < ActiveRecord::Migration
       t.string :uid
       t.string :password
       t.belongs_to :property, true
+      t.belongs_to :rent, true
       t.timestamps null: false
     end
   end
