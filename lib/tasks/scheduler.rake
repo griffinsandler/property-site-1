@@ -6,7 +6,7 @@ task :create_new_rents => :environment do
             @rent = Rent.new
             @rent.property_id = p.id
             @rent.manager_id = p.manager_id
-            @rent.total = p.rent
+            @rent.total = p.monthly_rent
             @tenants = Tenants.where(:property_id => p.id)
             @rent.due = time + 1.month
             @rent.save

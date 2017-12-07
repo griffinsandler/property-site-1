@@ -55,7 +55,7 @@
                     </div>
                 </div>
         <% end %>
-        <% if @services %>
+        <% if not @services.empty? %>
             <div class = "col s6">
             <div class = "card teal lighten-2">
                 <span class = "card-title white-text" style = "padding:5px;">Service Requests</span>
@@ -81,30 +81,34 @@
         </div>
         <% end %>
         </div>
-                <div class = "row">
+        <div class = "row">
+        <% if not @properties.empty? %>
             <div class = "col s6">
                 <div class = "card teal lighten-2">
                     <span class = "card-title white-text" style = "padding:5px;"> Rent</span>
                     <div class = "card-content black-text white">
                         <table class = "highlight"  >
                         <thead>
-                            <th>Address</th>
+                            <th>Property Name</th>
                             <th>Rent Amount</th>
                             <th>Amount Left to Pay</th>
                         </thead>
                         <tbody>
                              <% @properties.each do |t| %>
-                                <tr>
-                                    <td><%= t.name %></td>
-                                    <td><%= t.monthly_rent %></td>
-                                    <td><%= t.rent %></td>
-                                </tr>
+                                 <% @propRents[t].each do |r| %>
+                                    <tr>
+                                        <td><%= t.name %></td>
+                                        <td><%= t.monthly_rent %></td>
+                                        <td><%= r.total %></td>
+                                    </tr>
+                                <% end %>
                             <% end %>
                         </tbody>
                     </table>
                     </div>
                 </div>
             </div>
+        <% end %>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
