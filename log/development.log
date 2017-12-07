@@ -46270,3 +46270,288 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/tenant.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.81.38.143 at 2017-12-07 00:24:03 +0000
+  [1m[36m (5007.4ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (112.9ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (703.0ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.4ms)[0m  DROP TABLE "joinrequests" CASCADE
+  [1m[36m (10.8ms)[0m  [1mCREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.0ms)[0m  CREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")
+  [1m[36m (4.8ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")[0m
+  [1m[35m (4.1ms)[0m  CREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")
+  [1m[36m (4.1ms)[0m  [1mDROP TABLE "landlords" CASCADE[0m
+  [1m[35m (12.4ms)[0m  CREATE TABLE "landlords" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "office_address" character varying, "phone_number" character varying, "email" character varying, "notes" text, "password" character varying, "name" character varying, "provider" character varying, "uid" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.9ms)[0m  [1mDROP TABLE "managers" CASCADE[0m
+  [1m[35m (10.6ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (3.8ms)[0m  [1mDROP TABLE "properties" CASCADE[0m
+  [1m[35m (10.5ms)[0m  CREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "rent" integer) 
+  [1m[36m (3.8ms)[0m  [1mCREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")[0m
+  [1m[35m (13.5ms)[0m  CREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.6ms)[0m  [1mCREATE  INDEX  "index_services_on_manager_id" ON "services" USING btree ("manager_id")[0m
+  [1m[35m (3.6ms)[0m  CREATE  INDEX  "index_services_on_property_id" ON "services" USING btree ("property_id")
+  [1m[36m (5.9ms)[0m  [1mCREATE  INDEX  "index_services_on_tenant_id" ON "services" USING btree ("tenant_id")[0m
+  [1m[35m (2.9ms)[0m  DROP TABLE "tenants" CASCADE
+  [1m[36m (12.8ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "property_id" integer, "rent" integer) [0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (12.1ms)[0m  CREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (8.4ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")[0m
+  [1m[35m (3.9ms)[0m  CREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")
+  [1m[36m (8.4ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")[0m
+  [1m[35m (11.8ms)[0m  CREATE TABLE "landlords" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "office_address" character varying, "phone_number" character varying, "email" character varying, "notes" text, "password" character varying, "name" character varying, "provider" character varying, "uid" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) [0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "rent" integer) 
+  [1m[36m (2.9ms)[0m  [1mCREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")[0m
+  [1m[35m (10.1ms)[0m  CREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (5.0ms)[0m  [1mCREATE  INDEX  "index_services_on_manager_id" ON "services" USING btree ("manager_id")[0m
+  [1m[35m (5.7ms)[0m  CREATE  INDEX  "index_services_on_property_id" ON "services" USING btree ("property_id")
+  [1m[36m (5.2ms)[0m  [1mCREATE  INDEX  "index_services_on_tenant_id" ON "services" USING btree ("tenant_id")[0m
+  [1m[35m (11.3ms)[0m  CREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "property_id" integer, "rent" integer) 
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (5.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171206040540')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171206030232')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171205064958')
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171101202325')[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171126200031')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "managers" ("name", "id", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Charlie Powicki"], ["id", 25], ["email", "cpowicki@tulane.edu"], ["password", "1234"], ["created_at", "2017-12-07 01:37:03.458009"], ["updated_at", "2017-12-07 01:37:03.458009"]]
+  [1m[35m (5.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to Createservices (20171207013814)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateServices (20171207013814)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (5008.4ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (110.8ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.4ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (671.7ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.2ms)[0m  DROP TABLE "joinrequests" CASCADE
+  [1m[36m (10.7ms)[0m  [1mCREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.3ms)[0m  CREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")
+  [1m[36m (3.6ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")[0m
+  [1m[35m (4.8ms)[0m  CREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")
+  [1m[36m (3.7ms)[0m  [1mDROP TABLE "landlords" CASCADE[0m
+  [1m[35m (11.8ms)[0m  CREATE TABLE "landlords" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "office_address" character varying, "phone_number" character varying, "email" character varying, "notes" text, "password" character varying, "name" character varying, "provider" character varying, "uid" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.0ms)[0m  [1mDROP TABLE "managers" CASCADE[0m
+  [1m[35m (10.5ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (4.1ms)[0m  [1mDROP TABLE "properties" CASCADE[0m
+  [1m[35m (13.1ms)[0m  CREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "rent" integer) 
+  [1m[36m (3.9ms)[0m  [1mCREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")[0m
+  [1m[35m (5.1ms)[0m  DROP TABLE "services" CASCADE
+  [1m[36m (11.2ms)[0m  [1mCREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (7.1ms)[0m  CREATE  INDEX  "index_services_on_manager_id" ON "services" USING btree ("manager_id")
+  [1m[36m (5.7ms)[0m  [1mCREATE  INDEX  "index_services_on_property_id" ON "services" USING btree ("property_id")[0m
+  [1m[35m (5.2ms)[0m  CREATE  INDEX  "index_services_on_tenant_id" ON "services" USING btree ("tenant_id")
+  [1m[36m (4.6ms)[0m  [1mDROP TABLE "tenants" CASCADE[0m
+  [1m[35m (20.5ms)[0m  CREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "property_id" integer, "rent" integer) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (10.8ms)[0m  [1mCREATE TABLE "joinrequests" ("id" serial primary key, "resolved" boolean, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.0ms)[0m  CREATE  INDEX  "index_joinrequests_on_manager_id" ON "joinrequests" USING btree ("manager_id")
+  [1m[36m (3.7ms)[0m  [1mCREATE  INDEX  "index_joinrequests_on_property_id" ON "joinrequests" USING btree ("property_id")[0m
+  [1m[35m (6.8ms)[0m  CREATE  INDEX  "index_joinrequests_on_tenant_id" ON "joinrequests" USING btree ("tenant_id")
+  [1m[36m (18.6ms)[0m  [1mCREATE TABLE "landlords" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "office_address" character varying, "phone_number" character varying, "email" character varying, "notes" text, "password" character varying, "name" character varying, "provider" character varying, "uid" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (11.2ms)[0m  CREATE TABLE "managers" ("id" serial primary key, "name" character varying, "provider" character varying, "uid" character varying, "email" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying) 
+  [1m[36m (12.3ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "name" character varying, "address" character varying, "square_feet" decimal, "max_num_tenants" integer, "curr_num_tenants" integer, "monthly_rent" decimal, "notes" text, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "rent" integer) [0m
+  [1m[35m (3.9ms)[0m  CREATE  INDEX  "index_properties_on_manager_id" ON "properties" USING btree ("manager_id")
+  [1m[36m (11.2ms)[0m  [1mCREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (7.6ms)[0m  CREATE  INDEX  "index_services_on_manager_id" ON "services" USING btree ("manager_id")
+  [1m[36m (3.9ms)[0m  [1mCREATE  INDEX  "index_services_on_property_id" ON "services" USING btree ("property_id")[0m
+  [1m[35m (4.6ms)[0m  CREATE  INDEX  "index_services_on_tenant_id" ON "services" USING btree ("tenant_id")
+  [1m[36m (11.4ms)[0m  [1mCREATE TABLE "tenants" ("id" serial primary key, "name" character varying, "phone_number" character varying, "email" character varying, "provider" character varying, "uid" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "property_id" integer, "rent" integer) [0m
+  [1m[35m (9.4ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (4.5ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171206040540')[0m
+  [1m[35m (2.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171205064958')
+  [1m[36m (1.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171126011520')[0m
+  [1m[35m (2.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114003128')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171101202325')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171126200031')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateServices (20171207013814)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateServices (20171207013814)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateServices (20171207013814)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateServices (20171207013814)
+  [1m[35m (3.9ms)[0m  DROP TABLE "services"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (8.4ms)[0m  CREATE TABLE "services" ("id" serial primary key, "name" character varying, "address" character varying, "room" character varying, "notes" character varying, "tenant_id" integer, "property_id" integer, "manager_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.9ms)[0m  [1mCREATE  INDEX  "index_services_on_tenant_id" ON "services"  ("tenant_id")[0m
+  [1m[35m (2.9ms)[0m  CREATE  INDEX  "index_services_on_property_id" ON "services"  ("property_id")
+  [1m[36m (2.9ms)[0m  [1mCREATE  INDEX  "index_services_on_manager_id" ON "services"  ("manager_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171207013814"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'joinrequests'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'landlords'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'managers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'properties'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'services'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tenants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSubjectToServices (20171207014148)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (3.9ms)[0m  [1mALTER TABLE "services" ADD "subject" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171207014148"]]
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'joinrequests'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'landlords'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'managers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'properties'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'services'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tenants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
