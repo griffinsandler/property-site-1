@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20171206030232) do
     t.string   "email"
     t.text     "notes"
     t.string   "password"
+    t.string   "name"
+    t.string   "provider"
+    t.string   "uid"
+
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -88,9 +92,16 @@ ActiveRecord::Schema.define(version: 20171206030232) do
     t.string   "name"
     t.string   "email"
     t.string   "password"
+<<<<<<< HEAD
     t.string   "phone_number"
     t.integer  "property_id"
     t.string   "rent"
+=======
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "property_id"
+    t.integer  "rent"
+>>>>>>> ef59d954c55139b9d780a8e51296360795c4c6e0
   end
 
 end
