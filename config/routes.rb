@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   patch '/tenants/edit' => 'tenants#update'
   get '/tenants/pay' => 'tenants#pay'
   get '/tenants/pay/:id' => 'tenants#dummypay'
+  get '/tenants/:op/:id' => 'tenants#service'
   
   # Properties routes #
   get '/properties' => 'properties#index'
@@ -45,6 +46,7 @@ Rails.application.routes.draw do
   post '/services/new' => 'services#create'
   get '/services' => 'services#index'
   get '/services/:id' => 'services#show'
+  post 'services/response/:id' => 'services#respond'
   
   # Added these for cucumber testing
     # sessions#create_guest makes a fake user for Cucumber testing with hard coded data 

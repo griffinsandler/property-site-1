@@ -69,8 +69,9 @@
                     </div>
                 </div>
             </div>
-        <% if not @roommates.empty? %>
-            <div class = "col s6">
+        <% if not @roommates.nil? %>
+            <% if not @roommates.empty? %>
+                <div class = "col s6">
             <div class = "card orange darken-4">
                 <span class = "card-title white-text" style = "padding:5px;">My Housemates</span>
                 <div class = "card-content black-text white">
@@ -95,6 +96,32 @@
                 </div>
             </div>
         </div>
+            <% end %>
+        <% end %>
+        <% if not @services.nil? %>
+            <% if not @services.empty? %>
+                <div class = "col s6">
+                    <div class = "card orange darken-4">
+                        <span class = "card-title white-text" style = "padding:5px;">Service Requests</span>
+                        <div class = "card-content black-text white">
+                            <table class = "highlight"  >
+                                <thead>
+                                    <th>Address</th>
+                                    <th>Subject</th>
+                                </thead>
+                                <tbody>
+                                    <% @services.each do |t| %>
+                                        <tr>
+                                            <td>  <a class "waves-effect waves-teal btn-flat" href="<%= services_path %>/<%= t.id %>"><%= t.address %> </a> </td>
+                                            <td><%= t.subject %> </td>
+                                        </tr>
+                                    <% end %>
+                                 </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
         <% end %>
         </div>
         <div class = "row">

@@ -18,7 +18,7 @@ class ManagersController < ApplicationController
             end
         end
         @properties = Property.where(:manager_id => @manager)
-        @services = Service.where(:manager_id => @manager)
+        @services = Service.where("manager_id = ? AND resolved = ?", @manager, false)
         @propRents = Hash.new
         @properties.each do |p|
             @rents = Rent.where(:property_id => p)
@@ -67,9 +67,9 @@ class ManagersController < ApplicationController
                 @tenant.rent << @rent
                 @tenant.save
             end
+            @property.save
         end
         @joinrequest.delete
-        @property.save
         redirect_to '/managers/show'
     end
 end

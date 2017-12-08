@@ -12,8 +12,21 @@ class TenantsController < ApplicationController
     unless @tenant.property_id.blank?
       @property = Property.find(@tenant.property_id)
       @roommates = Tenant.where("property_id = ? AND id != ?", @property.id, @tenant.id)
+      @services = Service.where("tenant_id = ? AND resolved = ?", @tenant.id, true)
     end
   end
+  
+  def service
+    @service = Service.find(params[:id])
+    if params[:op] == 'completed'
+      @service.delete
+    else
+      @service.resolved = false
+      @service.save
+    end
+    redirect_to '/tenants/show'
+  end
+  
   def create
      params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:tenant])
     @tenant = Tenant.new(params_map)
