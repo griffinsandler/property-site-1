@@ -39,18 +39,37 @@ class ManagersController < ApplicationController
         @joinrequest = Joinrequest.find(params[:id])
         if params[:op] == 'accept'
             @property = Property.find(@joinrequest.property_id)
+            if @property.max_num_tenants == @property.curr_num_tenants
+                flash[:notice] = "This property is full right now!"
+                return
+            end
+            @property.curr_num_tenants += 1
             @tenant = Tenant.find(@joinrequest.tenant_id)
             @tenant.property_id = @joinrequest.property_id
-            @rent = Rent.new
-            @rent.property_id = @joinrequest.property_id
-            @rent.manager_id = @joinrequest.manager_id
-            @rent.total = @property.monthly_rent
-            @rent.due = Time.now + 1.month
-            @rent.save 
-            @tenant.rent << @rent
-            @tenant.save
+            @currRent = Rent.where("property_id = ? AND (due = ? OR due = ?)",  @joinrequest.property_id, Time.now + 1.month, Date.new(Time.now.year + 1, 1, 1)).first
+            if @currRent
+                @currRent.tenants << @tenant
+                @tenant.rent << @currRent
+                @currRent.save
+                @tenant.save
+            else
+                @rent = Rent.new
+                @rent.property_id = @joinrequest.property_id
+                @rent.manager_id = @joinrequest.manager_id
+                @rent.total = @property.monthly_rent
+                if (Time.now.month != 12)
+                    @rent.due = Date.new(Time.now.year, Time.now.month + 1, 1)
+                else
+                    @rent.due = Date.new(Time.now.year + 1, 1, 1) 
+                end
+                @rent.due
+                @rent.save 
+                @tenant.rent << @rent
+                @tenant.save
+            end
         end
         @joinrequest.delete
+        @property.save
         redirect_to '/managers/show'
     end
 end

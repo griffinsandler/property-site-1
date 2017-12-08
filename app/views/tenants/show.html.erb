@@ -57,6 +57,7 @@
                                 <li><b>Phone Number:</b> <%= @tenant.phone_number%></li>
                                 <%if @property %>
                                     <li><b>My Property:</b> <a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= @property.id %>"><%= @property.name %> </a> </td>
+                                    <li><b>Monthly Rent:</b> <%= @tenant.rentNum %></td>
                                 <% else %>
                                     <li><b>My Property:</b> None</li>
                                 <% end %>
@@ -64,11 +65,11 @@
                         </p>
                     </div>
                     <div class = "card-action">
-                        <a href = "/tenants/edit">Edit</a>
+                        <a href = "/tenants/edit" class = "white-text">Edit</a>
                     </div>
                 </div>
             </div>
-        <% if not @roommates.nil? %>
+        <% if not @roommates.empty? %>
             <div class = "col s6">
             <div class = "card orange darken-4">
                 <span class = "card-title white-text" style = "padding:5px;">My Housemates</span>
@@ -78,6 +79,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone Number</th>
+                            <th>Monthly Rent</th>
                         </thead>
                         <tbody>
                             <% @roommates.each do |t| %>
@@ -85,6 +87,7 @@
                                     <td><%= t.name %></td>
                                     <td><%= t.email %></td>
                                     <td><%= t.phone_number %></td>
+                                    <td><%= t.rentNum %></td>
                                 </tr>
                             <% end %>
                          </tbody>

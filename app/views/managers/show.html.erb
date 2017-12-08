@@ -20,7 +20,7 @@
                         </p>
                     </div>
                     <div class = "card-action">
-                        <a href = "/managers/edit">Edit</a>
+                        <a href = "/managers/edit" class = "white-text">Edit</a>
                     </div>
                 </div>
             </div>
@@ -92,6 +92,7 @@
                             <th>Property Name</th>
                             <th>Rent Amount</th>
                             <th>Amount Left to Pay</th>
+                            <th>Due By</th>
                         </thead>
                         <tbody>
                              <% @properties.each do |t| %>
@@ -100,6 +101,7 @@
                                         <td><%= t.name %></td>
                                         <td><%= t.monthly_rent %></td>
                                         <td><%= r.total %></td>
+                                        <td><%= r.due.month %>/<%= r.due.day %>/<%= r.due.year %></td>
                                     </tr>
                                 <% end %>
                             <% end %>
