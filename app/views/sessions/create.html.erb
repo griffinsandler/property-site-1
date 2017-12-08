@@ -25,15 +25,15 @@
                   <%= form_for(:manager, url: '/create/manager/local') do |f| %>
               
                     <%= f.label :name, class: 'white-text' %>
-                    <%= f.text_field :name, class: 'form-control' %>
+                    <%= f.text_field :name, class: 'form-control', id:"name" %>
                 
                     <%= f.label :email, class: 'white-text' %>
-                    <%= f.email_field :email, class: 'form-control' %>
+                    <%= f.email_field :email, class: 'form-control', id:"email" %>
                   
                     <%= f.label :password, class: 'white-text' %>
-                    <%= f.password_field :password, class: 'form-control' %>
+                    <%= f.password_field :password, class: 'form-control', id:"password" %>
                     <%= f.label :phone_number, class: 'white-text' %>
-                    <%= f.text_field :phone_number, class: 'form-control' %>
+                    <%= f.text_field :phone_number, class: 'form-control', id:"phone_number" %>
                     <%= f.submit "Sign Up", class: "btn btn-primary" %>
                   <% end %>
                 </div>

@@ -20,9 +20,30 @@ module NavigationHelpers
     # '/'"
 
     when /^the property-site home page/
-    '/properties'  
+     '/properties'  
+     
+    when /^the Properties page/
+     '/properties'
+     
     when /^the Create New Property page/
-    '/properties/new'   
+     '/properties/new'
+    
+    when /^the Login page/
+      '/signin'
+      
+    when /^the Signup page/
+      '/create'
+    
+    when /^I press "create"$/
+      'properties/new'
+    
+    when /^the manager profile page/
+     '/managers/show'
+     
+    when /^the Local Signup page/
+     '/signin/local'
+      
+  
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
