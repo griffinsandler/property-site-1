@@ -51,7 +51,6 @@ class ManagersController < ApplicationController
                 @tenant.rent << @currRent
                 @currRent.save
                 @tenant.save
-                flash[:notice] = "Added?"
             else
                 @rent = Rent.new
                 @rent.property_id = @joinrequest.property_id
