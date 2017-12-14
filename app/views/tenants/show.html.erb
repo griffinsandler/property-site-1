@@ -72,30 +72,35 @@
         <% if not @roommates.nil? %>
             <% if not @roommates.empty? %>
                 <div class = "col s6">
-            <div class = "card orange darken-4">
-                <span class = "card-title white-text" style = "padding:5px;">My Housemates</span>
-                <div class = "card-content black-text white">
-                    <table class = "highlight"  >
-                        <thead>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone Number</th>
-                            <th>Monthly Rent</th>
-                        </thead>
-                        <tbody>
-                            <% @roommates.each do |t| %>
-                                <tr>
-                                    <td><%= t.name %></td>
-                                    <td><%= t.email %></td>
-                                    <td><%= t.phone_number %></td>
-                                    <td><%= t.rentNum %></td>
-                                </tr>
+                    <div class = "card orange darken-4">
+                        <span class = "card-title white-text" style = "padding:5px;">My Housemates</span>
+                        <div class = "card-content black-text white">
+                            <table class = "highlight"  >
+                                <thead>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>Monthly Rent</th>
+                                </thead>
+                                <tbody>
+                                    <% @roommates.each do |t| %>
+                                        <tr>
+                                            <td><%= t.name %></td>
+                                            <td><%= t.email %></td>
+                                            <td><%= t.phone_number %></td>
+                                            <td><%= t.rentNum %></td>
+                                        </tr>
+                                    <% end %>
+                                 </tbody>
+                            </table>
+                            <% if @roommateRentTot < @property.monthly_rent %> 
+                                <span class = "red-text"><i class="material-icons left">warning</i> Your monthly rent is <%= @property.monthly_rent %>, but you have agreed to pay <%=@roommateRentTot%> in total.
+                                <br/>Please adjust your monthly rent contributions.
+                                </span>
                             <% end %>
-                         </tbody>
-                    </table>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
             <% end %>
         <% end %>
         <% if not @services.nil? %>
@@ -139,17 +144,18 @@
                         </thead>
                         <tbody>
                             <%if @property %>
-                                <tr>
                                     <% @tenant.rent.each do |r| %>
-                                        <td><%= @property.address %> </a> </td>
-                                        <% if @tenant.rentNum.nil? %>
-                                            <td><a href = "/tenants/edit">Edit</a></td>
-                                        <% else %>
-                                            <td><%= @tenant.rentNum %> </td>
-                                            <td><%= r.total %> </td>
-                                            <td><div id = "paypal-button"/></td>
-                                            <td><a class "waves-effect waves-teal btn-flat" href="/tenants/pay/<%= r.id %>">Pay Rent</a></td>
-                                        <% end %>
+                                       <tr>
+                                            <td><%= @property.address %> </a> </td>
+                                            <% if @tenant.rentNum.nil? %>
+                                                <td><a href = "/tenants/edit">Edit</a></td>
+                                            <% else %>
+                                                <td><%= @tenant.rentNum %> </td>
+                                                <td><%= r.total %> </td>
+                                                <td><div id = "paypal-button"/></td>
+                                                <td><a class "waves-effect waves-teal btn-flat" href="/tenants/pay/<%= r.id %>">Pay Rent</a></td>
+                                            <% end %>
+                                        </tr>
                                     <% end %>
                                 </tr>
                             <% end %>

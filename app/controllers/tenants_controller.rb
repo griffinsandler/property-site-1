@@ -13,6 +13,11 @@ class TenantsController < ApplicationController
       @property = Property.find(@tenant.property_id)
       @roommates = Tenant.where("property_id = ? AND id != ?", @property.id, @tenant.id)
       @services = Service.where("tenant_id = ? AND resolved = ?", @tenant.id, true)
+      @roommateRentTot = 0
+      @roommates.each do |r| 
+        @roommateRentTot += r.rentNum
+      end
+      @roommateRentTot += @tenant.rentNum
     end
   end
   
