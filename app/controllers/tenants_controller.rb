@@ -14,10 +14,16 @@ class TenantsController < ApplicationController
       @roommates = Tenant.where("property_id = ? AND id != ?", @property.id, @tenant.id)
       @services = Service.where("tenant_id = ? AND resolved = ?", @tenant.id, true)
       @roommateRentTot = 0
-      @roommates.each do |r| 
-        @roommateRentTot += r.rentNum
+      unless @roommates.empty?
+        @roommates.each do |r| 
+          if not r.rentNum.nil?
+            @roommateRentTot += r.rentNum ||= 0
+          end
+        end
       end
-      @roommateRentTot += @tenant.rentNum
+      if not @tenant.rentNum.nil?
+        @roommateRentTot +=  @tenant.rentNum
+      end
     end
   end
   

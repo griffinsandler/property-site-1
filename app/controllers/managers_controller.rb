@@ -48,10 +48,10 @@ class ManagersController < ApplicationController
             @tenant.property_id = @joinrequest.property_id
             @currRent = Rent.where("property_id = ? AND (due = ? OR due = ?)",  @joinrequest.property_id, Time.now + 1.month, Date.new(Time.now.year + 1, 1, 1)).first
             if @currRent
-                @currRent.tenants << @tenant
                 @tenant.rent << @currRent
                 @currRent.save
                 @tenant.save
+                flash[:notice] = "Added?"
             else
                 @rent = Rent.new
                 @rent.property_id = @joinrequest.property_id
@@ -62,7 +62,6 @@ class ManagersController < ApplicationController
                 else
                     @rent.due = Date.new(Time.now.year + 1, 1, 1) 
                 end
-                @rent.due
                 @rent.save 
                 @tenant.rent << @rent
                 @tenant.save
