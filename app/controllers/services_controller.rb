@@ -26,7 +26,7 @@ skip_before_action :verify_authenticity_token
         @service.tenant_id = @tenant.id
         @service.resolved = false
         if @service.save
-            ServicesMailer.reminder(@service).deliver_now
+            ServiceMailer.reminder(@service).deliver_now
             redirect_to '/tenants/show'
         else
           render "new"
