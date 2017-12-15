@@ -4,21 +4,21 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Dear <%= @manager.name %>,</h1>
     <p>
-        One of your tenants has sent you a service request:
-        <ul>
-            <li>Property: <%= @property.name %></li>
-            <li>Address: <%= @property.address %></li>
-            <li>Requester: <%= @tenant.name %></li>
-            <li>Subject: <%= @service.subject %></li>
-        </ul>
+      Dear <%= @manager.name %>,
+        
+      One of your tenants has sent you a service request:
+      <ul>
+          <li><b>Property:</b> <%= @property.name %></li>
+          <li><b>Address:</b><%= @property.address %></li>
+          <li><b>Requester:</b><%= @tenant.name %></li>
+          <li><b>Subject:</b> <%= @service.subject %></li>
+      </ul>
     </p>
     <p>
-        <%= @service.notes %>
-    </p>
-    <p>
-        To respond to this request, please follow this link: <a href = "<%=@url %>" />
+      Details:
+      
+      <%= @service.notes %>
     </p>
   </body>
 </html>
