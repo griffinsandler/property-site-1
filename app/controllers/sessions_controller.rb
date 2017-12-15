@@ -15,10 +15,22 @@ class SessionsController < ApplicationController
   def facebookcheck
     auth=request.env["omniauth.auth"]
     session[:auth] = auth
-    if (session[:check] == 1)
-      redirect_to '/create/manager'
-    else 
-      redirect_to '/create/tenant'
+    if Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
+      user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
+      session[:user_id] = user.id
+      session[:check] = 1
+      redirect_to '/managers/show'
+    elsif Tenant.find_by(:provider => auth["provider"], :uid => auth["uid"]) 
+      user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
+      session[:user_id] = user.id
+      session[:check] = 2
+      redirect_to '/tenants/show'
+    else  
+      if (session[:check] == 1)
+       redirect_to '/create/manager'
+     else 
+        redirect_to '/create/tenant'
+      end
     end
   end
   
