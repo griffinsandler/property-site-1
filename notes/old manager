@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <%= render '/layouts/manager_nav_bar' %>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    </head>
+    <body>
+        <br/>
+        <div class = "row">
+            <div class = "col s6">
+                <div class = "card teal lighten-2">
+                    <span class = "card-title white-text" style = "padding:5px;">My Info</span>
+                    <div class = "card-content black-text white">
+                        <p>
+                            <ul>
+                                <li><b>Name:</b> <%= @manager.name%></li>
+                                <li><b>Email:</b> <%= @manager.email%></li>
+                                <li><b>Phone Number:</b> <%= @manager.phone_number%></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class = "card-action">
+                        <a href = "/managers/edit" class = "white-text">Edit</a>
+                    </div>
+                </div>
+            </div>
+        <%if @JRBundles%>
+            <div class = "col s6">
+                    <div class = "card teal lighten-2">
+                        <span class = "card-title white-text" style = "padding:5px;">Requests to Join Properties</span>
+                        <div class = "card-content black-text white">
+                            <table class = "highlight"  >
+                            <thead>
+                                <th>Property</th>
+                                <th>Address</th>
+                                <th>Tenant</th>
+                                <th>Email</th>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                <% @JRBundles.each do |t| %>
+                                    <tr>
+                                        <td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= t.property.id %>"><%= t.property.name %> </a> </td>
+                                        <td><%= t.property.address %></td>
+                                        <td><%= t.tenant.name %></td>
+                                        <td><%= t.tenant.email %></td>
+                                        <td><a href="/request/accept/<%= t.joinRequest.id %>"><i class="material-icons">check</i></a></li></td>
+                                        <td><a href="/request/deny/<%= t.joinRequest.id %>"><i class="material-icons">close</i></a></li></td>
+                                    </tr>
+                                <% end %>
+                             </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+        <% end %>
+        <% if not @services.empty? %>
+            <div class = "col s6">
+            <div class = "card teal lighten-2">
+                <span class = "card-title white-text" style = "padding:5px;">Service Requests</span>
+                <div class = "card-content black-text white">
+                    <table class = "highlight"  >
+                        <thead>
+                            <th>Address</th>
+                            <th>Subject</th>
+                        </thead>
+                        <tbody>
+                            <% @services.each do |t| %>
+                                <tr>
+                                   
+                                    <td>  <a class "waves-effect waves-teal btn-flat" href="<%= services_path %>/<%= t.id %>"><%= t.address %> </a> </td>
+                                      <td><%= t.subject %> </td>
+                                    
+                                </tr>
+                            <% end %>
+                         </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <% end %>
+        </div>
+        <div class = "row">
+        <% if not @properties.empty? %>
+            <div class = "col s6">
+                <div class = "card teal lighten-2">
+                    <span class = "card-title white-text" style = "padding:5px;"> Rent</span>
+                    <div class = "card-content black-text white">
+                        <table class = "highlight"  >
+                        <thead>
+                            <th>Property Name</th>
+                            <th>Rent Amount</th>
+                            <th>Amount Left to Pay</th>
+                            <th>Due By</th>
+                        </thead>
+                        <tbody>
+                             <% @properties.each do |t| %>
+                                 <% @propRents[t].each do |r| %>
+                                    <tr>
+                                        <td><%= t.name %></td>
+                                        <td><%= t.monthly_rent %></td>
+                                        <td><%= r.total %></td>
+                                        <td><%= r.due.month %>/<%= r.due.day %>/<%= r.due.year %></td>
+                                    </tr>
+                                <% end %>
+                            <% end %>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>

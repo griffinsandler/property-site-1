@@ -25,15 +25,15 @@
                   <%= form_for(:manager, url: '/create/manager/local') do |f| %>
               
                     <%= f.label :name, class: 'white-text' %>
-                    <%= f.text_field :name, class: 'form-control', id:"name" %>
+                    <%= f.text_field :name, class: 'form-control', id:"name", maxlength: "22", required: "true" %>
                 
                     <%= f.label :email, class: 'white-text' %>
-                    <%= f.email_field :email, class: 'form-control', id:"email" %>
+                    <%= f.email_field :email, class: 'form-control', id:"email", maxlength: "25", required: "true" %>
                   
                     <%= f.label :password, class: 'white-text' %>
-                    <%= f.password_field :password, class: 'form-control', id:"password" %>
+                    <%= f.password_field :password, class: 'form-control', id:"password", maxlength: "22", required: "true" %>
                     <%= f.label :phone_number, class: 'white-text' %>
-                    <%= f.text_field :phone_number, class: 'form-control', id:"phone_number" %>
+                    <%= f.text_field :phone_number, class: 'form-control', id:"phone_number", maxlenght: "10", required: "true" %>
                     <%= f.submit "Sign Up", class: "btn btn-primary" %>
                   <% end %>
                 </div>
@@ -47,17 +47,17 @@
                 <span class="card-title">Tenant Signup:</span>
                   <%= form_for(:tenant, url: '/create/tenant/local') do |f| %>
                   
-                    <%= f.label :name, class: 'white-text' %>
-                    <%= f.text_field :name, class: 'form-control' %>
+                     <%= f.label :name, class: 'white-text' %>
+                    <%= f.text_field :name, class: 'form-control', id:"name", maxlength: "22", required: "true" %>
                 
                     <%= f.label :email, class: 'white-text' %>
-                    <%= f.email_field :email, class: 'form-control' %>
+                    <%= f.email_field :email, class: 'form-control', id:"email", maxlength: "25", required: "true" %>
                   
                     <%= f.label :password, class: 'white-text' %>
-                    <%= f.password_field :password, class: 'form-control' %>
+                    <%= f.password_field :password, class: 'form-control', id:"password", maxlength: "22", required: "true"%>
                     
                     <%= f.label :phone_number, class: 'white-text' %>
-                    <%= f.text_field :phone_number, class: 'form-control' %>
+                    <%= f.text_field :phone_number, class: 'form-control', id:"phone_number", maxlenght: "10", required: "true"%>
                     
                     <%= f.submit "Sign Up", class: "btn btn-primary  orange darken-4" %>
                   <% end %>
