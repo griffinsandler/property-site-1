@@ -15,20 +15,20 @@ class SessionsController < ApplicationController
   def facebookcheck
     auth=request.env["omniauth.auth"]
     session[:auth] = auth
-    if Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
-      user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
-      session[:user_id] = user.id
-      session[:check] = 1
-      redirect_to '/managers/show'
-    elsif Tenant.find_by(:provider => auth["provider"], :uid => auth["uid"]) 
-      user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
-      session[:user_id] = user.id
-      session[:check] = 2
-      redirect_to '/tenants/show'
-    else  
-      if (session[:check] == 1)
-       redirect_to '/create/manager'
-     else 
+    if (session[:check] == 1)
+      if Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
+        user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
+        session[:user_id] = user.id
+        redirect_to '/managers/show'
+      else
+        redirect_to '/create/manager'
+      end
+    else
+      if Tenant.find_by(:provider => auth["provider"], :uid => auth["uid"]) 
+        user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
+        session[:user_id] = user.id
+        redirect_to '/tenants/show'
+      else 
         redirect_to '/create/tenant'
       end
     end
@@ -111,13 +111,20 @@ class SessionsController < ApplicationController
   def search
       params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:query])
       @result = Property.where(:address => params_map[:address]).take
-      @manager = Manager.find(@result.manager_id)
+      if @result
+        @manager = Manager.find(@result.manager_id)
+        flash.clear
+        render 'search'
+      else
+        flash[:notice] = "Your search returned no results."
+        render 'search'
+      end
   end
   
   # Ends the user's current session, logging them out. 
   def destroy
     session.delete(:user_id)
-    flash.now[:notice] = 'Logged out successfully.'
+    flash[:notice] = 'Logged out successfully.'
     redirect_to "/home"
   end
   
