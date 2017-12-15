@@ -16,23 +16,23 @@
                             <label for="services_name">Requester Name</label>
                         </div>
                         <div class = "input-field col s6">
-                            <input id="services_address" value = "<%= @property.address %>"name = "services[address]" type="text" class="validate">
+                            <input id="services_address" value = "<%= @property.address %>"name = "services[address]" type="text" class="validate" required="true">
                             <label for="services_address">Address</label>
                         </div>
                     </div>
                      <div class = "row">
                         <div class = "input-field col s6">
-                            <input id="services_subject" name = "services[subject]" type="text" class="validate">
+                            <input id="services_subject" name = "services[subject]" type="text" class="validate" maxlength="25" required="true">
                             <label for="services_subject">Subject</label>
                         </div>
                         <div class = "input-field col s6">
-                            <input id="services_room" name = "services[room]" type="text" class="validate">
+                            <input id="services_room" name = "services[room]" type="text" class="validate" maxlength="25" required="true">
                             <label for="services_room">Room</label>
                         </div>
                     </div>
                     <div class = "row">
                         <div class = "input-field col s12">
-                            <textarea class = "materialize-textarea" id="services_notes" name = "services[notes]"></textarea>
+                            <textarea class = "materialize-textarea" id="services_notes" name = "services[notes]" maxlength="140"></textarea>
                             <label for="services_notes">Notes</label>
                         </div>
                     </div>

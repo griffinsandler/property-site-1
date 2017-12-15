@@ -15742,7 +15742,6 @@ Processing by SessionsController#home as HTML
 Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
 
 
-<<<<<<< HEAD
 Started GET "/" for 174.70.101.221 at 2017-11-02 04:52:07 +0000
 Cannot render console from 174.70.101.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -16106,7 +16105,6 @@ Completed 200 OK in 60ms (Views: 38.6ms | ActiveRecord: 7.7ms)
 
 Started GET "/logout" for 98.172.185.27 at 2017-11-12 17:31:54 +0000
 Cannot render console from 98.172.185.27! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-=======
 Started GET "/" for 129.81.39.214 at 2017-11-14 00:48:27 +0000
 Cannot render console from 129.81.39.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -16482,7 +16480,6 @@ Completed 200 OK in 49ms (Views: 39.6ms | ActiveRecord: 1.8ms)
 
 Started GET "/logout" for 129.81.39.214 at 2017-11-14 00:53:30 +0000
 Cannot render console from 129.81.39.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
->>>>>>> tenant-model
 Processing by SessionsController#destroy as HTML
 Redirected to https://property-site-gsandler.c9users.io/home
 Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
@@ -56810,7 +56807,11 @@ Processing by TenantsController#show as HTML
 Completed 200 OK in 39ms (Views: 31.6ms | ActiveRecord: 3.0ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 129.81.137.201 at 2017-12-15 19:20:14 +0000
+=======
+Started GET "/" for 24.252.82.78 at 2017-12-15 18:07:40 +0000
+>>>>>>> 8a0a4f6a95f12a058c7daeb3ffdf0d1624541754
 
 PG::ConnectionBad (could not connect to server: Connection refused
 	Is the server running on host "0.0.0.0" and accepting
@@ -56871,6 +56872,7 @@ PG::ConnectionBad (could not connect to server: Connection refused
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
@@ -57185,3 +57187,624 @@ Processing by TenantsController#show as HTML
   [1m[36mRent Load (0.5ms)[0m  [1mSELECT "rents".* FROM "rents" INNER JOIN "rents_tenants" ON "rents"."id" = "rents_tenants"."rent_id" WHERE "rents_tenants"."tenant_id" = $1[0m  [["tenant_id", 1]]
   Rendered tenants/show.html.erb within layouts/application (4.3ms)
 Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 3.1ms)
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.3ms)
+
+
+Started GET "/" for 24.252.82.78 at 2017-12-15 18:07:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (6.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 24.252.82.78 at 2017-12-15 18:07:59 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 341ms (Views: 330.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/services.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/properties.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/service.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/managers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/landlords.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/tenant.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/landlords.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/properties.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/service.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/tenant.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/services.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 24.252.82.78 at 2017-12-15 18:08:00 +0000
+
+
+Started GET "/signin" for 24.252.82.78 at 2017-12-15 18:08:22 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 24.252.82.78 at 2017-12-15 18:08:26 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZaT33vyAx9IwR2wVRrcooYiMOPdGHu04xcaWCzDeNdwuaa6oRGZj14KAVN31xyepPx/Oto+N0U3QcnVtdoQ5QA==", "session"=>{"email"=>"michael.redston@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (4.2ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "michael.redston@gmail.com"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 57ms (ActiveRecord: 22.2ms)
+
+
+Started GET "/managers/show" for 24.252.82.78 at 2017-12-15 18:08:26 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1
+  [1m[36mProperty Load (7.1ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1[0m
+  Rendered layouts/_manager_nav_bar.html.erb (0.4ms)
+  [1m[35m (8.0ms)[0m  SELECT COUNT(*) FROM "services" WHERE (manager_id = 1 AND resolved = 'f')
+  [1m[36mService Load (0.4ms)[0m  [1mSELECT "services".* FROM "services" WHERE (manager_id = 1 AND resolved = 'f')[0m
+  [1m[35mRent Load (5.1ms)[0m  SELECT "rents".* FROM "rents" WHERE "rents"."property_id" = 2
+  [1m[36mRent Load (0.3ms)[0m  [1mSELECT "rents".* FROM "rents" WHERE "rents"."property_id" = 3[0m
+  Rendered managers/show.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 113ms (Views: 55.9ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/logout" for 24.252.82.78 at 2017-12-15 18:13:05 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-redston96.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 24.252.82.78 at 2017-12-15 18:13:06 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 83ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 24.252.82.78 at 2017-12-15 18:13:07 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/sessions/create.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+...m-control', id:"name" maxlength="22" );@output_buffer.safe_a...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...-control', id:"email" maxlength="25" );@output_buffer.safe_a...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ntrol', id:"password" maxlength="22" );@output_buffer.safe_a...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+...l', id:"phone_number" maxlenght="10" );@output_buffer.safe_a...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+...m-control', id:"name" maxlength="22" );@output_buffer.safe_a...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+...-control', id:"email" maxlength="25" );@output_buffer.safe_a...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ntrol', id:"password" maxlength="22" );@output_buffer.safe_a...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+...l', id:"phone_number" maxlenght="10" );@output_buffer.safe_a...
+...                               ^):
+  app/views/sessions/create.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.3ms)
+
+
+Started GET "/create" for 24.252.82.78 at 2017-12-15 18:13:46 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/sessions/create.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+...m-control', id:"name" maxlength: "22" );@output_buffer.safe_...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...-control', id:"email" maxlength: "25" );@output_buffer.safe_...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ntrol', id:"password" maxlength: "22" );@output_buffer.safe_...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+...l', id:"phone_number" maxlenght: "10" );@output_buffer.safe_...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+...m-control', id:"name" maxlength: "22" );@output_buffer.safe_...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+...-control', id:"email" maxlength: "25" );@output_buffer.safe_...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ntrol', id:"password" maxlength: "22" );@output_buffer.safe_...
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+...l', id:"phone_number" maxlenght: "10" );@output_buffer.safe_...
+...                               ^):
+  app/views/sessions/create.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/sessions/create.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.6ms)
+
+
+Started GET "/create" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/landlords.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/managers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/services.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/properties.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/service.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/tenant.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/landlords.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/properties.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/service.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/services.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/tenant.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 24.252.82.78 at 2017-12-15 18:14:12 +0000
+
+
+Started GET "/create" for 24.252.82.78 at 2017-12-15 18:16:01 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/sessions/create.html.erb:28: syntax error, unexpected ')', expecting =>
+...e", maxlength: "22", required );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:31: syntax error, unexpected ')', expecting =>
+...l", maxlength: "25", required );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:34: syntax error, unexpected ')', expecting =>
+...d", maxlength: "22", required );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:36: syntax error, unexpected ')', expecting =>
+...r", maxlenght: "10", required );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;                   end 
+                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:51: syntax error, unexpected ')', expecting =>
+...e", maxlength: "22", required );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:54: syntax error, unexpected ')', expecting =>
+...l", maxlength: "25", required );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:57: syntax error, unexpected ')', expecting =>
+...rd", maxlength: "22", required);@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:60: syntax error, unexpected ')', expecting =>
+...er", maxlenght: "10", required);@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:63: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;                   end 
+                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:73: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:75: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/sessions/create.html.erb:28: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:31: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:34: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:36: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+  app/views/sessions/create.html.erb:51: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:54: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:57: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:60: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:63: syntax error, unexpected keyword_end, expecting ')'
+  app/views/sessions/create.html.erb:73: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/sessions/create.html.erb:75: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.5ms)
+
+
+Started GET "/create" for 24.252.82.78 at 2017-12-15 18:16:36 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/sessions/create.html.erb:28: syntax error, unexpected ')', expecting =>
+...length: "22", required="true" );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:31: syntax error, unexpected ')', expecting =>
+...length: "25", required="true" );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:34: syntax error, unexpected ')', expecting =>
+...length: "22", required="true" );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:36: syntax error, unexpected ')', expecting =>
+...lenght: "10", required="true" );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;                   end 
+                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:51: syntax error, unexpected ')', expecting =>
+...length: "22", required="true" );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:54: syntax error, unexpected ')', expecting =>
+...length: "25", required="true" );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:57: syntax error, unexpected ')', expecting =>
+...xlength: "22", required="true");@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:60: syntax error, unexpected ')', expecting =>
+...xlenght: "10", required="true");@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:63: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;                   end 
+                               ^
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:73: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/sessions/create.html.erb:75: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/sessions/create.html.erb:28: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:31: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:34: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:36: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+  app/views/sessions/create.html.erb:51: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:54: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:57: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:60: syntax error, unexpected ')', expecting =>
+  app/views/sessions/create.html.erb:63: syntax error, unexpected keyword_end, expecting ')'
+  app/views/sessions/create.html.erb:73: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/sessions/create.html.erb:75: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.4ms)
+
+
+Started GET "/create" for 24.252.82.78 at 2017-12-15 18:18:38 +0000
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/landlords.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/managers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/services.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/properties.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/service.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/tenant.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/landlords.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/properties.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/services.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/service.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/tenant.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 24.252.82.78 at 2017-12-15 18:18:39 +0000
+
+
+Started GET "/home" for 24.252.82.78 at 2017-12-15 18:22:47 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.252.82.78 at 2017-12-15 18:22:51 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 24.252.82.78 at 2017-12-15 18:22:54 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FdTo1oc3MiEiILVe1Xo1Xyfz58/h5c0SxkEsFX0ZkWFeGbGgP9GWJJDnjZZmCjpXkGARjih28WfT9c9zO0Od/Q==", "session"=>{"email"=>"brad.silk@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.3ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "brad.silk@gmail.com"], ["password", "1234"]]
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "brad.silk@gmail.com"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/tenants/show
+Completed 302 Found in 15ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/tenants/show" for 24.252.82.78 at 2017-12-15 18:22:55 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.5ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "tenants" WHERE (property_id = 2 AND id != 1)
+  Rendered layouts/_tenant_nav_bar.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tenants" WHERE (property_id = 2 AND id != 1)[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "services" WHERE (tenant_id = 1 AND resolved = 't')
+  [1m[36mService Load (0.5ms)[0m  [1mSELECT "services".* FROM "services" WHERE (tenant_id = 1 AND resolved = 't')[0m
+  [1m[35mRent Load (2.3ms)[0m  SELECT "rents".* FROM "rents" INNER JOIN "rents_tenants" ON "rents"."id" = "rents_tenants"."rent_id" WHERE "rents_tenants"."tenant_id" = $1  [["tenant_id", 1]]
+  Rendered tenants/show.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 150ms (Views: 70.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/services/new" for 24.252.82.78 at 2017-12-15 18:22:57 +0000
+Processing by ServicesController#new as HTML
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered services/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/services/new" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+Processing by ServicesController#new as HTML
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered services/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/landlords.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/tenant.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/properties.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/service.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/services.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/managers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/managers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/landlords.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/properties.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/service.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/services.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/tenant.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 24.252.82.78 at 2017-12-15 18:23:28 +0000
+
+
+Started GET "/logout" for 24.252.82.78 at 2017-12-15 18:32:04 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://property-site-redston96.c9users.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 24.252.82.78 at 2017-12-15 18:32:05 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.252.82.78 at 2017-12-15 18:32:06 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 24.252.82.78 at 2017-12-15 18:32:15 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CzqlyDpfB4b0C4O7u6ceqLmOod5jIIYCLtyo1aJIy5VA9/y+grmjg0bMu3MI1xGgDh1Xn6qzunc7aEuz5BLHCQ==", "session"=>{"email"=>"michael.redston@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.3ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "michael.redston@gmail.com"], ["password", "1234"]]
+Redirected to https://property-site-redston96.c9users.io/managers/show
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/managers/show" for 24.252.82.78 at 2017-12-15 18:32:15 +0000
+Processing by ManagersController#show as HTML
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 1[0m
+  [1m[35mProperty Load (0.3ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered layouts/_manager_nav_bar.html.erb (0.2ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "services" WHERE (manager_id = 1 AND resolved = 'f')[0m
+  [1m[35mService Load (0.4ms)[0m  SELECT "services".* FROM "services" WHERE (manager_id = 1 AND resolved = 'f')
+  [1m[36mRent Load (0.4ms)[0m  [1mSELECT "rents".* FROM "rents" WHERE "rents"."property_id" = 2[0m
+  [1m[35mRent Load (0.3ms)[0m  SELECT "rents".* FROM "rents" WHERE "rents"."property_id" = 3
+  Rendered managers/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 41ms (Views: 35.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/properties" for 24.252.82.78 at 2017-12-15 18:32:18 +0000
+Processing by PropertiesController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  [1m[35mProperty Load (0.6ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 1
+  Rendered properties/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/properties/new" for 24.252.82.78 at 2017-12-15 18:32:20 +0000
+Processing by PropertiesController#new as HTML
+  Rendered layouts/_manager_nav_bar.html.erb (0.1ms)
+  Rendered properties/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+>>>>>>> 8a0a4f6a95f12a058c7daeb3ffdf0d1624541754
