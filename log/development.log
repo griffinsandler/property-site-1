@@ -57808,3 +57808,386 @@ Processing by PropertiesController#new as HTML
   Rendered properties/new.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
 >>>>>>> 8a0a4f6a95f12a058c7daeb3ffdf0d1624541754
+
+
+Started GET "/" for 129.81.137.201 at 2017-12-15 19:59:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.137.201 at 2017-12-15 19:59:41 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 418ms (Views: 400.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.137.201 at 2017-12-15 19:59:43 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 117ms (Views: 115.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.137.201 at 2017-12-15 19:59:47 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mzOfLQM3Hv/33OyDT9sS46uLbpRcZuiWSTHbWWEm/6wbGFV9mQGVDL7HW8o2d3M9T5thXWhufGNNlyPibSizqA==", "session"=>{"email"=>"gsandler@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (0.9ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+  [1m[36mTenant Load (0.6ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1[0m  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 136ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/tenants/show" for 129.81.137.201 at 2017-12-15 19:59:47 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.6ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
+  Rendered layouts/_tenant_nav_bar.html.erb (0.9ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "services" WHERE (tenant_id = 1 AND resolved = 't')
+  [1m[36mRent Load (0.9ms)[0m  [1mSELECT "rents".* FROM "rents" INNER JOIN "rents_tenants" ON "rents"."id" = "rents_tenants"."rent_id" WHERE "rents_tenants"."tenant_id" = $1[0m  [["tenant_id", 1]]
+  Rendered tenants/show.html.erb within layouts/application (103.9ms)
+Completed 200 OK in 170ms (Views: 134.4ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/services/new" for 129.81.137.201 at 2017-12-15 19:59:49 +0000
+Processing by ServicesController#new as HTML
+  [1m[35mTenant Load (0.6ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.3ms)
+  Rendered services/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/services/new" for 129.81.137.201 at 2017-12-15 19:59:54 +0000
+Processing by ServicesController#create as HTML
+  Parameters: {"services"=>{"name"=>"Griffin Sandler", "address"=>"2224 Calhoun Street", "subject"=>"New", "room"=>"New", "notes"=>"1234"}, "commit"=>"Create"}
+  [1m[35mTenant Load (0.9ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.5ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "services" ("name", "address", "subject", "room", "notes", "manager_id", "property_id", "tenant_id", "resolved", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Griffin Sandler"], ["address", "2224 Calhoun Street"], ["subject", "New"], ["room", "New"], ["notes", "1234"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 1], ["resolved", "f"], ["created_at", "2017-12-15 19:59:54.970605"], ["updated_at", "2017-12-15 19:59:54.970605"]]
+  [1m[36m (3.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mManager Load (0.6ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.5ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered service_mailer/reminder.html.erb within layouts/mailer (1.0ms)
+
+ServiceMailer#reminder: processed outbound mail in 376.9ms
+
+Sent mail to cpowicki@tulane.edu (151.4ms)
+Date: Fri, 15 Dec 2017 19:59:55 +0000
+From: chpowicki@gmail.com
+To: cpowicki@tulane.edu
+Message-ID: <5a3429bb5fe01_ee73fb84154557c192ed@cpowicki-property-management-5672612.mail>
+Subject: New Service Request: New
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Dear Charlie Powicki,</h1>
+    <p>
+        One of your tenants has sent you a service request:
+        <ul>
+            <li>Property: Home</li>
+            <li>Address: 2224 Calhoun Street</li>
+            <li>Requester: Griffin Sandler</li>
+            <li>Subject: New</li>
+        </ul>
+    </p>
+    <p>
+        1234
+    </p>
+    <p>
+        To respond to this request, please follow this link: <a href = "/services/show/5" />
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 600ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/tenants/show" for 129.81.137.201 at 2017-12-15 19:59:55 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.6ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
+  [1m[35mTenant Load (0.5ms)[0m  SELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "services" WHERE (tenant_id = 1 AND resolved = 't')[0m
+  [1m[35mRent Load (0.6ms)[0m  SELECT "rents".* FROM "rents" INNER JOIN "rents_tenants" ON "rents"."id" = "rents_tenants"."rent_id" WHERE "rents_tenants"."tenant_id" = $1  [["tenant_id", 1]]
+  Rendered tenants/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 26.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/services/new" for 129.81.137.201 at 2017-12-15 20:01:05 +0000
+Processing by ServicesController#new as HTML
+  [1m[36mTenant Load (0.6ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.4ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.3ms)
+  Rendered services/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 129.81.137.201 at 2017-12-15 20:01:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/home" for 129.81.137.201 at 2017-12-15 20:01:46 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 405ms (Views: 393.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 129.81.137.201 at 2017-12-15 20:01:50 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.137.201 at 2017-12-15 20:01:52 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owVdYeY2O/e3ulO94n1zFFbQTpivxB51Dm29be/IKAAjLpcxfACwBP6h5PSb0RLKssBBUZvMioAKy0XW48ZkBA==", "session"=>{"email"=>"cpowicki@tulane.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[35mManager Load (1.1ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1  [["email", "cpowicki@tulane.edu"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/managers/show
+Completed 302 Found in 94ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/managers/show" for 129.81.137.201 at 2017-12-15 20:01:52 +0000
+Processing by ManagersController#show as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "joinrequests" WHERE "joinrequests"."manager_id" = 25
+  [1m[36mProperty Load (0.7ms)[0m  [1mSELECT "properties".* FROM "properties" WHERE "properties"."manager_id" = 25[0m
+  Rendered layouts/_manager_nav_bar.html.erb (1.1ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "services" WHERE (manager_id = 25 AND resolved = 'f')
+  [1m[36mService Load (0.5ms)[0m  [1mSELECT "services".* FROM "services" WHERE (manager_id = 25 AND resolved = 'f')[0m
+  [1m[35mRent Load (0.6ms)[0m  SELECT "rents".* FROM "rents" WHERE "rents"."property_id" = 1
+  Rendered managers/show.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 141ms (Views: 62.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/auth/facebook" for 129.81.137.201 at 2017-12-15 20:01:57 +0000
+
+
+Started GET "/auth/facebook" for 129.81.137.201 at 2017-12-15 20:01:58 +0000
+
+
+Started GET "/signin" for 129.81.137.201 at 2017-12-15 20:01:59 +0000
+Processing by SessionsController#signin as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 129.81.137.201 at 2017-12-15 20:02:00 +0000
+Processing by SessionsController#home as HTML
+  Rendered sessions/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin/local" for 129.81.137.201 at 2017-12-15 20:02:05 +0000
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8dk29Ql5jbcr8PZHKu/BBJ26IlQkeEG6Vsxf12AMl7r7K6LThNtxZW0dJBlB97a9mbnQGSZdfPt/cnEUY5+Wg==", "session"=>{"email"=>"gsandler@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in", "op"=>"local"}
+  [1m[36mManager Load (0.6ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."email" = $1 AND "managers"."password" = $2 LIMIT 1[0m  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+  [1m[35mTenant Load (0.6ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."email" = $1 AND "tenants"."password" = $2 LIMIT 1  [["email", "gsandler@gmail.com"], ["password", "1234"]]
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 18ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/tenants/show" for 129.81.137.201 at 2017-12-15 20:02:05 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
+  [1m[35mTenant Load (0.5ms)[0m  SELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  Rendered layouts/_tenant_nav_bar.html.erb (0.7ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "services" WHERE (tenant_id = 1 AND resolved = 't')[0m
+  [1m[35mRent Load (0.8ms)[0m  SELECT "rents".* FROM "rents" INNER JOIN "rents_tenants" ON "rents"."id" = "rents_tenants"."rent_id" WHERE "rents_tenants"."tenant_id" = $1  [["tenant_id", 1]]
+  Rendered tenants/show.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 96ms (Views: 84.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/services/new" for 129.81.137.201 at 2017-12-15 20:02:07 +0000
+Processing by ServicesController#new as HTML
+  [1m[36mTenant Load (0.7ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.3ms)
+  Rendered services/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/services/new" for 129.81.137.201 at 2017-12-15 20:02:14 +0000
+Processing by ServicesController#create as HTML
+  Parameters: {"services"=>{"name"=>"Griffin Sandler", "address"=>"2224 Calhoun Street", "subject"=>"New", "room"=>"New", "notes"=>"New"}, "commit"=>"Create"}
+  [1m[36mTenant Load (0.6ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.4ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mManager Load (0.4ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "services" ("name", "address", "subject", "room", "notes", "manager_id", "property_id", "tenant_id", "resolved", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Griffin Sandler"], ["address", "2224 Calhoun Street"], ["subject", "New"], ["room", "New"], ["notes", "New"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 1], ["resolved", "f"], ["created_at", "2017-12-15 20:02:14.665642"], ["updated_at", "2017-12-15 20:02:14.665642"]]
+  [1m[35m (3.9ms)[0m  COMMIT
+  [1m[36mManager Load (0.6ms)[0m  [1mSELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered service_mailer/reminder.html.erb within layouts/mailer (0.8ms)
+
+ServiceMailer#reminder: processed outbound mail in 181.2ms
+
+Sent mail to cpowicki@tulane.edu (54.5ms)
+Date: Fri, 15 Dec 2017 20:02:14 +0000
+From: chpowicki@gmail.com
+To: cpowicki@tulane.edu
+Message-ID: <5a342a46ea038_12c83fd28d1104dc85237@cpowicki-property-management-5672612.mail>
+Subject: New Service Request: New
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Dear Charlie Powicki,</h1>
+    <p>
+        One of your tenants has sent you a service request:
+        <ul>
+            <li>Property: Home</li>
+            <li>Address: 2224 Calhoun Street</li>
+            <li>Requester: Griffin Sandler</li>
+            <li>Subject: New</li>
+        </ul>
+    </p>
+    <p>
+        New
+    </p>
+    <p>
+        To respond to this request, please follow this link: <a href = "/services/show/6" />
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 351ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/tenants/show" for 129.81.137.201 at 2017-12-15 20:02:15 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.5ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "services" WHERE (tenant_id = 1 AND resolved = 't')
+  [1m[36mRent Load (0.6ms)[0m  [1mSELECT "rents".* FROM "rents" INNER JOIN "rents_tenants" ON "rents"."id" = "rents_tenants"."rent_id" WHERE "rents_tenants"."tenant_id" = $1[0m  [["tenant_id", 1]]
+  Rendered tenants/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 27.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tenants/show" for 129.81.137.201 at 2017-12-15 20:02:50 +0000
+Processing by TenantsController#show as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "services" WHERE (tenant_id = 1 AND resolved = 't')
+  [1m[36mRent Load (0.6ms)[0m  [1mSELECT "rents".* FROM "rents" INNER JOIN "rents_tenants" ON "rents"."id" = "rents_tenants"."rent_id" WHERE "rents_tenants"."tenant_id" = $1[0m  [["tenant_id", 1]]
+  Rendered tenants/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 95ms (Views: 54.0ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/services/new" for 129.81.137.201 at 2017-12-15 20:02:52 +0000
+Processing by ServicesController#new as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  Rendered services/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/services/new" for 129.81.137.201 at 2017-12-15 20:02:58 +0000
+Processing by ServicesController#create as HTML
+  Parameters: {"services"=>{"name"=>"Griffin Sandler", "address"=>"2224 Calhoun Street", "subject"=>"New", "room"=>"New", "notes"=>"1234"}, "commit"=>"Create"}
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.2ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mManager Load (0.4ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "services" ("name", "address", "subject", "room", "notes", "manager_id", "property_id", "tenant_id", "resolved", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Griffin Sandler"], ["address", "2224 Calhoun Street"], ["subject", "New"], ["room", "New"], ["notes", "1234"], ["manager_id", 25], ["property_id", 1], ["tenant_id", 1], ["resolved", "f"], ["created_at", "2017-12-15 20:02:58.486376"], ["updated_at", "2017-12-15 20:02:58.486376"]]
+  [1m[36m (3.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mManager Load (0.5ms)[0m  SELECT  "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered service_mailer/reminder.html.erb within layouts/mailer (0.2ms)
+
+ServiceMailer#reminder: processed outbound mail in 15.1ms
+
+Sent mail to cpowicki@tulane.edu (43.8ms)
+Date: Fri, 15 Dec 2017 20:02:58 +0000
+From: noreply@abode.com
+To: cpowicki@tulane.edu
+Message-ID: <5a342a728d96f_12c83fd28df22854853ad@cpowicki-property-management-5672612.mail>
+Subject: New Service Request: New
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Dear Charlie Powicki,</h1>
+    <p>
+        One of your tenants has sent you a service request:
+        <ul>
+            <li>Property: Home</li>
+            <li>Address: 2224 Calhoun Street</li>
+            <li>Requester: Griffin Sandler</li>
+            <li>Subject: New</li>
+        </ul>
+    </p>
+    <p>
+        1234
+    </p>
+    <p>
+        To respond to this request, please follow this link: <a href = "/services/show/7" />
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+Redirected to https://property-management-cpowicki.c9users.io/tenants/show
+Completed 302 Found in 161ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/tenants/show" for 129.81.137.201 at 2017-12-15 20:02:58 +0000
+Processing by TenantsController#show as HTML
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT  "tenants".* FROM "tenants" WHERE "tenants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "tenants" WHERE (property_id = 1 AND id != 1)[0m
+  [1m[35mTenant Load (0.4ms)[0m  SELECT "tenants".* FROM "tenants" WHERE (property_id = 1 AND id != 1)
+  Rendered layouts/_tenant_nav_bar.html.erb (0.2ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "services" WHERE (tenant_id = 1 AND resolved = 't')[0m
+  [1m[35mRent Load (0.4ms)[0m  SELECT "rents".* FROM "rents" INNER JOIN "rents_tenants" ON "rents"."id" = "rents_tenants"."rent_id" WHERE "rents_tenants"."tenant_id" = $1  [["tenant_id", 1]]
+  Rendered tenants/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 33ms (Views: 26.9ms | ActiveRecord: 2.4ms)
