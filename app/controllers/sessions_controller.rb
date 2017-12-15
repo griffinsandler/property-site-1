@@ -41,7 +41,7 @@ class SessionsController < ApplicationController
       redirect_to '/tenants/show'
     else
       session[:auth] = auth
-      flash[:notice] = 'incorrect login information'
+      flash[:notice] = 'incorrect login information.'
       redirect_to '/signin'
     end
   end
@@ -59,7 +59,7 @@ class SessionsController < ApplicationController
       redirect_to '/managers/show'  
     else
       auth = session[:auth]
-      if Manager.find_by(:email => auth["info"]["email"]).valid?
+      if Manager.find_by(:email => auth["info"]["email"])
         flash[:notice] = 'Email already used.'
         redirect_to '/create'
       else
@@ -84,7 +84,7 @@ class SessionsController < ApplicationController
       render 'search'
     else
       auth = session[:auth]
-      if Tenant.find_by(:email => auth["info"]["email"]).valid?
+      if Tenant.find_by(:email => auth["info"]["email"])
         flash[:notice] = 'Email already used.'
         redirect_to '/create'
       else  
