@@ -5,6 +5,84 @@
     <% else %>
         <%= render '/layouts/tenant_nav_bar' %>
     <% end %>
+    <% if flash[:notice] %>
+        <div class="card-panel teal lighten-2 col s3">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
+    <body>
+        <div class= "container">
+            <div class = "row">
+                <div class = "col s12">
+                    <% if session[:check] == 1 %>
+                        <div class = "card teal lighten-2">
+                    <% else %> 
+                        <div class = "card orange darken-4">
+                    <% end %>
+                        <span class = "card-title white-text" style = "padding:5px;">Service Request</span>
+                        <div class = "card-content black-text white">
+                            <p>
+                                <ul>
+                                    <li><b>Requester: </b><%= @service.name %> </li>
+                                    <li><b>Address: </b><%= @service.address %> </li>
+                                    <li><b>Room: </b><%= @service.room %> </li>
+                                    <li><b>Subject: </b><%= @service.subject %> </li>
+                                </ul>
+                            </p>
+                            <p>
+                                <b>Details:</b><br/><%= @service.notes %> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col s12">
+                    <% if session[:check] == 1 %>
+                        <div class = "card teal lighten-2">
+                    <% else %> 
+                        <div class = "card orange darken-4">
+                    <% end %>
+                        <span class = "card-title white-text" style = "padding:5px;">Response</span>
+                        <div class = "card-content black-text white">
+                            <% if session[:check] == 1 %>
+                                <form class = "container" action = "<%= services_path %>/response/<%= @service.id %>" method = "post">
+                                    <div class = "row">
+                                        <div class = "row">
+                                            <div class = "input-field">
+                                                <textarea class = "materialize-textarea" id="services_response" name = "services[response]"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class = "row">
+                                            <div class = "input-field">
+                                                <input name="commit" type="submit" value="Enter" class = "waves-effect waves-light btn orange darken-4"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            <% else %>
+                                <p>
+                                    <%= @service.response %>
+                                </p>
+                                </div>
+                                <div class = "card-action">
+                                    <a href = "/tenants/completed/<%=@service.id%>" class = "white-text">Mark Completed</a>
+                                    <a href = "/tenants/reopen/<%=@service.id%>" class = "white-text" s>Reopen</a>
+                                </div>
+                            <% end %> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html><!DOCTYPE html>
+<html>
+    <% if session[:check] == 1 %>
+        <%= render '/layouts/manager_nav_bar' %>
+    <% else %>
+        <%= render '/layouts/tenant_nav_bar' %>
+    <% end %>
     <body>
         <div class= "container">
             <div class = "row">
