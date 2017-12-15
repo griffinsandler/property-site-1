@@ -81,13 +81,18 @@ class SessionsController < ApplicationController
   def search
       params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:query])
       @result = Property.where(:address => params_map[:address]).take
-      @manager = Manager.find(@result.manager_id)
+      if @result
+        @manager = Manager.find(@result.manager_id)
+      else
+        flash[:notice] = "Your search returned no results."
+        render 'search'
+      end
   end
   
   # Ends the user's current session, logging them out. 
   def destroy
     session.delete(:user_id)
-    flash.now[:notice] = 'Logged out successfully.'
+    flash[:notice] = 'Logged out successfully.'
     redirect_to "/home"
   end
   

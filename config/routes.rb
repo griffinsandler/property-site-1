@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # Sessions routes #
   get '/home' => 'sessions#home'
   post '/search' => 'sessions#search'
+  get '/search' => 'sessions#search'
   get '/join/:id/:pid' => 'sessions#sendreq'
   get '/create' => 'sessions#create'
   get '/signin' => 'sessions#signin'
