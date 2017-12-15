@@ -5,6 +5,11 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
+    <% if flash[:notice] %>
+        <div class="card-panel teal lighten-2 col s3">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
     <body>
         <nav>
             <div class="nav-wrapper deep-purple darken-2">
@@ -42,6 +47,7 @@
                     <%= f.submit "Sign Up", class: "btn btn-primary" %>
                     
                   <% end %>
+                  <br/>
                    <a href="/create/manager/check" class = "btn btn-primary">Signup in with Facebook</a>
                 </div>
               </div>
@@ -68,6 +74,7 @@
                     
                     <%= f.submit "Sign Up", class: "btn btn-primary  orange darken-4" %>
                   <% end %>
+                  <br/>
                   <a href="/create/tenant/check" class = "btn btn-primary orange darken-4">Signup in with Facebook</a>
                 </div>
               </div>

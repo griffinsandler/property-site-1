@@ -2,6 +2,11 @@
 <html>
     <%= render '/layouts/manager_nav_bar' %>
     <body>
+        <% if flash[:notice] %>
+        <div class="card-panel teal lighten-2 col s3">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
         <div class = "container">
             <div class = "row">
                 <h3>
