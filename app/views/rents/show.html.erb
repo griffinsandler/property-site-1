@@ -4,6 +4,11 @@
     <% else %>
         <%= render '/layouts/tenant_nav_bar' %>
     <% end %>
+    <% if flash[:notice] %>
+        <div class="card-panel teal lighten-2 col s3">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
     <body>
         <div class= "container">
             <div class = "row">

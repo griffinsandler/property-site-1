@@ -41,7 +41,8 @@ class SessionsController < ApplicationController
       redirect_to '/tenants/show'
     else
       session[:auth] = auth
-      render 'new'
+      flash[:notice] = 'incorrect login information'
+      redirect_to '/signin'
     end
   end
   
@@ -54,11 +55,20 @@ class SessionsController < ApplicationController
           render 'create'
           return
         end
+      session[:user_id] = user.id  
+      redirect_to '/managers/show'  
     else
-      user=Manager.create_with_omniauth(session[:auth])
+      auth = session[:auth]
+      if Manager.find_by(:email => auth["info"]["email"]).valid?
+        flash[:notice] = 'Email already used.'
+        redirect_to '/create'
+      else
+       
+       user=Manager.create_with_omniauth(session[:auth])
+       session[:user_id] = user.id
+       redirect_to '/managers/show'
+      end
     end
-    session[:user_id] = user.id
-    redirect_to '/managers/show'
   end
   
   # Creates a new user with type 'Tenant', designed to support both local and Facebook sign ups. 
@@ -70,11 +80,19 @@ class SessionsController < ApplicationController
           render 'create'
           return
         end
+      session[:user_id] = user.id
+      render 'search'
     else
-      user=Tenant.create_with_omniauth(session[:auth])
+      auth = session[:auth]
+      if Tenant.find_by(:email => auth["info"]["email"]).valid?
+        flash[:notice] = 'Email already used.'
+        redirect_to '/create'
+      else  
+        user=Tenant.create_with_omniauth(session[:auth])
+        session[:user_id] = user.id
+        render 'search'
+      end
     end
-    session[:user_id] = user.id
-    render 'search'
   end
   
   # Searches for a Property by address using a query derived from user input.  

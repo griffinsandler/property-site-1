@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
      <%= render '/layouts/manager_nav_bar' %>
-    <% if flash[:notice] %>
-        <div class="notice">
+     <% if flash[:notice] %>
+        <div class="card-panel teal lighten-2 col s3">
             <%= flash[:notice] %>
         </div>
     <% end %>

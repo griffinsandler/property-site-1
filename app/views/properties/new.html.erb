@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
     <%= render '/layouts/manager_nav_bar' %>
+    <% if flash[:notice] %>
+        <div class="card-panel teal lighten-2 col s3">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
     <body>
         <div class = "container">
             <div class = "row">
@@ -22,15 +27,15 @@
                     </div>
                     <div class = "row">
                         <div class = "input-field col s3">
-                            <input id="property_square_feet" name = "property[square_feet]" type="text" class="validate" maxlength="7">
+                            <input id="property_square_feet" name = "property[square_feet]" type="text"  class="validate" maxlength="7" required="true">
                             <label for="property_square_feet">Square Feet</label>
                         </div>
                         <div class = "input-field col s3">
-                            <input id="property_max_num_tenants" name = "property[max_num_tenants]" type="number" class="validate" maxlength="2">
+                            <input id="property_max_num_tenants" name = "property[max_num_tenants]" type="number" class="validate" maxlength="2" required="true">
                             <label for="property_max_num_tenants">Capacity</label>
                         </div>
                         <div class = "input-field col s3">
-                            <input id="property_curr_num_tenants" name = "property[curr_num_tenants]" type="number" class="validate" maxlength="2">
+                            <input id="property_curr_num_tenants" name = "property[curr_num_tenants]" type="number" class="validate" maxlength="2" required="true">
                             <label for="property_curr_num_tenants">Current Occupants</label>
                         </div>
                         <div class = "col s3">
