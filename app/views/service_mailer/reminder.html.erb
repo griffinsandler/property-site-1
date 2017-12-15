@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Dear <%= @manager.name %>,
+        
+      One of your tenants has sent you a service request:
+      <ul>
+          <li><b>Property:</b> <%= @property.name %></li>
+          <li><b>Address:</b><%= @property.address %></li>
+          <li><b>Requester:</b><%= @tenant.name %></li>
+          <li><b>Subject:</b> <%= @service.subject %></li>
+      </ul>
+    </p>
+    <p>
+      Details:
+      
+      <%= @service.notes %>
+    </p>
+  </body>
+</html>

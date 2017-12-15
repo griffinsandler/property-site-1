@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+      
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-      <section class = "deep-purple darken-2" style = "padding:10px;">
-        <div class = "container">
-          <div class = "row">
-            <h1 class = "center-align white-text">Welcome</h1>
-          </div>
-        </div>
-      </section>
+        <nav>
+            <div class="nav-wrapper deep-purple darken-2">
+                <a href="/home" class="brand-logo" style = "margin-left:10px;">Abode</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a href="/signin"><i class="material-icons left">person</i>Login</a></li>
+                  <li><a href="/create"><i class = "material-icons left">person</i>Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br/>
       <div class = "row">
         <div class = "col s12" >
           <ul id="login-tabs" class="tabs">
@@ -70,6 +75,7 @@
           </div>
         </div>
       </div>
+       
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
 </html>
