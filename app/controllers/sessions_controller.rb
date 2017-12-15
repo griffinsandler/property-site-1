@@ -2,6 +2,25 @@ class SessionsController < ApplicationController
   # User does not need to be logged in before logged in. 
   skip_before_filter :set_current_user
   
+  def Managerfb
+    session[:check] = 1
+    redirect_to '/auth/facebook'
+  end
+   
+  def Tenantfb
+    session[:check] = 2
+    redirect_to '/auth/facebook'
+  end
+  
+  def facebookcheck
+    auth=request.env["omniauth.auth"]
+    session[:auth] = auth
+    if (session[:check] == 1)
+      redirect_to '/create/manager'
+    else 
+      redirect_to '/create/tenant'
+    end
+  end
   
   def new
     if params[:op] == 'local'
@@ -56,9 +75,6 @@ class SessionsController < ApplicationController
     end
     session[:user_id] = user.id
     render 'search'
-  end
-  
-  def create
   end
   
   # Searches for a Property by address using a query derived from user input.  

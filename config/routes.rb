@@ -11,10 +11,14 @@ Rails.application.routes.draw do
   post '/signin/:op' => 'sessions#new'
   post '/create/manager/:op' => 'sessions#createManager'
   post '/create/tenant/:op' => 'sessions#createTenant'
-  get  'auth/:provider/callback' => 'sessions#new'
+  get  'auth/:provider/callback' => 'sessions#facebookcheck'
+  get '/create/manager' => 'sessions#createManager'
+  get '/create/tenant' => 'sessions#createTenant'
   get 'logout' => 'sessions#destroy'
   get  'auth/failure' => 'sessions#failure'
   get  'auth/facebook', :as => 'login'
+  get '/create/manager/check' => 'sessions#Managerfb'
+  get '/create/tenant/check' => 'sessions#Tenantfb'
   
   # Managers routes #
   get '/request/:op/:id' => 'managers#respond'
