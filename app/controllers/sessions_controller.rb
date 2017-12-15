@@ -101,6 +101,8 @@ class SessionsController < ApplicationController
       @result = Property.where(:address => params_map[:address]).take
       if @result
         @manager = Manager.find(@result.manager_id)
+        flash.clear
+        render 'search'
       else
         flash[:notice] = "Your search returned no results."
         render 'search'
