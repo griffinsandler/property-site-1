@@ -1,6 +1,6 @@
 class ServiceMailer < ApplicationMailer
     
-    default from: 'noreply@abode.com'
+    default from: 'abode.property.management1@gmail.com'
     
     def reminder(req)
         @service = req
