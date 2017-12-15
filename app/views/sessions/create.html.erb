@@ -6,11 +6,7 @@
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </head>
-    <% if flash[:notice] %>
-        <div class="card-panel teal lighten-2 col s3">
-            <%= flash[:notice] %>
-        </div>
-    <% end %>
+    
     <body>
         <nav>
             <div class="nav-wrapper deep-purple darken-2">
@@ -21,6 +17,11 @@
                 </ul>
             </div>
         </nav>
+        <% if flash[:notice] %>
+        <div class="card-panel teal lighten-2 col s3 white-text">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
         <br/>
       <div class = "row">
         <div class = "col s12" >
