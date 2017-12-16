@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get  'auth/facebook', :as => 'login'
   get '/create/manager/check' => 'sessions#Managerfb'
   get '/create/tenant/check' => 'sessions#Tenantfb'
+  get '/create/check' => 'sessions#signinfb'
   
   # Managers routes #
   get '/request/:op/:id' => 'managers#respond'

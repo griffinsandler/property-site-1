@@ -12,24 +12,30 @@ class SessionsController < ApplicationController
     redirect_to '/auth/facebook'
   end
   
+  def signinfb
+    session[:check] = 3
+    redirect_to '/auth/facebook'
+  end
+  
   def facebookcheck
     auth=request.env["omniauth.auth"]
     session[:auth] = auth
     if (session[:check] == 1)
-      if Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
+        redirect_to '/create/manager'
+    elsif (session[:check] == 2)
+        redirect_to '/create/tenant'
+    else
+      if Manager.where(:provider => auth["provider"], :uid => auth["uid"]).exists?
         user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
         session[:user_id] = user.id
         redirect_to '/managers/show'
-      else
-        redirect_to '/create/manager'
-      end
-    else
-      if Tenant.find_by(:provider => auth["provider"], :uid => auth["uid"]) 
-        user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
+      elsif Tenant.where(:provider => auth["provider"], :uid => auth["uid"]).exists?
+        user = Tenant.find_by(:provider => auth["provider"], :uid => auth["uid"]) 
         session[:user_id] = user.id
         redirect_to '/tenants/show'
-      else 
-        redirect_to '/create/tenant'
+      else
+        flash[:notice] = 'Incorrect login information.'
+        redirect_to '/signin'
       end
     end
   end
@@ -60,7 +66,12 @@ class SessionsController < ApplicationController
   
   # Creates a new user with type 'Manager', designed to support both local and Facebook sign ups. 
   def createManager
-    if params[:op] == 'local'
+    auth = session[:auth]
+    if Tenant.where(:email => auth["info"]["email"]).exists? || Tenant.where(:email => params[:email]).exists?
+      flash[:notice] = "Email already in use."
+      redirect_to '/create'
+    else 
+      if params[:op] == 'local'
         params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:manager])
         user = Manager.new(params_map)
         if !user.save
@@ -69,23 +80,28 @@ class SessionsController < ApplicationController
         end
       session[:user_id] = user.id  
       redirect_to '/managers/show'  
-    else
-      auth = session[:auth]
-      if Manager.find_by(:email => auth["info"]["email"])
-        flash[:notice] = 'Email already used.'
-        redirect_to '/create'
       else
-       
-       user=Manager.create_with_omniauth(session[:auth])
-       session[:user_id] = user.id
-       redirect_to '/managers/show'
+        auth = session[:auth]
+        if Manager.find_by(:email => auth["info"]["email"])
+          flash[:notice] = 'Email already used.'
+          redirect_to '/create'
+        else
+          user=Manager.create_with_omniauth(session[:auth])
+        session[:user_id] = user.id
+         redirect_to '/managers/show'
+        end
       end
     end
   end
   
   # Creates a new user with type 'Tenant', designed to support both local and Facebook sign ups. 
   def createTenant
-    if params[:op] == 'local'
+    auth = session[:auth]
+    if Manager.where(:email => auth["info"]["email"]).exists? || Manager.where(:email => params[:email]).exists?
+      flash[:notice] = "Email already in use."
+      redirect_to '/create'
+    else
+      if params[:op] == 'local'
         params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:tenant])
         user = Tenant.new(params_map)
         if !user.save
@@ -94,15 +110,16 @@ class SessionsController < ApplicationController
         end
       session[:user_id] = user.id
       render 'search'
-    else
-      auth = session[:auth]
-      if Tenant.find_by(:email => auth["info"]["email"])
-        flash[:notice] = 'Email already used.'
-        redirect_to '/create'
-      else  
-        user=Tenant.create_with_omniauth(session[:auth])
-        session[:user_id] = user.id
-        render 'search'
+      else
+        auth = session[:auth]
+        if Tenant.find_by(:email => auth["info"]["email"])
+          flash[:notice] = 'Email already used.'
+          redirect_to '/create'
+        else  
+         user=Tenant.create_with_omniauth(session[:auth])
+          session[:user_id] = user.id
+          render 'search'
+        end
       end
     end
   end
