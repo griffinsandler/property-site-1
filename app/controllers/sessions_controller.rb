@@ -59,18 +59,13 @@ class SessionsController < ApplicationController
       redirect_to '/tenants/show'
     else
       session[:auth] = auth
-      flash[:notice] = 'incorrect login information.'
+      flash[:notice] = 'Incorrect login information.'
       redirect_to '/signin'
     end
   end
   
   # Creates a new user with type 'Manager', designed to support both local and Facebook sign ups. 
   def createManager
-    auth = session[:auth]
-    if Tenant.where(:email => auth["info"]["email"]).exists? || Tenant.where(:email => params[:email]).exists?
-      flash[:notice] = "Email already in use."
-      redirect_to '/create'
-    else 
       if params[:op] == 'local'
         params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:manager])
         user = Manager.new(params_map)
@@ -91,16 +86,10 @@ class SessionsController < ApplicationController
          redirect_to '/managers/show'
         end
       end
-    end
   end
   
   # Creates a new user with type 'Tenant', designed to support both local and Facebook sign ups. 
   def createTenant
-    auth = session[:auth]
-    if Manager.where(:email => auth["info"]["email"]).exists? || Manager.where(:email => params[:email]).exists?
-      flash[:notice] = "Email already in use."
-      redirect_to '/create'
-    else
       if params[:op] == 'local'
         params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:tenant])
         user = Tenant.new(params_map)
@@ -121,7 +110,6 @@ class SessionsController < ApplicationController
           render 'search'
         end
       end
-    end
   end
   
   # Searches for a Property by address using a query derived from user input.  
@@ -141,6 +129,7 @@ class SessionsController < ApplicationController
   # Ends the user's current session, logging them out. 
   def destroy
     session.delete(:user_id)
+    session.delete(:auth)
     flash[:notice] = 'Logged out successfully.'
     redirect_to "/home"
   end
