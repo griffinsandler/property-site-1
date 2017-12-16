@@ -35,13 +35,9 @@ Rails.application.routes.draw do
   get '/tenants/edit' => 'tenants#edit'
   patch '/tenants/edit' => 'tenants#update'
   get '/tenants/pay' => 'tenants#pay'
-<<<<<<< HEAD
   get '/tenants/pay/:id' => 'tenants#stripepay'
   get '/tenants/:op/:id' => 'tenants#service'
-=======
-  get '/tenants/pay/:id' => 'tenants#dummypay'
->>>>>>> 970b92e0efaea1e0052125df1edc67047f33936f
-  
+
   # Properties routes #
   get '/properties' => 'properties#index'
   get '/properties/:id' => 'properties#show'
