@@ -41,6 +41,7 @@ class ManagersController < ApplicationController
             @property = Property.find(@joinrequest.property_id)
             if @property.max_num_tenants == @property.curr_num_tenants
                 flash[:notice] = "This property is full right now!"
+                redirect_to '/managers/show'
                 return
             end
             @property.curr_num_tenants += 1
