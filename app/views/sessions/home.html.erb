@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <% @title="Home: Abode" %>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -20,17 +21,41 @@
         </div>
     <% end %>
         <br/>
-        <div class = "container">
+        <script>
+      $(document).ready(function(){
+       $('.slider').slider();
+    });
+   </script>
+        
+           <div class = "row">
+                  <div class="caption center top-align orange-text text-darken-4">
+                    <h3 class="orange-text text-darken-4"> Manage Your Properties!</h3>
+                    <h5 class="orange-text text-darken-4"> It's all in your hands.</h5>
+                   </div>
+                  <div class = "container">
           <div class = "row">
-                 <div class="caption center top-align orange-text text-darken-4">
-                    <h3>Manage Your Properties!</h3>
-                    <h5 class="orange-text text-darken-3">It's all in your hands.</h5>
-                  </div>
-                  
-                  <img src="http://dingo.care2.com/pictures/greenliving/uploads/2010/11/house1.jpg" style="width:886 px;height:538px;">
-                 
-          </div>
-          </div>
+            <div class="slider">
+              <ul class="slides">
+                <li>
+                  <img src="http://eistplus.com/images/Chic-Rich-Houses-with-Pool.jpg" alt = "Expensive house with a pool">
+                </li>
+                <li>
+                  <img src="http://www.kevinandamanda.com/whatsnew/wp-content/uploads/2012/10/new-house-1.jpg" alt = "Estate with large yard">
+                </li>
+                
+                <li>
+                  <img src="http://www.designshuffle.com/blog/files/2012/09/User-13.jpg" alt = "Villa with Palm Trees">
+                   
+-                  <img src="http://dingo.care2.com/pictures/greenliving/uploads/2010/11/house1.jpg" style="width:886 px;height:538px;" alt = "Mansion with fountain and circular driveway">
+                </li>
+                <li>
+                  <img src="http://www.glencovemansion.com/getmedia/5a440d27-f456-4cb6-91b6-2a2044c04ed9/slider-bg-1.jpg?width=1402&height=579&ext=.jpg">
+                </li>
+                
+              </ul>
+            </div>
+         
+</div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
 </html>

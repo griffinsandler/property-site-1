@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # Sessions routes #
   get '/home' => 'sessions#home'
   post '/search' => 'sessions#search'
-  get '/search' => 'sessions#search'
   get '/join/:id/:pid' => 'sessions#sendreq'
   get '/create' => 'sessions#create'
   get '/signin' => 'sessions#signin'
@@ -20,6 +19,7 @@ Rails.application.routes.draw do
   get  'auth/facebook', :as => 'login'
   get '/create/manager/check' => 'sessions#Managerfb'
   get '/create/tenant/check' => 'sessions#Tenantfb'
+  get '/create/check' => 'sessions#signinfb'
   
   # Managers routes #
   get '/request/:op/:id' => 'managers#respond'
@@ -35,8 +35,12 @@ Rails.application.routes.draw do
   get '/tenants/edit' => 'tenants#edit'
   patch '/tenants/edit' => 'tenants#update'
   get '/tenants/pay' => 'tenants#pay'
+<<<<<<< HEAD
   get '/tenants/pay/:id' => 'tenants#stripepay'
   get '/tenants/:op/:id' => 'tenants#service'
+=======
+  get '/tenants/pay/:id' => 'tenants#dummypay'
+>>>>>>> 970b92e0efaea1e0052125df1edc67047f33936f
   
   # Properties routes #
   get '/properties' => 'properties#index'
@@ -51,7 +55,6 @@ Rails.application.routes.draw do
   post '/services/new' => 'services#create'
   get '/services' => 'services#index'
   get '/services/:id' => 'services#show'
-  post 'services/response/:id' => 'services#respond'
   
   # Added these for cucumber testing
     # sessions#create_guest makes a fake user for Cucumber testing with hard coded data 
