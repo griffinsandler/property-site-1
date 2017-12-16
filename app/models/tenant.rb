@@ -1,4 +1,5 @@
 class Tenant < ActiveRecord::Base
+    #tenant can only belong to one property 
     belongs_to :property
     has_many :joinrequests, dependent: :destroy
     has_many :services, dependent: :destroy

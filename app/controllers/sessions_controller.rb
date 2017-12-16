@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   # User does not need to be logged in before logged in. 
   skip_before_filter :set_current_user
   
+  #session needs a number for the application to differentiate on facebook log ins
   def Managerfb
     session[:check] = 1
     redirect_to '/auth/facebook'
@@ -17,6 +18,7 @@ class SessionsController < ApplicationController
     redirect_to '/auth/facebook'
   end
   
+  #facebook authentication redirects based on the type of user signing up 
   def facebookcheck
     auth=request.env["omniauth.auth"]
     session[:auth] = auth
@@ -25,6 +27,7 @@ class SessionsController < ApplicationController
     elsif (session[:check] == 2)
         redirect_to '/create/tenant'
     else
+      #differentiates the redirection for the log in of a tenant or manager
       if Manager.where(:provider => auth["provider"], :uid => auth["uid"]).exists?
         user=Manager.find_by(:provider => auth["provider"], :uid => auth["uid"])
         session[:user_id] = user.id
@@ -33,6 +36,7 @@ class SessionsController < ApplicationController
         user = Tenant.find_by(:provider => auth["provider"], :uid => auth["uid"]) 
         session[:user_id] = user.id
         redirect_to '/tenants/show'
+      #redirects incorrect sign ins
       else
         flash[:notice] = 'Incorrect login information.'
         redirect_to '/signin'
@@ -40,9 +44,11 @@ class SessionsController < ApplicationController
     end
   end
   
+  #creates new session 
   def new
     if params[:op] == 'local'
       params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:session])
+      #searches the database of managers and tenants to redirect propperly 
       user=Manager.find_by(:email => params_map["email"], :password => params_map["password"]) || Tenant.find_by(:email => params_map["email"], :password => params_map["password"])
     else
       auth=request.env["omniauth.auth"]

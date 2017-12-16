@@ -46,6 +46,7 @@
                                 <th></th>
                             </thead>
                             <tbody>
+                            <!-- this is the notification for a manager that there is a tenant who wants to join!-->    
                                 <% @JRBundles.each do |t| %>
                                     <tr>
                                         <td><a class "waves-effect waves-teal btn-flat" href="<%= properties_path %>/<%= t.property.id %>"><%= t.property.name %> </a> </td>
@@ -73,6 +74,7 @@
                             <th>Subject</th>
                         </thead>
                         <tbody>
+                            <!-- shows the service requests for all the properties !-->
                             <% @services.each do |t| %>
                                 <tr>
                                    
@@ -96,12 +98,14 @@
                     <div class = "card-content black-text white">
                         <table class = "highlight"  >
                         <thead>
+                        <!-- the list of columns in the table for rent!-->    
                             <th>Property Name</th>
                             <th>Rent Amount</th>
                             <th>Amount Left to Pay</th>
                             <th>Due By</th>
                         </thead>
                         <tbody>
+                            <!-- all the rent due for the manager's properties!-->
                              <% @properties.each do |t| %>
                                  <% @propRents[t].each do |r| %>
                                     <tr>

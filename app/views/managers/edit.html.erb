@@ -5,6 +5,7 @@
         <% @title="Manager Edit Page: Abode" %>
     </head>
     <body>
+       <!--this is a flash notice for editting managers!-->
         <% if flash[:notice] %>
         <div class="card-panel teal lighten-2 col s3 white-text">
             <%= flash[:notice] %>
@@ -16,6 +17,7 @@
                    Edit My Information
                 </h3>
             </div>
+            <!-- different input fields for the managers editting !-->
             <div class = "row">
                 <%= form_for @manager, url: {action: "edit"} do |f| %>
                     <div class = "row">

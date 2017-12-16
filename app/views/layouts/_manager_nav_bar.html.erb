@@ -1,3 +1,5 @@
+<!--creates the navigation bar for all managers!-->
+
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -7,6 +9,7 @@
             <div class="nav-wrapper orange darken-4">
                 <a href="/home" class="brand-logo" style = "margin-left:10px;" >Abode</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!--managers have the buttons: properties, profile, and log out!-->
                     <li><a href="/managers/show"><i class="material-icons left">person_pin</i>My Profile</a></li>
                     <li><a href= "<%=properties_path %>"><i class="material-icons left">home</i>My Properties</a></li>
                     <li><a href="/logout"><i class="material-icons left">power_settings_new</i>Log Out</a></li>

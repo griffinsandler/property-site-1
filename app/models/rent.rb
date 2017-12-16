@@ -1,3 +1,4 @@
+#rent belogs to a property and manager but can have many tenants 
 class Rent < ActiveRecord::Base
     belongs_to :property
     belongs_to :manager
