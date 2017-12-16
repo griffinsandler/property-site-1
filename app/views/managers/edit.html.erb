@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <%= render '/layouts/manager_nav_bar' %>
+    <head>
+        <% @title="Manager Edit Page: Abode" %>
+    </head>
     <body>
         <% if flash[:notice] %>
         <div class="card-panel teal lighten-2 col s3 white-text">
