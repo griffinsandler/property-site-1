@@ -1,0 +1,6 @@
+development:
+    :PUBLISHABLE_KEY: pk_live_iBOaWPIrnfzoVtZSkjqTX13F
+    :SECRET_KEY: sk_live_8NHE2vkkiUHunwbpPYZFrG0L
+production:
+    :PUBLISHABLE_KEY: pk_live_iBOaWPIrnfzoVtZSkjqTX13F
+    :SECRET_KEY: sk_live_8NHE2vkkiUHunwbpPYZFrG0L
