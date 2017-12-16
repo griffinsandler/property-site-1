@@ -1,8 +1,12 @@
 class ManagersController < ApplicationController
     require 'ostruct'
+    require 'stripe'
+    require 'json'
     skip_before_action :verify_authenticity_token
     #before_action :force_log_in
     before_action :confirm_logged_in
+    require 'net/http'
+    require 'uri'
     
     def show
         @manager = Manager.find(session[:user_id])
@@ -24,7 +28,22 @@ class ManagersController < ApplicationController
             @rents = Rent.where(:property_id => p)
             @propRents[p] = @rents
         end
+        if params[:code]
+            uri = URI.parse("https://connect.stripe.com/oauth/token")
+            @response = Net::HTTP.post_form(uri, "client_secret" => "sk_live_8NHE2vkkiUHunwbpPYZFrG0L",
+              "code" => params[:code],
+              "grant_type" => "authorization_code")
+            @JSONResponse = JSON.parse(@response.body)
+            @manager.stripe_user_id = @JSONResponse["stripe_user_id"]
+            if @manager.save
+                render 'show'
+            else
+                flash[:notice] = "You were unable to add a Stripe account. Please try again."
+                render 'show'
+            end
+        end
     end
+    
     def update
         @manager = Manager.find(session[:user_id])
         params_map = ActiveSupport::HashWithIndifferentAccess.new(params[:manager])

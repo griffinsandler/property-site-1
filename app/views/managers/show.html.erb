@@ -21,6 +21,10 @@
                                 <li><b>Name:</b> <%= @manager.name%></li>
                                 <li><b>Email:</b> <%= @manager.email%></li>
                                 <li><b>Phone Number:</b> <%= @manager.phone_number%></li>
+                                <% if @manager.stripe_user_id.blank? %>
+                                <br/>
+                                <li><a href="https://connect.stripe.com/express/oauth/authorize?response_type=code&amp;client_id=ca_BxQ5lRqHMj8wNB7ypsxH0sl1XNkFJ9xE&amp;scope=read_write&amp;redirect_uri=https://property-site-2.herokuapp.com/managers/show" class="stripe-connect"><span>Connect with Stripe</span></a></li>
+                                <% end %>
                             </ul>
                         </p>
                     </div>
@@ -76,7 +80,6 @@
                                    
                                     <td>  <a class "waves-effect waves-teal btn-flat" href="<%= services_path %>/<%= t.id %>"><%= t.address %> </a> </td>
                                       <td><%= t.subject %> </td>
-                                    
                                 </tr>
                             <% end %>
                          </tbody>
